@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
@@ -20,6 +21,12 @@ const Header = () => {
             <nav className={styles.nav}>
                 <Link
                     to='/'
+                    className={`${styles.logo} ${
+                        location.pathname === "/" && !location.hash
+                            ? styles.logo_active
+                            : ""
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}>
                     className={styles.logo}>
                     bguarizo
                 </Link>
@@ -28,16 +35,25 @@ const Header = () => {
                         isMenuOpen ? styles.navListOpen : ""
                     }`}>
                     <li>
-                        <a
-                            className={styles.nav_link}
-                            href='#projects'
-                            onClick={() => scrollToSection("projects")}>
+                        <Link
+                            className={`${styles.nav_link} ${
+                                location.pathname === "/projects"
+                                    ? styles.nav_link_active
+                                    : ""
+                            }`}
+                            to='/projects'
+                            onClick={() => setIsMenuOpen(false)}>
                             Projects
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a
-                            className={styles.nav_link}
+                            className={`${styles.nav_link} ${
+                                location.pathname === "/" &&
+                                location.hash === "#about"
+                                    ? styles.nav_link_active
+                                    : ""
+                            }`}
                             href='#about'
                             onClick={() => scrollToSection("about")}>
                             About me

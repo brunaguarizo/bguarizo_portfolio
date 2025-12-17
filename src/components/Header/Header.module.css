@@ -26,6 +26,11 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo_active {
+    font-weight: 500;
 }
 
 .nav_list {
@@ -44,6 +49,11 @@
 
 .nav_link:hover {
     color: var(--white);
+}
+
+.nav_link_active {
+    color: var(--white);
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {

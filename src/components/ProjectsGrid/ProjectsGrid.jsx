@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./ProjectsGrid.module.css";
 import { images } from "../../assets/images";
 import Button from "../Button/Button";
@@ -52,11 +53,11 @@ const ProjectsGrid = () => {
                     ))}
                 </div>
                 <div className={styles.actions}>
-                    <a
-                        href='#projects'
+                    <Link
+                        to='/projects'
                         className={styles.allProjectsLink}>
                         See More
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
