@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
@@ -17,7 +18,11 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <div className={styles.logo}>bguarizo</div>
+                <Link
+                    to='/'
+                    className={styles.logo}>
+                    bguarizo
+                </Link>
                 <ul
                     className={`${styles.nav_list} ${
                         isMenuOpen ? styles.navListOpen : ""
