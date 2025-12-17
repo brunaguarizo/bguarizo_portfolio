@@ -2,21 +2,27 @@ import React from "react";
 import styles from "./ProjectCard.module.css";
 import { ProjectButton } from "../Button/Button";
 
-const ProjectCard = ({ image, index, col, rowStart, rowSpan, isLarger, isMiddleFirstRow, isMiddleSecondRow, isMiddleThirdRow }) => {
+const ProjectCard = ({
+    image,
+    index,
+    col,
+    rowStart,
+    rowSpan,
+    isLarger,
+    isMiddleFirstRow,
+    isMiddleSecondRow,
+    isMiddleThirdRow,
+}) => {
     return (
         <a
             href='https://www.behance.net/'
             target='_blank'
-            rel='noopener'
+            rel='noopener noreferrer'
             className={`${styles.projectItem} ${
                 isLarger ? styles.largerCard : ""
-            } ${
-                isMiddleFirstRow ? styles.middleFirstRow : ""
-            } ${
+            } ${isMiddleFirstRow ? styles.middleFirstRow : ""} ${
                 isMiddleSecondRow ? styles.middleSecondRow : ""
-            } ${
-                isMiddleThirdRow ? styles.middleThirdRow : ""
-            }`}
+            } ${isMiddleThirdRow ? styles.middleThirdRow : ""}`}
             style={{
                 gridColumn: col,
                 gridRow: `${rowStart} / span ${rowSpan}`,
