@@ -87,8 +87,13 @@ const Home = () => {
                     <div className={styles.contactContainer}>
                         <div className={styles.contactContent}>
                             <h2 className={styles.contactTitle}>
-                                Let's create something amazing together!
+                                Ready to build impactful digital products?
                             </h2>
+                            <p className={styles.description}>
+                                Let's combine strategy and code to bring your
+                                vision to life.
+                            </p>
+
                             <Button
                                 onClick={() =>
                                     (window.location.href =
