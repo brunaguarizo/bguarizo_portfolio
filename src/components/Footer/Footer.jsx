@@ -38,7 +38,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <p className={styles.copyright}>
-                    All rights reserved, ©{currentYear}
+                    All rights reserved ©{currentYear}
                 </p>
             </div>
         </footer>
