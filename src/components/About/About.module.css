@@ -165,19 +165,81 @@
     display: block;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
     .container {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-3xl);
+        flex-direction: column;
+        gap: var(--spacing-2xl);
+        align-items: center;
+        padding: 0 var(--spacing-md);
+    }
+
+    .textSection {
+        max-width: 100%;
+        width: 100%;
     }
 
     .profileImage {
-        order: -1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profileImg {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        aspect-ratio: 1;
     }
 }
 
 @media (max-width: 768px) {
     .about {
         padding: var(--spacing-2xl) 0;
+    }
+
+    .container {
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .textSection {
+        padding: 0;
+    }
+
+    .title {
+        font-size: clamp(28px, 5vw, 40px);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .description {
+        font-size: var(--font-size-small);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skillTag {
+        padding: 8px 16px;
+        font-size: var(--font-size-small);
+    }
+
+    .experienceSection {
+        margin-top: var(--spacing-md);
+    }
+
+    .experienceContent {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .experienceItem {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .profileImg {
+        max-width: 100%;
+        width: 100%;
     }
 }

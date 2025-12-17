@@ -7,7 +7,7 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
     margin: 0;
 }
 
@@ -52,7 +52,7 @@
 
     .nav_list {
         position: fixed;
-        top: 70px;
+        top: 60px;
         left: 0;
         right: 0;
         background: rgba(20, 20, 20, 0.7);
