@@ -27,7 +27,6 @@ const Header = () => {
                             : ""
                     }`}
                     onClick={() => setIsMenuOpen(false)}>
-                    className={styles.logo}>
                     bguarizo
                 </Link>
                 <ul
@@ -56,7 +55,7 @@ const Header = () => {
                             }`}
                             href='#about'
                             onClick={() => scrollToSection("about")}>
-                            About me
+                            About Me
                         </a>
                     </li>
 
@@ -66,7 +65,7 @@ const Header = () => {
                                 (window.location.href =
                                     "mailto:b.guarizo@hotmail.com")
                             }>
-                            Get in Touch
+                            Get In Touch
                         </Button>
                     </li>
                 </ul>

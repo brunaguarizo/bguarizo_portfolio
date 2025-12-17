@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ProjectPage.module.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Button from "../../components/Button/Button";
 
 const ProjectPage = () => {
     const [selectedTag, setSelectedTag] = useState("all");
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const tags = [
         "all",

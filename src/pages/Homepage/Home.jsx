@@ -99,7 +99,7 @@ const Home = () => {
                                     (window.location.href =
                                         "mailto:b.guarizo@hotmail.com")
                                 }>
-                                Get in Touch
+                                Get In Touch
                             </Button>
                         </div>
                     </div>

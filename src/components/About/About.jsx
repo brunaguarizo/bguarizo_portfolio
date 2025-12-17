@@ -80,7 +80,7 @@ const About = () => {
                         ))}
                     </div>
                     <div className={styles.buttonContainer}>
-                        <Button> Know more about me</Button>
+                        <Button>About Me</Button>
                     </div>
                 </div>
 
