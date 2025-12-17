@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Home.module.css";
-import WavyBackground from "../components/WavyBackground/WavyBackground";
-import ProjectsGrid from "../components/ProjectsGrid/ProjectsGrid";
-import About from "../components/About/About";
-import Button from "../components/Button/Button";
+import WavyBackground from "../../components/WavyBackground/WavyBackground";
+import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
+import About from "../../components/About/About";
+import Button from "../../components/Button/Button";
 
 const Home = () => {
     // Cores baseadas nas variáveis CSS do projeto
