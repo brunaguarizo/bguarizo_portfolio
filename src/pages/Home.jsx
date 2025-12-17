@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import WavyBackground from "../components/WavyBackground/WavyBackground";
 import ProjectsGrid from "../components/ProjectsGrid/ProjectsGrid";
 import About from "../components/About/About";
+import Button from "../components/Button/Button";
 
 const Home = () => {
     // Cores baseadas nas variáveis CSS do projeto
@@ -71,6 +72,34 @@ const Home = () => {
             </section>
             <ProjectsGrid />
             <About />
+            <section
+                id='contact'
+                className={styles.contact}>
+                <WavyBackground
+                    colors={waveColors}
+                    backgroundFill='#141414'
+                    waveOpacity={0.5}
+                    blur={20}
+                    speed='slow'
+                    waveWidth={100}
+                    containerClassName={styles.wavyContainer}
+                    className={styles.wavyContent}>
+                    <div className={styles.contactContainer}>
+                        <div className={styles.contactContent}>
+                            <h2 className={styles.contactTitle}>
+                                Let's create something amazing together!
+                            </h2>
+                            <Button
+                                onClick={() =>
+                                    (window.location.href =
+                                        "mailto:b.guarizo@hotmail.com")
+                                }>
+                                Get in Touch
+                            </Button>
+                        </div>
+                    </div>
+                </WavyBackground>
+            </section>
         </div>
     );
 };

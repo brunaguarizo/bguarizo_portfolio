@@ -103,6 +103,66 @@
     height: 24px;
 }
 
+.contact {
+    min-height: 85vh;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(-1 * var(--spacing-lg));
+    margin-right: calc(-1 * var(--spacing-lg));
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: linear-gradient(
+        to bottom,
+        var(--black) 0%,
+        rgba(20, 20, 20, 0.95) 15%,
+        rgba(20, 20, 20, 0.7) 40%,
+        rgba(20, 20, 20, 0.3) 70%,
+        transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.contactContainer {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-4xl) var(--spacing-lg);
+    min-height: 85vh;
+    position: relative;
+    z-index: 2;
+}
+
+.contactContent {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-md);
+}
+
+.contactTitle {
+    font-size: clamp(32px, 4vw, 64px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
 @media (max-width: 768px) {
     .homeWrapper {
         padding: 0 var(--spacing-sm);
@@ -111,6 +171,21 @@
     .hero {
         margin-left: calc(-1 * var(--spacing-sm));
         margin-right: calc(-1 * var(--spacing-sm));
+    }
+
+    .contact {
+        margin-left: calc(-1 * var(--spacing-sm));
+        margin-right: calc(-1 * var(--spacing-sm));
+    }
+
+    .contactContainer {
+        padding: var(--spacing-3xl) var(--spacing-sm);
+        min-height: 70vh;
+    }
+
+    .contactButton {
+        width: 160px;
+        height: 160px;
     }
 
     .title {

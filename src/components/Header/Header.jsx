@@ -39,7 +39,21 @@ const Header = () => {
                         </a>
                     </li>
                     <li>
-                        <Button>Get in touch</Button>
+                        <a
+                            className={styles.nav_link}
+                            href='#contact'
+                            onClick={() => scrollToSection("contact")}>
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <Button
+                            onClick={() =>
+                                (window.location.href =
+                                    "mailto:b.guarizo@hotmail.com")
+                            }>
+                            Get in Touch
+                        </Button>
                     </li>
                 </ul>
 
