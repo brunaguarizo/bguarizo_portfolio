@@ -11,6 +11,13 @@ const Home = () => {
         "#ffffff", // --white
     ];
 
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById("projects");
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <>
         <section
@@ -38,7 +45,8 @@ const Home = () => {
                         </p>
                         <button
                             className={styles.scrollButton}
-                            aria-label='Scroll down'>
+                            onClick={scrollToProjects}
+                            aria-label='Scroll down to projects'>
                             <svg
                                 width='24'
                                 height='24'

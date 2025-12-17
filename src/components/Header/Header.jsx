@@ -33,7 +33,7 @@ const Header = () => {
                     <li>
                         <a
                             className={styles.nav_link}
-                            href='#testimonials'
+                            href='#aboutme'
                             onClick={() => scrollToSection("aboutme")}>
                             About me
                         </a>

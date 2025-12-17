@@ -21,6 +21,8 @@
 .logo {
     font-size: var(--font-size-regular);
     color: var(--white);
+    margin: 0;
+    padding: 0;
 }
 
 .nav_list {
