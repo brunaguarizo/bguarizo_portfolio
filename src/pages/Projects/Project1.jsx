@@ -13,15 +13,17 @@ const Project1 = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        Managing approvals for financial actions like issuing
-                        cards, changing limits, or reviewing reimbursements can
-                        be complex. Each organization has unique rules,
-                        approvers, and hierarchies, which makes scaling
-                        difficult. To address this, we introduced Approval
-                        Policies: a unified system that centralizes approval
-                        logic and provides a consistent experience across
-                        workflows. Phase 1 focused on Card Requests: the most
-                        common and sensitive approval flow.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec viverra sit amet erat vestibulum viverra. Nam
+                        maximus ex sed diam tempor, eu eleifend nibh aliquet.
+                        Suspendisse bibendum metus felis, eu dapibus enim auctor
+                        at. Suspendisse dictum felis vehicula mauris
+                        pellentesque cursus. Sed in suscipit nulla. Aliquam non
+                        viverra sapien, at varius elit. In eu ipsum leo. Nam
+                        iaculis massa sit amet urna posuere consectetur. Nunc
+                        pharetra risus nulla, dignissim bibendum metus
+                        pellentesque sit amet. Integer tincidunt tellus lectus,
+                        ac dapibus lacus accumsan eget.
                     </p>
                 </div>
 
