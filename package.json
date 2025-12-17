@@ -1,0 +1,22 @@
+{
+  "name": "branding-portfolio",
+  "version": "1.0.0",
+  "description": "Brand Identity & Package Designer Portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "motion": "^12.23.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "simplex-noise": "^4.0.3",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  }
+}

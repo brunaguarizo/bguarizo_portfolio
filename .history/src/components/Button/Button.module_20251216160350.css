@@ -1,0 +1,24 @@
+.button_primary {
+    background: var(--black);
+    color: var(--white);
+    font-size: var(--font-size-small);
+    border: 0.5px solid var(--gray-light);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.button_primary:hover {
+    border-color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7),
+        0 0 1.25rem rgba(255, 255, 255, 0.4),
+        0 0 2.1875rem rgba(255, 255, 255, 0.3),
+        0 0 3.125rem rgba(255, 255, 255, 0.15);
+}
+
+.button_primary:active {
+    transform: translateY(0);
+}
+

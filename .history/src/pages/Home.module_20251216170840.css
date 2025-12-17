@@ -1,0 +1,145 @@
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.wavyContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.wavyContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 160px 32px 96px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-lg);
+}
+
+.content {
+    max-width: 850px;
+}
+
+.title {
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: normal;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    font-size: var(--font-size-regular);
+    color: var(--gray-light);
+    max-width: 800px;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.primaryButton {
+    background: var(--white);
+    color: var(--black);
+    border: none;
+    padding: 14px 24px;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
+
+.primaryButton:hover {
+    background: #f5f5f5;
+    transform: translateY(-1px);
+}
+
+.primaryButton:active {
+    transform: translateY(0);
+}
+
+.secondaryButton {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid var(--white);
+    padding: 14px 24px;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
+
+.secondaryButton:hover {
+    background: var(--white);
+    color: var(--black);
+    transform: translateY(-1px);
+}
+
+.secondaryButton:active {
+    transform: translateY(0);
+}
+
+.carouselIndicators {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: var(--spacing-3xl);
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gray-medium);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.indicator:first-child {
+    background: var(--white);
+    width: 24px;
+    border-radius: 4px;
+}
+
+.indicator:hover {
+    background: var(--gray-light);
+}
+
+@media (max-width: 768px) {
+    .wavyContent {
+        padding: 96px 16px 48px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+    }
+}

@@ -1,0 +1,233 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px;
+    margin: 0px;
+}
+
+.nav {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+    color: var(--white);
+}
+
+.nav_link {
+    text-decoration: none;
+    color: var(--gray-light);
+    transition: color 0.3s ease;
+}
+
+.nav_link :hover {
+    color: var(--white);
+}
+
+.button_wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.button_primary {
+    background: rgb(59, 59, 59);
+    color: var(--white);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 11.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    letter-spacing: -0.01em;
+    z-index: 2;
+    box-shadow: rgba(255, 255, 255, 0) 0px 1px 9px 0px;
+}
+
+.button_text {
+    position: relative;
+    z-index: 3;
+}
+
+/* Container interno preto */
+.button_primary::before {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+    right: 1.5px;
+    bottom: 1.5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Glow interno sutil - camada 1 */
+.glow_inner_subtle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background: radial-gradient(50% 50%, rgb(163, 163, 163) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: blur(10px);
+    border-radius: 999px;
+    opacity: 0.41;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Glow interno principal - camada 2 */
+.glow_inner_main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(50% 50%, rgb(115, 115, 115) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: blur(10px);
+    border-radius: 999px;
+    opacity: 1;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Glow externo - camada adicional */
+.glow_external {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(50% 50%, rgb(171, 171, 171) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: blur(10px);
+    border-radius: 999px;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Glow canto superior direito */
+.glow_corner_top {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(50% 50%, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: blur(8px);
+    opacity: 0.62;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 21px;
+}
+
+/* Glow canto inferior esquerdo */
+.glow_corner_bottom {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(50% 50%, rgb(230, 230, 230) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: blur(8px);
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 21px;
+}
+
+.button_primary:hover {
+    background: rgb(65, 65, 65);
+    transform: translateY(-1px);
+}
+
+.button_primary:hover::after {
+    background: radial-gradient(50% 50%, rgb(171, 171, 171) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1;
+    width: 90%;
+    height: 90%;
+}
+
+.button_wrapper:hover .glow_external {
+    background: radial-gradient(50% 50%, rgb(200, 200, 200) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1.2;
+}
+
+.button_wrapper:hover .glow_corner_top {
+    opacity: 0.8;
+}
+
+.button_wrapper:hover .glow_corner_bottom {
+    opacity: 1.2;
+}
+
+.button_primary:active {
+    transform: translateY(0);
+    background: rgb(55, 55, 55);
+}
+
+.menuToggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menuToggle span {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menuToggle {
+        display: flex;
+    }
+
+    .nav_list {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .nav_listOpen {
+        transform: translateX(0);
+    }
+}

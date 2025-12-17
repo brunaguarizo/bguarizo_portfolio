@@ -1,0 +1,48 @@
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.line {
+    width: 25px;
+    height: 2px;
+    background: var(--white);
+    transition: all var(--transition-normal);
+    transform-origin: center;
+    position: absolute;
+}
+
+.line:first-child {
+    top: calc(50% - 4px);
+}
+
+.line:last-child {
+    top: calc(50% + 4px);
+}
+
+/* Animação para formar X quando aberto */
+.hamburger.open .line:first-child {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.hamburger.open .line:last-child {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+}
