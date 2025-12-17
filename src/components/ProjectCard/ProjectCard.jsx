@@ -14,18 +14,21 @@ const ProjectCard = ({
     isMiddleSecondRow,
     isMiddleThirdRow,
     href,
+    simpleLayout = false,
 }) => {
-    const isInternalLink = href && !href.startsWith('http');
+    const isInternalLink = href && !href.startsWith("http");
     const linkProps = {
         className: `${styles.projectItem} ${
             isLarger ? styles.largerCard : ""
         } ${isMiddleFirstRow ? styles.middleFirstRow : ""} ${
             isMiddleSecondRow ? styles.middleSecondRow : ""
         } ${isMiddleThirdRow ? styles.middleThirdRow : ""}`,
-        style: {
-            gridColumn: col,
-            gridRow: `${rowStart} / span ${rowSpan}`,
-        },
+        style: simpleLayout
+            ? {}
+            : {
+                  gridColumn: col,
+                  gridRow: `${rowStart} / span ${rowSpan}`,
+              },
     };
 
     const content = (
@@ -43,7 +46,9 @@ const ProjectCard = ({
 
     if (isInternalLink) {
         return (
-            <Link to={href} {...linkProps}>
+            <Link
+                to={href}
+                {...linkProps}>
                 {content}
             </Link>
         );
@@ -51,9 +56,9 @@ const ProjectCard = ({
 
     return (
         <a
-            href={href || 'https://www.behance.net/'}
-            target={href ? undefined : '_blank'}
-            rel={href ? undefined : 'noopener noreferrer'}
+            href={href || "https://www.behance.net/"}
+            target={href ? undefined : "_blank"}
+            rel={href ? undefined : "noopener noreferrer"}
             {...linkProps}>
             {content}
         </a>
