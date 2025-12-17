@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
 import WavyBackground from "../components/WavyBackground/WavyBackground";
+import ProjectsGrid from "../components/ProjectsGrid/ProjectsGrid";
 
 const Home = () => {
     // Cores baseadas nas variáveis CSS do projeto
@@ -11,6 +12,7 @@ const Home = () => {
     ];
 
     return (
+        <>
         <section
             id='hero'
             className={styles.hero}>
@@ -56,6 +58,8 @@ const Home = () => {
                 </div>
             </WavyBackground>
         </section>
+        <ProjectsGrid />
+    </>
     );
 };
 
