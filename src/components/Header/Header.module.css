@@ -3,7 +3,9 @@
     top: 0;
     left: 0;
     right: 0;
-    background: var(--black);
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
     padding: var(--spacing-lg);
     margin: 0;
@@ -53,7 +55,9 @@
         top: 70px;
         left: 0;
         right: 0;
-        background: var(--black);
+        background: rgba(20, 20, 20, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         flex-direction: column;
         padding: var(--spacing-xl);
         padding-left: 40px;

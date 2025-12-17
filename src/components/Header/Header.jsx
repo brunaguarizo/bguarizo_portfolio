@@ -38,14 +38,7 @@ const Header = () => {
                             About me
                         </a>
                     </li>
-                    <li>
-                        <a
-                            className={styles.nav_link}
-                            href='#contact'
-                            onClick={() => scrollToSection("contact")}>
-                            Contact
-                        </a>
-                    </li>
+
                     <li>
                         <Button
                             onClick={() =>
