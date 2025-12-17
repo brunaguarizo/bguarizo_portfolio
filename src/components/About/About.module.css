@@ -1,164 +1,160 @@
 .about {
-  padding: var(--spacing-4xl) var(--spacing-lg);
-  background: var(--black);
-  position: relative;
+    padding: 0;
+    margin: 0;
+    background: var(--black);
+    position: relative;
+}
+
+.about::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-4xl);
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-3xl);
-  align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-3xl);
+    align-items: start;
+    justify-content: space-between;
 }
 
 .textSection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 0;
+    max-width: 600px;
 }
 
 .title {
-  font-size: clamp(32px, 4vw, 48px);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: var(--spacing-md);
-  font-family: "Inter", sans-serif;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+    font-family: "Inter", sans-serif;
 }
 
 .description {
-  font-size: var(--font-size-medium);
-  line-height: 1.6;
-  color: var(--gray-light);
-  margin-bottom: var(--spacing-lg);
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+    font-size: var(--font-size-medium);
+    line-height: 1.6;
+    color: var(--gray-light);
+    margin-bottom: var(--spacing-lg);
+    font-family: "Inter", sans-serif;
 }
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .skillTag {
-  background: var(--gray-very-dark);
-  padding: 10px 19px;
-  border-radius: 6px;
-  font-size: var(--font-size-small);
-  color: var(--white);
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
+    background: var(--gray-very-dark);
+    padding: 10px 19px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-small);
+    color: var(--white);
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
 .experienceSection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    position: relative;
+    width: 100%;
+}
+
+.experienceSection::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-lg);
 }
 
 .experienceItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: var(--spacing-sm) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.experienceItem:last-child {
-  border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 0;
+    width: 100%;
 }
 
 .experienceContent {
-  flex: 1;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-sm);
+    width: 100%;
 }
 
 .role {
-  font-weight: 600;
-  font-size: var(--font-size-medium);
-  color: var(--white);
-  margin-bottom: 4px;
-  font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    color: var(--white);
+    font-family: "Inter", sans-serif;
 }
 
 .company {
-  color: var(--gray-light);
-  margin-bottom: 4px;
-  font-size: var(--font-size-small);
-  font-family: "Inter", sans-serif;
+    color: var(--gray-light);
+    font-size: var(--font-size-small);
+    font-family: "Inter", sans-serif;
 }
 
 .period {
-  color: var(--gray-medium);
-  font-size: 13px;
-  font-family: "Inter", sans-serif;
+    color: var(--gray-light);
+    font-size: var(--font-size-small);
+    font-family: "Inter", sans-serif;
 }
 
-.currentBadge {
-  background: var(--gray-very-dark);
-  color: var(--white);
-  padding: 6px 13px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  font-family: "Inter", sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.buttonContainer {
+    margin-top: var(--spacing-md);
 }
 
 .profileImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
+    margin-right: 0;
+    padding-right: 0;
 }
 
 .profileImg {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-}
-
-.imagePlaceholder {
-  width: 300px;
-  height: 300px;
-  background: var(--gray-dark);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray-medium);
-  font-size: 18px;
-  border: 2px solid var(--gray-dark);
+    width: 600px;
+    height: 600px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
 }
 
 @media (max-width: 968px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-3xl);
-  }
+    .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-3xl);
+    }
 
-  .profileImage {
-    order: -1;
-  }
-
-  .imagePlaceholder {
-    width: 100%;
-    max-width: 500px;
-    height: 400px;
-    border-radius: var(--radius-lg);
-  }
+    .profileImage {
+        order: -1;
+    }
 }
 
 @media (max-width: 768px) {
-  .about {
-    padding: var(--spacing-2xl) var(--spacing-sm);
-  }
+    .about {
+        padding: var(--spacing-2xl) 0;
+    }
 }
-

@@ -1,85 +1,99 @@
-import React from 'react'
-import styles from './About.module.css'
-import { images } from '../../assets/images'
+import React from "react";
+import styles from "./About.module.css";
+import Button from "../Button/Button";
 
 const About = () => {
-  const skills = [
-    'Product Design',
-    'Brand Identity Design',
-    'UX Design',
-    'Branding',
-    'Packaging Design',
-    'Figma',
-    'Photoshop'
-  ]
+    const skills = [
+        "Product Design",
+        "Brand Strategy",
+        "UX/UI Design",
+        "Frontend Development",
+        "Visual Storytelling",
+        "Design Systems",
+    ];
 
-  const experience = [
-    {
-      role: 'Brand Designer',
-      company: 'UrbanFit Studio',
-      period: '2023-24',
-      current: false
-    },
-    {
-      role: 'Package Designer',
-      company: 'GreenK Studio',
-      period: '2020-22',
-      current: false
-    },
-    {
-      role: 'Freelance',
-      company: 'GreenLeaf Co',
-      period: 'Currently',
-      current: true
-    }
-  ]
+    const experience = [
+        {
+            role: "Product Designer",
+            company: "Freelance",
+            period: "Currently",
+        },
+        {
+            role: "Senior Brand Designer",
+            company: "Marcas com Sal",
+            period: "2023-24",
+        },
+        {
+            role: "Senior Brand Designer",
+            company: "Brand Gym",
+            period: "2020-22",
+        },
+    ];
 
-  return (
-    <section id="about" className={styles.about}>
-      <div className={styles.container}>
-        <div className={styles.textSection}>
-          <h2 className={styles.title}>Meet Meily</h2>
-          <p className={styles.description}>
-            I'm Meily, a passionate Brand Identity & Package Designer based in tokyo. I specialize in crafting bold visual identities and packaging that captivate and inspire, blending creativity with strategy to elevate brands.
-          </p>
-          <div className={styles.skills}>
-            {skills.map((skill, index) => (
-              <span key={index} className={styles.skillTag}>{skill}</span>
-            ))}
-          </div>
-          <div className={styles.experienceSection}>
-            {experience.map((exp, index) => (
-              <div key={index} className={styles.experienceItem}>
-                <div className={styles.experienceContent}>
-                  <div className={styles.role}>{exp.role}</div>
-                  <div className={styles.company}>{exp.company}</div>
-                  <div className={styles.period}>{exp.period}</div>
+    return (
+        <section
+            id='about'
+            className={styles.about}>
+            <div className={styles.container}>
+                <div className={styles.textSection}>
+                    <h2 className={styles.title}>Meet Bruna</h2>
+                    <p className={styles.description}>
+                        I'm Bruna Guarizo, a Brazilian multidisciplinary
+                        designer and frontend developer based in Vancouver. I
+                        believe that truly and impactful design creates
+                        meaningful connections between brands and people. I
+                        bridge the gap between concept and reality, combining
+                        strategic design with technical precision to build
+                        end-to-end digital products.
+                    </p>
+                    <div className={styles.skills}>
+                        {skills.map((skill, index) => (
+                            <span
+                                key={index}
+                                className={styles.skillTag}>
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                    <div className={styles.experienceSection}>
+                        {experience.map((exp, index) => (
+                            <div
+                                key={index}
+                                className={styles.experienceItem}>
+                                <div className={styles.experienceContent}>
+                                    <div className={styles.role}>
+                                        {exp.role}
+                                    </div>
+                                    <div className={styles.company}>
+                                        {exp.company}
+                                    </div>
+                                    <div className={styles.period}>
+                                        {exp.period}
+                                    </div>
+                                </div>
+                                {exp.current && (
+                                    <span className={styles.currentBadge}>
+                                        Currently
+                                    </span>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                    <div className={styles.buttonContainer}>
+                        <Button> Know more about me</Button>
+                    </div>
                 </div>
-                {exp.current && <span className={styles.currentBadge}>Currently</span>}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className={styles.profileImage}>
-          {images.profile ? (
-            <img 
-              src={images.profile} 
-              alt="Meily - Brand Identity & Package Designer"
-              className={styles.profileImg}
-              onError={(e) => {
-                e.target.style.display = 'none'
-                e.target.nextSibling.style.display = 'flex'
-              }}
-            />
-          ) : null}
-          <div className={styles.imagePlaceholder} style={{ display: images.profile ? 'none' : 'flex' }}>
-            <span>Profile Picture</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
-export default About
+                <div className={styles.profileImage}>
+                    <img
+                        src='/askfolio/bruna.png'
+                        alt='Bruna Guarizo'
+                        className={styles.profileImg}
+                    />
+                </div>
+            </div>
+        </section>
+    );
+};
 
+export default About;
