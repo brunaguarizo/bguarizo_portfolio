@@ -1,0 +1,125 @@
+.projectItem {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.projectItem.largerCard {
+    height: 500px;
+}
+
+.projectItem.middleFirstRow {
+    transform: translateY(80px);
+}
+
+.projectItem.middleSecondRow {
+    transform: translateY(-50px);
+}
+
+.projectItem.middleThirdRow {
+    transform: translateY(50px);
+}
+
+.projectItem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 4px;
+}
+
+.projectItem:hover::before {
+    opacity: 1;
+}
+
+.projectImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(1);
+    display: block;
+    border-radius: 4px;
+    transition: filter var(--transition-normal);
+}
+
+.projectItem:hover .projectImage {
+    filter: grayscale(0);
+}
+
+.projectButtonWrapper {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.projectItem:hover .projectButtonWrapper {
+    pointer-events: auto;
+}
+
+.projectButtonWrapper button {
+    width: 100%;
+    opacity: 0;
+    transition: opacity var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.projectItem:hover .projectButtonWrapper button {
+    opacity: 1;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 30px 6px;
+    animation: borderGlow 1.5s ease-in-out infinite;
+}
+
+/* Arrow animation - target the arrow div inside the button */
+.projectItem:hover .projectButtonWrapper button > div > div:last-child {
+    transform: translateX(4px);
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 30px 6px;
+    }
+    50% {
+        box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 40px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projectItem,
+    .projectItem.largerCard {
+        height: 400px;
+    }
+
+    .projectItem.middleFirstRow,
+    .projectItem.middleSecondRow,
+    .projectItem.middleThirdRow {
+        transform: none;
+    }
+
+    .projectItem::before {
+        opacity: 1;
+    }
+
+    .projectButtonWrapper {
+        pointer-events: auto;
+    }
+
+    .projectButtonWrapper button {
+        opacity: 1;
+    }
+}

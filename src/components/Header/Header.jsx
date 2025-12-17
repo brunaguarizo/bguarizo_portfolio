@@ -25,14 +25,6 @@ const Header = () => {
                     <li>
                         <a
                             className={styles.nav_link}
-                            href='#services'
-                            onClick={() => scrollToSection("services")}>
-                            Services
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={styles.nav_link}
                             href='#projects'
                             onClick={() => scrollToSection("projects")}>
                             Projects
@@ -41,17 +33,9 @@ const Header = () => {
                     <li>
                         <a
                             className={styles.nav_link}
-                            href='#testimonials'
-                            onClick={() => scrollToSection("testimonials")}>
-                            Testimonials
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={styles.nav_link}
-                            href='#contact'
-                            onClick={() => scrollToSection("contact")}>
-                            Contact
+                            href='#aboutme'
+                            onClick={() => scrollToSection("aboutme")}>
+                            About me
                         </a>
                     </li>
                     <li>

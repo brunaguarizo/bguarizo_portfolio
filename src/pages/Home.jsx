@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
 import WavyBackground from "../components/WavyBackground/WavyBackground";
+import ProjectsGrid from "../components/ProjectsGrid/ProjectsGrid";
 
 const Home = () => {
     // Cores baseadas nas variáveis CSS do projeto
@@ -10,7 +11,15 @@ const Home = () => {
         "#ffffff", // --white
     ];
 
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById("projects");
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
+        <>
         <section
             id='hero'
             className={styles.hero}>
@@ -36,7 +45,8 @@ const Home = () => {
                         </p>
                         <button
                             className={styles.scrollButton}
-                            aria-label='Scroll down'>
+                            onClick={scrollToProjects}
+                            aria-label='Scroll down to projects'>
                             <svg
                                 width='24'
                                 height='24'
@@ -56,6 +66,8 @@ const Home = () => {
                 </div>
             </WavyBackground>
         </section>
+        <ProjectsGrid />
+    </>
     );
 };
 
