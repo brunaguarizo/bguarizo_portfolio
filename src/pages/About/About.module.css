@@ -178,3 +178,138 @@
     font-size: var(--font-size-small);
     font-family: "Inter", sans-serif;
 }
+
+.currentBadge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 10px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: var(--spacing-3xl) var(--spacing-md);
+    }
+
+    .title {
+        font-size: clamp(40px, 6vw, 80px);
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .content_2col {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        padding: var(--spacing-lg) 0;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .section_description {
+        max-width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto var(--spacing-lg);
+    }
+
+    .experienceContent {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .experienceContent.education {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .type {
+        padding-left: 0;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: var(--spacing-2xl) var(--spacing-sm);
+    }
+
+    .title {
+        font-size: clamp(32px, 8vw, 60px);
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .content_2col {
+        gap: var(--spacing-lg);
+        padding: var(--spacing-md) 0;
+        margin: var(--spacing-md) 0;
+    }
+
+    .section_title {
+        font-size: 11px;
+    }
+
+    .section_title_2 {
+        font-size: 11px;
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .section_description {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .image {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skillTag {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .experienceSection {
+        margin-top: var(--spacing-md);
+        gap: var(--spacing-xs);
+    }
+
+    .experienceSection::before {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .experienceItem {
+        padding: var(--spacing-xs) 0;
+    }
+
+    .experienceContent {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .experienceContent.education {
+        grid-template-columns: 1fr;
+    }
+
+    .role,
+    .company,
+    .type,
+    .period {
+        font-size: 12px;
+    }
+
+    .type {
+        padding-left: 0;
+    }
+}
