@@ -62,7 +62,7 @@
 
 .image {
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     margin-bottom: var(--spacing-lg);
 }
 
