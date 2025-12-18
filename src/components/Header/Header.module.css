@@ -57,8 +57,12 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
     .nav {
-        padding: 0 var(--spacing-lg);
+        padding: 0;
     }
 
     .nav_list {

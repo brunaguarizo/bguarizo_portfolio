@@ -35,7 +35,7 @@ const Home = () => {
             period: "2023-24",
         },
         {
-            role: "Senior  Marketing Leader",
+            role: "Senior Marketing Leader",
             company: "Qi Tech",
             period: "2022-23",
         },
