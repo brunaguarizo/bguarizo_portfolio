@@ -27,6 +27,7 @@ const Header = () => {
                             : ""
                     }`}
                     onClick={() => setIsMenuOpen(false)}>
+                    className={styles.logo}>
                     bguarizo
                 </Link>
                 <ul
