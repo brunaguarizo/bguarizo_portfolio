@@ -46,17 +46,16 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <a
+                        <Link
                             className={`${styles.nav_link} ${
-                                location.pathname === "/" &&
-                                location.hash === "#about"
+                                location.pathname === "/about"
                                     ? styles.nav_link_active
                                     : ""
                             }`}
-                            href='#about'
-                            onClick={() => scrollToSection("about")}>
+                            to='/about'
+                            onClick={() => setIsMenuOpen(false)}>
                             About Me
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
