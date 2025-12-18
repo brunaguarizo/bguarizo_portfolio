@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { Link } from "react-router-dom";
 import styles from "./Project.module.css";
-import Button from "../../components/Button/Button";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 
 const Project1 = () => {
@@ -325,7 +323,7 @@ const Project1 = () => {
             }
         };
 
-        // Iniciar quando o componente montar
+        // Initialize when component mounts
         initScrollTrigger();
 
         // Cleanup

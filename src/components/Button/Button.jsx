@@ -65,11 +65,11 @@ export const ProjectButton = ({ className, ...props }) => {
         <button
             className={`${styles.project_button} ${className || ""}`}
             {...props}>
-            <div className={styles.project_buttonContent}>
-                <span className={styles.project_buttonText}>
+            <div className={styles.project_button_content}>
+                <span className={styles.project_button_text}>
                     View Casestudy
                 </span>
-                <div className={styles.project_buttonArrow}>
+                <div className={styles.project_button_arrow}>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 256 256'>

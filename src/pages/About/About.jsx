@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { Link } from "react-router-dom";
 import styles from "./About.module.css";
-import Button from "../../components/Button/Button";
-import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 import DraggableTags from "../../components/DraggableTags/DraggableTags";
 
 const AboutMe = () => {
@@ -269,7 +266,7 @@ const AboutMe = () => {
             }
         };
 
-        // Iniciar quando o componente montar
+        // Initialize when component mounts
         initScrollTrigger();
 
         // Cleanup
@@ -300,20 +297,20 @@ const AboutMe = () => {
                         {skills.map((skill, index) => (
                             <span
                                 key={index}
-                                className={styles.skillTag}>
+                                className={styles.skill_tag}>
                                 {skill}
                             </span>
                         ))}
                     </div>
-                    <div ref={workExperienceRef} className={styles.experienceSection}>
+                    <div ref={workExperienceRef} className={styles.experience_section}>
                         <h2 className={styles.section_title_2}>
                             Work Experience
                         </h2>
                         {experience.map((exp, index) => (
                             <div
                                 key={index}
-                                className={styles.experienceItem}>
-                                <div className={styles.experienceContent}>
+                                className={styles.experience_item}>
+                                <div className={styles.experience_content}>
                                     <div className={styles.role}>
                                         {exp.role}
                                     </div>
@@ -325,21 +322,21 @@ const AboutMe = () => {
                                     </div>
                                 </div>
                                 {exp.current && (
-                                    <span className={styles.currentBadge}>
+                                    <span className={styles.current_badge}>
                                         Currently
                                     </span>
                                 )}
                             </div>
                         ))}
                     </div>
-                    <div ref={educationRef} className={styles.experienceSection}>
+                    <div ref={educationRef} className={styles.experience_section}>
                         <h2 className={styles.section_title_2}>Education</h2>
                         {education.map((exp, index) => (
                             <div
                                 key={index}
-                                className={styles.experienceItem}>
+                                className={styles.experience_item}>
                                 <div
-                                    className={`${styles.experienceContent} ${styles.education}`}>
+                                    className={`${styles.experience_content} ${styles.education}`}>
                                     <div className={styles.role}>
                                         {exp.role}
                                     </div>
@@ -354,7 +351,7 @@ const AboutMe = () => {
                                     </div>
                                 </div>
                                 {exp.current && (
-                                    <span className={styles.currentBadge}>
+                                    <span className={styles.current_badge}>
                                         Currently
                                     </span>
                                 )}

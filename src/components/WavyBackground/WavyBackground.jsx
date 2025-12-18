@@ -77,10 +77,36 @@ export const WavyBackground = ({
         }
     };
 
+    const getBackgroundColor = () => {
+        if (backgroundFill) {
+            // If it's a CSS variable, get its value
+            if (backgroundFill.startsWith("var(")) {
+                const varName = backgroundFill.match(/var\(--([^)]+)\)/)?.[1];
+                if (varName && typeof window !== "undefined") {
+                    return (
+                        getComputedStyle(document.documentElement)
+                            .getPropertyValue(`--${varName}`)
+                            .trim() || "#141414"
+                    );
+                }
+            }
+            return backgroundFill;
+        }
+        // Default: use CSS variable --black
+        if (typeof window !== "undefined") {
+            return (
+                getComputedStyle(document.documentElement)
+                    .getPropertyValue("--black")
+                    .trim() || "#141414"
+            );
+        }
+        return "#141414";
+    };
+
     let animationId;
     const render = () => {
         if (!ctx) return;
-        ctx.fillStyle = backgroundFill || "#141414";
+        ctx.fillStyle = getBackgroundColor();
         ctx.globalAlpha = waveOpacity || 0.5;
         ctx.fillRect(0, 0, w, h);
         drawWave(5);

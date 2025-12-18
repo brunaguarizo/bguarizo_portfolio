@@ -252,7 +252,7 @@ const Home = () => {
             }
         };
 
-        // Iniciar quando o componente montar
+        // Initialize when component mounts
         initScrollTrigger();
 
         // Cleanup
@@ -264,19 +264,19 @@ const Home = () => {
     }, []);
 
     return (
-        <div className={styles.homeWrapper}>
+        <div className={styles.home_wrapper}>
             <section
                 id='hero'
                 className={styles.hero}>
                 <WavyBackground
                     colors={waveColors}
-                    backgroundFill='#141414'
+                    backgroundFill='var(--black)'
                     waveOpacity={0.5}
                     blur={20}
                     speed='slow'
                     waveWidth={100}
-                    containerClassName={styles.wavyContainer}
-                    className={styles.wavyContent}>
+                    containerClassName={styles.wavy_container}
+                    className={styles.wavy_content}>
                     <div className={styles.container}>
                         <div className={styles.content} ref={heroRef}>
                             <h1
@@ -296,7 +296,7 @@ const Home = () => {
                             </p>
                             <button
                                 ref={scrollButtonRef}
-                                className={styles.scrollButton}
+                                className={styles.scroll_button}
                                 onClick={scrollToProjects}
                                 aria-label='Scroll down to projects'>
                                 <svg
@@ -325,16 +325,16 @@ const Home = () => {
                 ref={aboutRef}
                 id='about'
                 className={styles.about}>
-                <div className={styles.aboutContainer}>
-                    <div className={styles.textSection}>
+                <div className={styles.about_container}>
+                    <div className={styles.text_section}>
                         <h2
                             ref={aboutTitleRef}
-                            className={styles.aboutTitle}>
+                            className={styles.about_title}>
                             Meet Bruna
                         </h2>
                         <p
                             ref={aboutDescriptionRef}
-                            className={styles.aboutDescription}>
+                            className={styles.about_description}>
                             I'm Bruna Guarizo, a Brazilian multidisciplinary
                             designer and frontend developer based in Vancouver.
                             I believe that truly and impactful design creates
@@ -349,19 +349,19 @@ const Home = () => {
                             {skills.map((skill, index) => (
                                 <span
                                     key={index}
-                                    className={styles.skillTag}>
+                                    className={styles.skill_tag}>
                                     {skill}
                                 </span>
                             ))}
                         </div>
                         <div
                             ref={experienceRef}
-                            className={styles.experienceSection}>
+                            className={styles.experience_section}>
                             {experience.map((exp, index) => (
                                 <div
                                     key={index}
-                                    className={styles.experienceItem}>
-                                    <div className={styles.experienceContent}>
+                                    className={styles.experience_item}>
+                                    <div className={styles.experience_content}>
                                         <div className={styles.role}>
                                             {exp.role}
                                         </div>
@@ -373,24 +373,24 @@ const Home = () => {
                                         </div>
                                     </div>
                                     {exp.current && (
-                                        <span className={styles.currentBadge}>
+                                        <span className={styles.current_badge}>
                                             Currently
                                         </span>
                                     )}
                                 </div>
                             ))}
                         </div>
-                        <div className={styles.buttonContainer}>
+                        <div className={styles.button_container}>
                             <Button>More About Me</Button>
                         </div>
                     </div>
 
-                    <div className={styles.profileImage}>
+                    <div className={styles.profile_image}>
                         <img
                             ref={profileImageRef}
                             src='/askfolio/bruna.png'
                             alt='Bruna Guarizo'
-                            className={styles.profileImg}
+                            className={styles.profile_img}
                         />
                     </div>
                 </div>
@@ -401,18 +401,18 @@ const Home = () => {
                 className={styles.contact}>
                 <WavyBackground
                     colors={waveColors}
-                    backgroundFill='#141414'
+                    backgroundFill='var(--black)'
                     waveOpacity={0.5}
                     blur={20}
                     speed='slow'
                     waveWidth={100}
-                    containerClassName={styles.wavyContainer}
-                    className={styles.wavyContent}>
-                    <div className={styles.contactContainer}>
-                        <div className={styles.contactContent}>
+                    containerClassName={styles.wavy_container}
+                    className={styles.wavy_content}>
+                    <div className={styles.contact_container}>
+                        <div className={styles.contact_content}>
                             <h2
                                 ref={contactTitleRef}
-                                className={styles.contactTitle}>
+                                className={styles.contact_title}>
                                 Ready to build impactful digital products?
                             </h2>
                             <p

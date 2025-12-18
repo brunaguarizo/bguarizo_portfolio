@@ -116,7 +116,7 @@ const ProjectPage = () => {
             }
         };
 
-        // Iniciar quando o componente montar
+        // Initialize when component mounts
         initScrollTrigger();
 
         // Cleanup

@@ -1,4 +1,4 @@
-.homeWrapper {
+.home_wrapper {
     padding: 0 var(--spacing-lg);
 }
 
@@ -23,12 +23,12 @@
     pointer-events: none;
 }
 
-.wavyContainer {
+.wavy_container {
     width: 100%;
     height: 100%;
 }
 
-.wavyContent {
+.wavy_content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +74,7 @@
     padding: 0;
 }
 
-.scrollButton {
+.scroll_button {
     width: 48px;
     height: 48px;
     border-radius: 100px;
@@ -90,15 +90,15 @@
     padding: 0;
 }
 
-.scrollButton:hover {
+.scroll_button:hover {
     transform: scale(1.2);
 }
 
-.scrollButton:active {
+.scroll_button:active {
     transform: scale(1.1);
 }
 
-.scrollButton svg {
+.scroll_button svg {
     width: 24px;
     height: 24px;
 }
@@ -131,7 +131,7 @@
     pointer-events: none;
 }
 
-.contactContainer {
+.contact_container {
     max-width: 1200px;
     width: 100%;
     display: flex;
@@ -144,7 +144,7 @@
     z-index: 2;
 }
 
-.contactContent {
+.contact_content {
     width: 800px;
     max-width: 100%;
     display: flex;
@@ -154,7 +154,7 @@
     gap: var(--spacing-md);
 }
 
-.contactTitle {
+.contact_title {
     font-size: clamp(32px, 4vw, 64px);
     font-weight: 600;
     color: var(--white);
@@ -165,23 +165,23 @@
 }
 
 @media (max-width: 1024px) {
-    .contactContent {
+    .contact_content {
         width: 100%;
         max-width: 600px;
         padding: 0 var(--spacing-md);
     }
 
-    .contactContainer {
+    .contact_container {
         padding: var(--spacing-3xl) var(--spacing-md);
     }
 
-    .contactTitle {
+    .contact_title {
         font-size: clamp(28px, 5vw, 48px);
     }
 }
 
 @media (max-width: 768px) {
-    .homeWrapper {
+    .home_wrapper {
         padding: 0 var(--spacing-sm);
     }
 
@@ -195,30 +195,25 @@
         margin-right: calc(-1 * var(--spacing-sm));
     }
 
-    .contactContainer {
+    .contact_container {
         padding: var(--spacing-2xl) var(--spacing-sm);
         min-height: 60vh;
     }
 
-    .contactContent {
+    .contact_content {
         width: 100%;
         max-width: 100%;
         padding: 0;
         gap: var(--spacing-sm);
     }
 
-    .contactTitle {
+    .contact_title {
         font-size: clamp(24px, 6vw, 36px);
         line-height: 1.3;
     }
 
-    .contactContent p {
+    .contact_content p {
         font-size: var(--font-size-small);
-    }
-
-    .contactButton {
-        width: 160px;
-        height: 160px;
     }
 
     .title {
@@ -229,7 +224,7 @@
         padding: 0 var(--spacing-sm);
     }
 
-    .wavyContent {
+    .wavy_content {
         padding: 96px 0 48px;
     }
 
@@ -277,7 +272,7 @@
     pointer-events: none;
 }
 
-.aboutContainer {
+.about_container {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -290,7 +285,7 @@
     z-index: 1;
 }
 
-.textSection {
+.text_section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -299,7 +294,7 @@
     max-width: 600px;
 }
 
-.aboutTitle {
+.about_title {
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 700;
     color: var(--white);
@@ -307,7 +302,7 @@
     font-family: "Inter", sans-serif;
 }
 
-.aboutDescription {
+.about_description {
     font-size: var(--font-size-medium);
     line-height: 1.6;
     color: var(--gray-light);
@@ -318,10 +313,10 @@
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: var(--spacing-sm);
 }
 
-.skillTag {
+.skill_tag {
     background: var(--gray-very-dark);
     padding: 10px 19px;
     border-radius: var(--radius-sm);
@@ -332,7 +327,7 @@
     font-weight: 500;
 }
 
-.experienceSection {
+.experience_section {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -341,7 +336,7 @@
     width: 100%;
 }
 
-.experienceSection::before {
+.experience_section::before {
     content: "";
     display: block;
     width: 100%;
@@ -350,7 +345,7 @@
     margin-bottom: var(--spacing-lg);
 }
 
-.experienceItem {
+.experience_item {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -358,7 +353,7 @@
     width: 100%;
 }
 
-.experienceContent {
+.experience_content {
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -385,7 +380,7 @@
     font-family: "Inter", sans-serif;
 }
 
-.currentBadge {
+.current_badge {
     background: rgba(255, 255, 255, 0.1);
     padding: 4px 8px;
     border-radius: var(--radius-sm);
@@ -396,11 +391,11 @@
     font-family: "Inter", sans-serif;
 }
 
-.buttonContainer {
+.button_container {
     margin-top: var(--spacing-md);
 }
 
-.profileImage {
+.profile_image {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -409,7 +404,7 @@
     padding-right: 0;
 }
 
-.profileImg {
+.profile_img {
     width: 600px;
     height: 600px;
     aspect-ratio: 1;
@@ -419,24 +414,24 @@
 }
 
 @media (max-width: 1024px) {
-    .aboutContainer {
+    .about_container {
         flex-direction: column;
         gap: var(--spacing-2xl);
         align-items: center;
         padding: 0 var(--spacing-md);
     }
 
-    .textSection {
+    .text_section {
         max-width: 100%;
         width: 100%;
     }
 
-    .profileImage {
+    .profile_image {
         width: 100%;
         justify-content: center;
     }
 
-    .profileImg {
+    .profile_img {
         width: 100%;
         max-width: 500px;
         height: auto;
@@ -449,49 +444,49 @@
         padding: var(--spacing-2xl) 0;
     }
 
-    .aboutContainer {
+    .about_container {
         gap: var(--spacing-xl);
         padding: 0 var(--spacing-sm);
     }
 
-    .textSection {
+    .text_section {
         padding: 0;
     }
 
-    .aboutTitle {
+    .about_title {
         font-size: clamp(28px, 5vw, 40px);
         margin-bottom: var(--spacing-sm);
     }
 
-    .aboutDescription {
+    .about_description {
         font-size: var(--font-size-small);
         margin-bottom: var(--spacing-md);
     }
 
     .skills {
-        gap: 8px;
+        gap: var(--spacing-xs);
     }
 
-    .skillTag {
-        padding: 8px 16px;
+    .skill_tag {
+        padding: var(--spacing-xs) var(--spacing-sm);
         font-size: var(--font-size-small);
     }
 
-    .experienceSection {
+    .experience_section {
         margin-top: var(--spacing-md);
     }
 
-    .experienceContent {
+    .experience_content {
         grid-template-columns: 1fr;
         gap: 4px;
     }
 
-    .experienceItem {
+    .experience_item {
         flex-direction: column;
         gap: 4px;
     }
 
-    .profileImg {
+    .profile_img {
         max-width: 100%;
         width: 100%;
     }
