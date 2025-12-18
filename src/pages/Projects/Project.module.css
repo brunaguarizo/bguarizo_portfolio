@@ -62,7 +62,7 @@
 
 .image {
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     margin-bottom: var(--spacing-lg);
 }
 
@@ -86,4 +86,102 @@
 
 .space {
     margin-top: var(--spacing-lg);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: var(--spacing-3xl) var(--spacing-md);
+    }
+
+    .title {
+        font-size: clamp(40px, 6vw, 80px);
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .subtitle {
+        font-size: clamp(36px, 5vw, 48px);
+    }
+
+    .content_2col {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        padding: var(--spacing-lg) 0;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .section_description {
+        max-width: 100%;
+        font-size: var(--font-size-medium);
+    }
+
+    .image {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .image_2col {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg) 0;
+    }
+
+    .image_2col .image {
+        width: 100%;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: var(--spacing-2xl) var(--spacing-sm);
+    }
+
+    .title {
+        font-size: clamp(32px, 8vw, 60px);
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .subtitle {
+        font-size: clamp(28px, 6vw, 40px);
+    }
+
+    .content_2col {
+        gap: var(--spacing-lg);
+        padding: var(--spacing-md) 0;
+        margin: var(--spacing-md) 0;
+    }
+
+    .section_title {
+        font-size: 11px;
+    }
+
+    .section_description {
+        font-size: var(--font-size-small);
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .image_2col {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md) 0;
+        margin: var(--spacing-md) 0;
+    }
+
+    .image_2col .image {
+        width: 100%;
+    }
+
+    .space {
+        margin-top: var(--spacing-md);
+    }
 }
