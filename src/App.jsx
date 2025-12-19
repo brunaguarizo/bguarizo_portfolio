@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Homepage/Home";
 import Project1 from "./pages/Projects/Project1";
+import Project2 from "./pages/Projects/Project2";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
@@ -22,6 +23,10 @@ function App() {
                     <Route
                         path='/project1'
                         element={<Project1 />}
+                    />
+                    <Route
+                        path='/project2'
+                        element={<Project2 />}
                     />
                     <Route
                         path='/projects'

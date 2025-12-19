@@ -48,7 +48,13 @@ const ProjectsGrid = () => {
                             isMiddleFirstRow={item.isMiddleFirstRow}
                             isMiddleSecondRow={item.isMiddleSecondRow}
                             isMiddleThirdRow={item.isMiddleThirdRow}
-                            href={item.index === 0 ? '/project1' : undefined}
+                            href={
+                                item.index === 0
+                                    ? '/project1'
+                                    : item.index === 1
+                                    ? '/project2'
+                                    : undefined
+                            }
                         />
                     ))}
                 </div>
