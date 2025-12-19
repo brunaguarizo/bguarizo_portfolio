@@ -6,21 +6,48 @@ import Button from "../Button/Button";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 const ProjectsGrid = () => {
-    const askfolioImage = "/askfolio/askfolio.png";
-    const projectImages = Array(9).fill(askfolioImage);
+    const projectImages = [
+        "/askfolio/askfolio.png", // Index 0 - Project1
+        "/forge/forge-cover.png", // Index 1 - Project2
+        "/askfolio/askfolio.png", // Index 2
+        "/askfolio/askfolio.png", // Index 3
+        "/askfolio/askfolio.png", // Index 4
+        "/askfolio/askfolio.png", // Index 5
+        "/askfolio/askfolio.png", // Index 6
+        "/askfolio/askfolio.png", // Index 7
+        "/askfolio/askfolio.png", // Index 8
+    ];
 
     const gridLayout = [
         // Row 1-2: Item 0 (col1, row-start-2, row-span-2), Item 1 (col2, row-start-1, row-span-3), Item 2 (col3, row-start-2, row-span-2)
         { col: 1, rowStart: 2, rowSpan: 2, isLarger: false }, // Item 0
-        { col: 2, rowStart: 1, rowSpan: 3, isLarger: true, isMiddleFirstRow: true }, // Item 1 - middle column, first row, larger
+        {
+            col: 2,
+            rowStart: 1,
+            rowSpan: 3,
+            isLarger: true,
+            isMiddleFirstRow: true,
+        }, // Item 1 - middle column, first row, larger
         { col: 3, rowStart: 2, rowSpan: 2, isLarger: false }, // Item 2
         // Row 4-5: Item 3 (col1, row-start-4, row-span-2), Item 4 (col2, row-start-4, row-span-3), Item 5 (col3, row-start-4, row-span-2)
         { col: 1, rowStart: 4, rowSpan: 2, isLarger: false }, // Item 3
-        { col: 2, rowStart: 4, rowSpan: 3, isLarger: true, isMiddleSecondRow: true }, // Item 4 - middle column, second row, larger
+        {
+            col: 2,
+            rowStart: 4,
+            rowSpan: 3,
+            isLarger: true,
+            isMiddleSecondRow: true,
+        }, // Item 4 - middle column, second row, larger
         { col: 3, rowStart: 4, rowSpan: 2, isLarger: false }, // Item 5
         // Row 6-7: Item 6 (col1, row-start-6, row-span-2), Item 7 (col2, row-start-6, row-span-3), Item 8 (col3, row-start-6, row-span-2)
         { col: 1, rowStart: 6, rowSpan: 2, isLarger: false }, // Item 6
-        { col: 2, rowStart: 6, rowSpan: 3, isLarger: true, isMiddleThirdRow: true }, // Item 7 - middle column, third row, larger
+        {
+            col: 2,
+            rowStart: 6,
+            rowSpan: 3,
+            isLarger: true,
+            isMiddleThirdRow: true,
+        }, // Item 7 - middle column, third row, larger
         { col: 3, rowStart: 6, rowSpan: 2, isLarger: false }, // Item 8
     ];
 
@@ -50,9 +77,9 @@ const ProjectsGrid = () => {
                             isMiddleThirdRow={item.isMiddleThirdRow}
                             href={
                                 item.index === 0
-                                    ? '/project1'
+                                    ? "/project1"
                                     : item.index === 1
-                                    ? '/project2'
+                                    ? "/project2"
                                     : undefined
                             }
                         />

@@ -495,8 +495,8 @@ const Project2 = () => {
 
             <img
                 ref={firstImageRef}
-                src='/askfolio/askfolio.png'
-                alt='Phase 1: Rule builder'
+                src='/forge/forge-cover.png'
+                alt='Forge project cover'
                 className={styles.image}
             />
 
@@ -576,13 +576,13 @@ const Project2 = () => {
                 ref={image2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/askfolio/askfolio.png'
-                    alt='Phase 1: Rule builder'
+                    src='/forge/forge-cover.png'
+                    alt='Forge project image'
                     className={styles.image}
                 />
                 <img
-                    src='/askfolio/askfolio.png'
-                    alt='Phase 1: Rule builder'
+                    src='/forge/forge-cover.png'
+                    alt='Forge project image'
                     className={styles.image}
                 />
             </div>
@@ -626,8 +626,8 @@ const Project2 = () => {
 
             <img
                 ref={secondImageRef}
-                src='/askfolio/askfolio.png'
-                alt='Phase 1: Rule builder'
+                src='/forge/forge-cover.png'
+                alt='Forge project image'
                 className={styles.image}
             />
 
@@ -684,13 +684,13 @@ const Project2 = () => {
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/askfolio/askfolio.png'
-                    alt='Phase 1: Rule builder'
+                    src='/forge/forge-cover.png'
+                    alt='Forge project image'
                     className={styles.image}
                 />
                 <img
-                    src='/askfolio/askfolio.png'
-                    alt='Phase 1: Rule builder'
+                    src='/forge/forge-cover.png'
+                    alt='Forge project image'
                     className={styles.image}
                 />
             </div>
