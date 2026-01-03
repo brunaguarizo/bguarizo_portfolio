@@ -618,17 +618,36 @@ const Project2 = () => {
                 </div>
                 <div className={styles.content}></div>
             </div>
+            <img
+                src='/forge/forge-image8.png'
+                alt='Forge user flow'
+                className={styles.image}
+            />
             <div
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/forge/forge-cover.png'
-                    alt='Forge project image'
+                    src='/forge/forge-image6.png'
+                    alt='Forge primary persona'
                     className={styles.image}
                 />
                 <img
-                    src='/forge/forge-cover.png'
-                    alt='Forge project image'
+                    src='/forge/forge-image7.png'
+                    alt='Forge secondary persona'
+                    className={styles.image}
+                />
+            </div>
+            <div
+                ref={secondImage2ColRef}
+                className={styles.image_2col}>
+                <img
+                    src='/forge/forge-image9.png'
+                    alt='Forge lo-fi'
+                    className={styles.image}
+                />
+                <img
+                    src='/forge/forge-image10.png'
+                    alt='Forge mid-fi'
                     className={styles.image}
                 />
             </div>
@@ -708,7 +727,28 @@ const Project2 = () => {
                         British Columbia’s high schools and the future of
                         technical institutions.
                     </p>
-                    <div className={styles.space}></div>
+                </div>
+            </div>
+
+            <div
+                ref={secondImage2ColRef}
+                className={styles.image_2col}>
+                <img
+                    src='/forge/forge-cover.png'
+                    alt='Forge project image'
+                    className={styles.image}
+                />
+                <img
+                    src='/forge/forge-cover.png'
+                    alt='Forge project image'
+                    className={styles.image}
+                />
+            </div>
+
+            <div
+                ref={thirdSectionRef}
+                className={styles.content_2col}>
+                <div className={styles.content}>
                     <h2 className={styles.section_title}>Future Iterations</h2>
                     <p className={styles.section_description}>
                         Moving forward, we plan to pilot Forge directly within
@@ -727,21 +767,7 @@ const Project2 = () => {
                         certifications and worked hours in real-time.
                     </p>
                 </div>
-            </div>
-
-            <div
-                ref={secondImage2ColRef}
-                className={styles.image_2col}>
-                <img
-                    src='/forge/forge-cover.png'
-                    alt='Forge project image'
-                    className={styles.image}
-                />
-                <img
-                    src='/forge/forge-cover.png'
-                    alt='Forge project image'
-                    className={styles.image}
-                />
+                <div className={styles.content}></div>
             </div>
 
             <div ref={navigationRef}>
