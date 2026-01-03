@@ -456,10 +456,10 @@ const Project2 = () => {
                         Navigating career choices after high school can be
                         overwhelming, especially when students lack awareness or
                         face social stigmas regarding skilled trades. To address
-                        this, we developed Forge—an AI-powered career discovery
-                        app—by transforming traditional, text-heavy guidance
-                        into an immersive, interactive experience. This platform
-                        introduces a core capability called AI Career
+                        this, we developed Forge, an AI-powered career discovery
+                        app, by transforming traditional, text-heavy guidance
+                        into an engaging and interactive experience. This
+                        platform introduces a core feature called AI Career
                         Simulations, which allows students to virtually
                         "experience" a day in the life of various trades while
                         receiving personalized feedback based on their skills
@@ -468,8 +468,8 @@ const Project2 = () => {
                         Columbia, Forge creates a more transparent and engaging
                         discovery process. The result is a gamified tool that
                         empowers students to move from uncertainty to making
-                        confident, informed decisions about their professional
-                        futures.
+                        confident and informed decisions about their
+                        professional futures.
                     </p>
                 </div>
 
@@ -493,10 +493,13 @@ const Project2 = () => {
                 </div>
             </div>
 
-            <img
+            <video
                 ref={firstImageRef}
-                src='/forge/forge-cover.png'
-                alt='Forge project cover'
+                src='/forge/forge-image1.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
                 className={styles.image}
             />
 
@@ -537,7 +540,7 @@ const Project2 = () => {
                     </ul>
                     <p className={styles.section_description}>
                         Our goal was to create a trusted digital guide that
-                        grows with the student—moving from vague curiosity to a
+                        grows with the student, moving from vague curiosity to a
                         confident, informed career path. We aimed to make career
                         discovery personalized, engaging, and accessible.
                     </p>
@@ -564,7 +567,7 @@ const Project2 = () => {
                             requirements and certification steps.
                         </li>
                         <li>
-                            <strong> Preference:</strong>Students favor
+                            <strong> Preference:</strong> Students favor
                             hands-on, visual learning over traditional
                             government websites.
                         </li>
@@ -574,6 +577,49 @@ const Project2 = () => {
 
             <div
                 ref={image2ColRef}
+                className={styles.image_2col}>
+                <video
+                    src='/forge/forge-image2.mp4'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={styles.image}
+                />
+                <video
+                    src='/forge/forge-image3.mp4'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={`${styles.image} ${styles.image_video_3}`}
+                />
+            </div>
+
+            <div
+                ref={thirdSectionRef}
+                className={styles.content_2col}>
+                <div className={styles.content}>
+                    <h2 className={styles.section_title}>The Process</h2>
+                    <p className={styles.section_description}>
+                        Forge was developed through an Agile framework of
+                        constant iteration, utilizing daily standups and weekly
+                        execution meetings to align our multidisciplinary squad.
+                        Guided by advisors across design, full-stack, and the
+                        trades industry, we performed competitive analysis and
+                        deep user research, including surveys, secondary
+                        research analysis, until we mapped out a comprehensive
+                        user journey. This workflow progressed from wireframes
+                        and lo-fi sketches through hi-fi prototyping to full
+                        frontend and backend coding . Every feature was
+                        validated through rigorous usability testing before our
+                        final presentation in December 2025.
+                    </p>
+                </div>
+                <div className={styles.content}></div>
+            </div>
+            <div
+                ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
                     src='/forge/forge-cover.png'
@@ -590,6 +636,8 @@ const Project2 = () => {
             <div
                 ref={thirdSectionRef}
                 className={styles.content_2col}>
+                <div className={styles.content}></div>
+
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
@@ -621,13 +669,14 @@ const Project2 = () => {
                         </li>
                     </ul>
                 </div>
-                <div className={styles.content}></div>
             </div>
 
-            <img
-                ref={secondImageRef}
-                src='/forge/forge-cover.png'
-                alt='Forge project image'
+            <video
+                src='/forge/forge-image4.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
                 className={styles.image}
             />
 
