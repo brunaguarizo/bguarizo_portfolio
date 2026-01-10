@@ -698,6 +698,33 @@ const Project2 = () => {
                 playsInline
                 className={styles.image}
             />
+            <video
+                src='/forge/forge-image11.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={styles.image}
+            />
+
+            <div
+                ref={secondImage2ColRef}
+                className={styles.image_2col}>
+                <img
+                    src='/forge/forge-image12.png'
+                    alt='Forge lo-fi'
+                    className={styles.image}
+                />
+
+                <video
+                    src='/forge/forge-image13.mp4'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={styles.image}
+                />
+            </div>
 
             <div
                 ref={fourthSectionRef}
@@ -734,12 +761,26 @@ const Project2 = () => {
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/forge/forge-cover.png'
+                    src='/forge/forge-image14.png'
                     alt='Forge project image'
                     className={styles.image}
                 />
                 <img
-                    src='/forge/forge-cover.png'
+                    src='/forge/forge-image15.png'
+                    alt='Forge project image'
+                    className={styles.image}
+                />
+            </div>
+            <div
+                ref={secondImage2ColRef}
+                className={styles.image_2col}>
+                <img
+                    src='/forge/forge-image16.png'
+                    alt='Forge project image'
+                    className={styles.image}
+                />
+                <img
+                    src='/forge/forge-image17.png'
                     alt='Forge project image'
                     className={styles.image}
                 />
