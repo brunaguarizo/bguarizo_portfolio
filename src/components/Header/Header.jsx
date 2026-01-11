@@ -27,7 +27,7 @@ const Header = () => {
                             : ""
                     }`}
                     onClick={() => setIsMenuOpen(false)}>
-                    bguarizo
+                    <img src="/bg logo.svg" alt="bguarizo logo" className={`${styles.logo_image} ${styles.logo_size}`} />
                 </Link>
                 <ul
                     className={`${styles.nav_list} ${

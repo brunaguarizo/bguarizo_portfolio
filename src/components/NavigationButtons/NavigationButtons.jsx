@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import styles from "./NavigationButtons.module.css";
 
 const NavigationButtons = ({ prevLink, nextLink, prevLabel, nextLabel }) => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "instant" });
+    };
+
     return (
         <div className={styles.navigation}>
             {prevLink ? (
-                <Link to={prevLink} className={styles.nav_button}>
+                <Link to={prevLink} className={styles.nav_button} onClick={scrollToTop}>
                     <svg
                         width='16'
                         height='16'
@@ -44,7 +48,7 @@ const NavigationButtons = ({ prevLink, nextLink, prevLabel, nextLabel }) => {
             )}
 
             {nextLink ? (
-                <Link to={nextLink} className={styles.nav_button}>
+                <Link to={nextLink} className={styles.nav_button} onClick={scrollToTop}>
                     <span>{nextLabel || "Next"}</span>
                     <svg
                         width='16'

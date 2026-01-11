@@ -9,6 +9,7 @@
     width: 100vw;
     margin-left: calc(-1 * var(--spacing-lg));
     margin-right: calc(-1 * var(--spacing-lg));
+    padding-top: calc(var(--spacing-4xl) + 120px);
 }
 
 .hero::after {
@@ -226,6 +227,10 @@
 
     .wavy_content {
         padding: 96px 0 48px;
+    }
+
+    .hero {
+        padding-top: calc(var(--spacing-4xl) + 100px);
     }
 
     .buttons {
