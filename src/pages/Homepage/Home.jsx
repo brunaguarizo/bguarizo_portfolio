@@ -80,9 +80,17 @@ const Home = () => {
 
         const setupAnimations = () => {
             // Hero animation (initial fade in)
-            if (titleRef.current && descriptionRef.current && scrollButtonRef.current) {
+            if (
+                titleRef.current &&
+                descriptionRef.current &&
+                scrollButtonRef.current
+            ) {
                 gsap.fromTo(
-                    [titleRef.current, descriptionRef.current, scrollButtonRef.current],
+                    [
+                        titleRef.current,
+                        descriptionRef.current,
+                        scrollButtonRef.current,
+                    ],
                     {
                         opacity: 0,
                         y: 30,
@@ -124,98 +132,98 @@ const Home = () => {
             if (aboutRef.current) {
                 // Title and description
                 if (aboutTitleRef.current && aboutDescriptionRef.current) {
-                gsap.fromTo(
-                    [aboutTitleRef.current, aboutDescriptionRef.current],
-                    {
-                        opacity: 0,
-                        x: -50,
-                    },
-                    {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.8,
-                        stagger: 0.2,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: aboutRef.current,
-                            start: "top 80%",
-                            toggleActions: "play none none none",
+                    gsap.fromTo(
+                        [aboutTitleRef.current, aboutDescriptionRef.current],
+                        {
+                            opacity: 0,
+                            x: -50,
                         },
-                    }
-                );
-            }
+                        {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.8,
+                            stagger: 0.2,
+                            ease: "power3.out",
+                            scrollTrigger: {
+                                trigger: aboutRef.current,
+                                start: "top 80%",
+                                toggleActions: "play none none none",
+                            },
+                        }
+                    );
+                }
 
-            // Skills
-            if (skillsRef.current) {
-                const skillTags = skillsRef.current.children;
-                gsap.fromTo(
-                    skillTags,
-                    {
-                        opacity: 0,
-                        scale: 0.8,
-                    },
-                    {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.5,
-                        stagger: 0.05,
-                        ease: "back.out(1.7)",
-                        scrollTrigger: {
-                            trigger: skillsRef.current,
-                            start: "top 85%",
-                            toggleActions: "play none none none",
+                // Skills
+                if (skillsRef.current) {
+                    const skillTags = skillsRef.current.children;
+                    gsap.fromTo(
+                        skillTags,
+                        {
+                            opacity: 0,
+                            scale: 0.8,
                         },
-                    }
-                );
-            }
+                        {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.5,
+                            stagger: 0.05,
+                            ease: "back.out(1.7)",
+                            scrollTrigger: {
+                                trigger: skillsRef.current,
+                                start: "top 85%",
+                                toggleActions: "play none none none",
+                            },
+                        }
+                    );
+                }
 
-            // Experience
-            if (experienceRef.current) {
-                const experienceItems = experienceRef.current.children;
-                gsap.fromTo(
-                    experienceItems,
-                    {
-                        opacity: 0,
-                        x: -30,
-                    },
-                    {
-                        opacity: 1,
-                        x: 0,
-                        duration: 0.6,
-                        stagger: 0.1,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: experienceRef.current,
-                            start: "top 85%",
-                            toggleActions: "play none none none",
+                // Experience
+                if (experienceRef.current) {
+                    const experienceItems = experienceRef.current.children;
+                    gsap.fromTo(
+                        experienceItems,
+                        {
+                            opacity: 0,
+                            x: -30,
                         },
-                    }
-                );
-            }
+                        {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.6,
+                            stagger: 0.1,
+                            ease: "power3.out",
+                            scrollTrigger: {
+                                trigger: experienceRef.current,
+                                start: "top 85%",
+                                toggleActions: "play none none none",
+                            },
+                        }
+                    );
+                }
 
-            // Profile Image
-            if (profileImageRef.current) {
-                gsap.fromTo(
-                    profileImageRef.current,
-                    {
-                        opacity: 0,
-                        x: 50,
-                        scale: 0.9,
-                    },
-                    {
-                        opacity: 1,
-                        x: 0,
-                        scale: 1,
-                        duration: 1,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: profileImageRef.current,
-                            start: "top 80%",
-                            toggleActions: "play none none none",
+                // Profile Image
+                if (profileImageRef.current) {
+                    gsap.fromTo(
+                        profileImageRef.current,
+                        {
+                            opacity: 0,
+                            x: 50,
+                            scale: 0.9,
                         },
-                    }
-                );
-            }
+                        {
+                            opacity: 1,
+                            x: 0,
+                            scale: 1,
+                            duration: 1,
+                            ease: "power3.out",
+                            scrollTrigger: {
+                                trigger: profileImageRef.current,
+                                start: "top 80%",
+                                toggleActions: "play none none none",
+                            },
+                        }
+                    );
+                }
             }
 
             // Contact section animation
@@ -258,7 +266,9 @@ const Home = () => {
         // Cleanup
         return () => {
             if (typeof window !== "undefined" && window.ScrollTrigger) {
-                window.ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+                window.ScrollTrigger.getAll().forEach((trigger) =>
+                    trigger.kill()
+                );
             }
         };
     }, []);
@@ -278,7 +288,9 @@ const Home = () => {
                     containerClassName={styles.wavy_container}
                     className={styles.wavy_content}>
                     <div className={styles.container}>
-                        <div className={styles.content} ref={heroRef}>
+                        <div
+                            className={styles.content}
+                            ref={heroRef}>
                             <h1
                                 ref={titleRef}
                                 className={styles.title}>
@@ -388,7 +400,7 @@ const Home = () => {
                     <div className={styles.profile_image}>
                         <img
                             ref={profileImageRef}
-                            src='/askfolio/bruna.png'
+                            src='/bruna.png'
                             alt='Bruna Guarizo'
                             className={styles.profile_img}
                         />

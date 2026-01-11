@@ -169,9 +169,9 @@ const ProjectPage = () => {
         },
         {
             id: 2,
-            image: "/askfolio/askfolio.png",
+            image: "/forge/forge-cover.jpg",
             tags: ["brand design", "ux/ui"],
-            href: undefined,
+            href: "/project2",
         },
         {
             id: 3,
