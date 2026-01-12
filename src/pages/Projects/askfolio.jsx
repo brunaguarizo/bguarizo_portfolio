@@ -478,7 +478,7 @@ const Askfolio = () => {
                     </p>
                     <h2 className={styles.section_title}>Team</h2>
                     <p className={styles.section_description}>
-                        Visual Identity: Bruna Guarizo e Duda Paixão
+                        Visual Identity: Bruna Guarizo and Duda Paixão
                         <br />
                         Motion: Douglas Farias
                         <br />

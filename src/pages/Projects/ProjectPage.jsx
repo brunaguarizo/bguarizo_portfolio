@@ -122,14 +122,20 @@ const ProjectPage = () => {
         // Cleanup
         return () => {
             if (typeof window !== "undefined" && window.ScrollTrigger) {
-                window.ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+                window.ScrollTrigger.getAll().forEach((trigger) =>
+                    trigger.kill()
+                );
             }
         };
     }, []);
 
     // Re-animate projects when filter changes
     useEffect(() => {
-        if (projectsGridRef.current && typeof window !== "undefined" && window.ScrollTrigger) {
+        if (
+            projectsGridRef.current &&
+            typeof window !== "undefined" &&
+            window.ScrollTrigger
+        ) {
             const projectCards = projectsGridRef.current.children;
             if (projectCards.length > 0) {
                 gsap.fromTo(
@@ -164,7 +170,7 @@ const ProjectPage = () => {
         {
             id: 1,
             image: "/askfolio/askfolio.png",
-            tags: ["product design", "ux/ui"],
+            tags: ["brand design"],
             href: "/askfolio",
         },
         {
@@ -175,45 +181,9 @@ const ProjectPage = () => {
         },
         {
             id: 3,
-            image: "/askfolio/askfolio.png",
-            tags: ["frontend", "product design"],
-            href: undefined,
-        },
-        {
-            id: 4,
-            image: "/askfolio/askfolio.png",
-            tags: ["motion", "brand design"],
-            href: undefined,
-        },
-        {
-            id: 5,
-            image: "/askfolio/askfolio.png",
-            tags: ["ux/ui", "product design"],
-            href: undefined,
-        },
-        {
-            id: 6,
-            image: "/askfolio/askfolio.png",
-            tags: ["frontend"],
-            href: undefined,
-        },
-        {
-            id: 7,
-            image: "/askfolio/askfolio.png",
+            image: "/goomer/goomer-image7.png",
             tags: ["brand design"],
-            href: undefined,
-        },
-        {
-            id: 8,
-            image: "/askfolio/askfolio.png",
-            tags: ["motion", "ux/ui"],
-            href: undefined,
-        },
-        {
-            id: 9,
-            image: "/askfolio/askfolio.png",
-            tags: ["product design"],
-            href: undefined,
+            href: "/goomer",
         },
     ];
 
@@ -229,9 +199,15 @@ const ProjectPage = () => {
     return (
         <div className={styles.project_page}>
             <div className={styles.container}>
-                <h1 ref={titleRef} className={styles.title}>Projects</h1>
+                <h1
+                    ref={titleRef}
+                    className={styles.title}>
+                    Projects
+                </h1>
 
-                <div ref={tagsRef} className={styles.tags_container}>
+                <div
+                    ref={tagsRef}
+                    className={styles.tags_container}>
                     {tags.map((tag) => (
                         <button
                             key={tag}
@@ -244,7 +220,9 @@ const ProjectPage = () => {
                     ))}
                 </div>
 
-                <div ref={projectsGridRef} className={styles.projects_grid}>
+                <div
+                    ref={projectsGridRef}
+                    className={styles.projects_grid}>
                     {filteredProjects.map((project, index) => (
                         <ProjectCard
                             key={project.id}
@@ -263,7 +241,9 @@ const ProjectPage = () => {
                     ))}
                 </div>
 
-                <div ref={ctaRef} className={styles.cta_section}>
+                <div
+                    ref={ctaRef}
+                    className={styles.cta_section}>
                     <Button
                         onClick={() =>
                             (window.location.href =

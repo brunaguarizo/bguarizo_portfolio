@@ -9,13 +9,7 @@ const ProjectsGrid = () => {
     const projectImages = [
         "/askfolio/askfolio.png", // Index 0 - Project1
         "/forge/forge-cover.png", // Index 1 - Project2
-        "/askfolio/askfolio.png", // Index 2
-        "/askfolio/askfolio.png", // Index 3
-        "/askfolio/askfolio.png", // Index 4
-        "/askfolio/askfolio.png", // Index 5
-        "/askfolio/askfolio.png", // Index 6
-        "/askfolio/askfolio.png", // Index 7
-        "/askfolio/askfolio.png", // Index 8
+        "/goomer/goomer-image7.png", // Index 2 - Goomer
     ];
 
     const gridLayout = [
@@ -80,6 +74,8 @@ const ProjectsGrid = () => {
                                     ? "/askfolio"
                                     : item.index === 1
                                     ? "/forge"
+                                    : item.index === 2
+                                    ? "/goomer"
                                     : undefined
                             }
                         />
