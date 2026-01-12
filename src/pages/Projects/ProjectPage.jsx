@@ -171,7 +171,7 @@ const ProjectPage = () => {
             id: 2,
             image: "/forge/forge-cover.jpg",
             tags: ["brand design", "ux/ui"],
-            href: "/project2",
+            href: "/forge",
         },
         {
             id: 3,

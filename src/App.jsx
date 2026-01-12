@@ -31,6 +31,10 @@ function App() {
                         element={<Forge />}
                     />
                     <Route
+                        path='/forge'
+                        element={<Forge />}
+                    />
+                    <Route
                         path='/projects'
                         element={<ProjectPage />}
                     />

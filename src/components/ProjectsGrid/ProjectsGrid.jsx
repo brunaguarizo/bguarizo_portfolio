@@ -79,7 +79,7 @@ const ProjectsGrid = () => {
                                 item.index === 0
                                     ? "/project1"
                                     : item.index === 1
-                                    ? "/project2"
+                                    ? "/forge"
                                     : undefined
                             }
                         />
