@@ -164,7 +164,6 @@
         font-size: clamp(14px, 6vw, 18px);
         padding-bottom: var(--spacing-xl);
     }
-
     .subtitle {
         font-size: clamp(36px, 5vw, 48px);
     }
@@ -188,7 +187,6 @@
         max-width: 100%;
         font-size: var(--font-size-medium);
     }
-
     .image {
         width: 100%;
         margin-bottom: var(--spacing-md);
@@ -220,7 +218,6 @@
         font-size: clamp(12px, 4vw, 16px);
         padding-bottom: var(--spacing-lg);
     }
-
     .subtitle {
         font-size: clamp(28px, 6vw, 40px);
     }
@@ -247,7 +244,6 @@
         max-width: 100%;
         padding-left: var(--spacing-md);
     }
-
     .image {
         width: 100%;
         margin-bottom: var(--spacing-md);
