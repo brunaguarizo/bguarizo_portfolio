@@ -77,7 +77,7 @@ const ProjectsGrid = () => {
                             isMiddleThirdRow={item.isMiddleThirdRow}
                             href={
                                 item.index === 0
-                                    ? "/project1"
+                                    ? "/askfolio"
                                     : item.index === 1
                                     ? "/forge"
                                     : undefined

@@ -620,7 +620,7 @@ const Forge = () => {
             </div>
             <img
                 src='/forge/forge-image8.png'
-                alt='Forge user flow'
+                alt='Forge image'
                 className={styles.image}
             />
             <div
@@ -628,12 +628,12 @@ const Forge = () => {
                 className={styles.image_2col}>
                 <img
                     src='/forge/forge-image6.png'
-                    alt='Forge primary persona'
+                    alt='Forge image'
                     className={styles.image}
                 />
                 <img
                     src='/forge/forge-image7.png'
-                    alt='Forge secondary persona'
+                    alt='Forge image'
                     className={styles.image}
                 />
             </div>
@@ -642,12 +642,12 @@ const Forge = () => {
                 className={styles.image_2col}>
                 <img
                     src='/forge/forge-image9.png'
-                    alt='Forge lo-fi'
+                    alt='Forge image'
                     className={styles.image}
                 />
                 <img
                     src='/forge/forge-image10.png'
-                    alt='Forge mid-fi'
+                    alt='Forge image'
                     className={styles.image}
                 />
             </div>
@@ -712,7 +712,7 @@ const Forge = () => {
                 className={styles.image_2col}>
                 <img
                     src='/forge/forge-image12.png'
-                    alt='Forge lo-fi'
+                    alt='Forge image'
                     className={styles.image}
                 />
 
@@ -771,12 +771,12 @@ const Forge = () => {
                 className={styles.image_2col}>
                 <img
                     src='/forge/forge-image14.png'
-                    alt='Forge project image'
+                    alt='Forge image'
                     className={styles.image}
                 />
                 <img
                     src='/forge/forge-image15.png'
-                    alt='Forge project image'
+                    alt='Forge image'
                     className={styles.image}
                 />
             </div>
@@ -785,12 +785,12 @@ const Forge = () => {
                 className={styles.image_2col}>
                 <img
                     src='/forge/forge-image16.png'
-                    alt='Forge project image'
+                    alt='Forge image'
                     className={styles.image}
                 />
                 <img
                     src='/forge/forge-image17.png'
-                    alt='Forge project image'
+                    alt='Forge image'
                     className={styles.image}
                 />
             </div>

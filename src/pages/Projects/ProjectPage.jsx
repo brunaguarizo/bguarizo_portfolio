@@ -165,11 +165,11 @@ const ProjectPage = () => {
             id: 1,
             image: "/askfolio/askfolio.png",
             tags: ["product design", "ux/ui"],
-            href: "/project1",
+            href: "/askfolio",
         },
         {
             id: 2,
-            image: "/forge/forge-cover.jpg",
+            image: "/forge/forge-cover.png",
             tags: ["brand design", "ux/ui"],
             href: "/forge",
         },
