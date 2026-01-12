@@ -363,7 +363,7 @@ const AboutMe = () => {
                 <div className={styles.content}>
                     <img
                         ref={imageRef}
-                        src='/askfolio/bruna.png'
+                        src='/bruna.png'
                         alt='Bruna Guarizo'
                         className={styles.image}
                     />
