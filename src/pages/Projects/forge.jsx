@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import styles from "./Project.module.css";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 
-const Project2 = () => {
+const Forge = () => {
     const titleRef = useRef(null);
     const firstSectionRef = useRef(null);
     const secondSectionRef = useRef(null);
@@ -832,4 +832,4 @@ const Project2 = () => {
     );
 };
 
-export default Project2;
+export default Forge;
