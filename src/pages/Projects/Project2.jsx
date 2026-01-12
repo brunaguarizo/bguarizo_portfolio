@@ -725,6 +725,15 @@ const Project2 = () => {
                     className={styles.image}
                 />
             </div>
+            <video
+                ref={firstImageRef}
+                src='/forge/forge-image18.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={styles.image}
+            />
 
             <div
                 ref={fourthSectionRef}

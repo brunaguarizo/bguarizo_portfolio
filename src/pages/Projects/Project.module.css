@@ -93,6 +93,7 @@
     width: 100%;
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
 }
 
 .image_2col {
