@@ -116,6 +116,7 @@
 .image_2col:has(.image_video_3) .image:first-child {
     flex: 1;
     width: auto;
+    align-self: flex-start;
 }
 
 .image_2col:has(.image_video_3) {
@@ -132,6 +133,7 @@
     min-width: 0;
     opacity: 1;
     margin-bottom: 0;
+    align-self: flex-start;
 }
 
 .image_video_3 {
@@ -142,7 +144,9 @@
     margin-bottom: 0 !important;
     margin-top: 0 !important;
     padding-bottom: 0 !important;
+    padding-top: 0 !important;
     object-fit: contain;
+    vertical-align: top;
 }
 
 .space {

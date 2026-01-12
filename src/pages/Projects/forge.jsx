@@ -584,7 +584,7 @@ const Forge = () => {
                     loop
                     muted
                     playsInline
-                    className={styles.image}
+                    className={`${styles.image} ${styles.image_video_3}`}
                 />
                 <video
                     src='/forge/forge-image3.mp4'
