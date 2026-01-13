@@ -185,6 +185,12 @@ const ProjectPage = () => {
             tags: ["brand design"],
             href: "/goomer",
         },
+        {
+            id: 4,
+            image: "/rumbazo/rumbazo-image2.png",
+            tags: ["brand design"],
+            href: "/rumbazo",
+        },
     ];
 
     const filteredProjects =

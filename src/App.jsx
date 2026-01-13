@@ -6,6 +6,7 @@ import Project1 from "./pages/Projects/Project1";
 import Askfolio from "./pages/Projects/askfolio";
 import Forge from "./pages/Projects/forge";
 import Goomer from "./pages/Projects/goomer";
+import Rumbazo from "./pages/Projects/rumbazo";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
@@ -43,6 +44,10 @@ function App() {
                     <Route
                         path='/goomer'
                         element={<Goomer />}
+                    />
+                    <Route
+                        path='/rumbazo'
+                        element={<Rumbazo />}
                     />
                     <Route
                         path='/projects'
