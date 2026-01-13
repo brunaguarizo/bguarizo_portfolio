@@ -187,7 +187,7 @@ const ProjectPage = () => {
         },
         {
             id: 4,
-            image: "/rumbazo/rumbazo-image2.png",
+            image: "/rumbazo/rumbazo-image7.png",
             tags: ["brand design"],
             href: "/rumbazo",
         },

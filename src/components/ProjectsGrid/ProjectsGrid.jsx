@@ -10,7 +10,7 @@ const ProjectsGrid = () => {
         "/askfolio/askfolio.png", // Index 0 - Project1
         "/forge/forge-cover.png", // Index 1 - Project2
         "/goomer/goomer-image7.png", // Index 2 - Goomer
-        "/rumbazo/rumbazo-image2.png", // Index 3 - Rumbazo
+        "/rumbazo/rumbazo-image7.png", // Index 3 - Rumbazo
     ];
 
     const gridLayout = [
