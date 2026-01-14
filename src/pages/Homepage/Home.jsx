@@ -300,15 +300,15 @@ const Home = () => {
                                     design
                                 </span>{" "}
                                 and{" "}
-                                <span className={styles.italicText}>code</span>
+                                <span className={styles.italicText}>code.</span>
                             </h1>
                             <p
                                 ref={descriptionRef}
                                 className={styles.description}>
-                                Hey there, I'm Bruna, a brand designer and
-                                frontend developer who translates brand concepts
-                                into pixel-perfect reality, combining visual
-                                storytelling with frontend to deliver end-to-end
+                                Hey there, I'm Bruna, a brand and graphic
+                                designer with almost 10 years of experience
+                                transitioning into frontend development and
+                                product design, to deliver end-to-end
                                 experiences.
                             </p>
                             <button
@@ -353,12 +353,13 @@ const Home = () => {
                             ref={aboutDescriptionRef}
                             className={styles.about_description}>
                             I'm Bruna Guarizo, a Brazilian multidisciplinary
-                            designer and frontend developer based in Vancouver.
-                            I believe that truly and impactful design creates
-                            meaningful connections between brands and people. I
-                            bridge the gap between concept and reality,
-                            combining strategic design with technical precision
-                            to build end-to-end digital products.
+                            designer transitioning into frontend development and
+                            product design based in Vancouver. I believe that
+                            impactful design creates meaningful connections
+                            between brands and people. I bridge the gap between
+                            concept and reality, combining strategic design with
+                            technical precision to deliver end-to-end digital
+                            products.
                         </p>
                         <div
                             ref={skillsRef}
