@@ -156,14 +156,7 @@ const ProjectPage = () => {
         }
     }, [selectedTag]);
 
-    const tags = [
-        "all",
-        "brand design",
-        "UX/UI",
-        "product design",
-        "frontend",
-        "motion",
-    ];
+    const tags = ["all", "brand design", "UX/UI", "frontend", "motion"];
 
     // Mock data - you can replace with real data
     const projects = [
@@ -194,7 +187,7 @@ const ProjectPage = () => {
         {
             id: 5,
             image: "/mosaic/mosaic-cover.png",
-            tags: ["product design", "ux/ui", "frontend"],
+            tags: ["brand design", "ux/ui", "frontend", "motion"],
             href: "/mosaic",
         },
     ];

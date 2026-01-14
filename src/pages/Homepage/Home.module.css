@@ -67,6 +67,11 @@
     padding: 0;
 }
 
+.italicText {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+
 .description {
     font-size: var(--font-size-regular);
     color: var(--gray-light);

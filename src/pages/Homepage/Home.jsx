@@ -294,8 +294,13 @@ const Home = () => {
                             <h1
                                 ref={titleRef}
                                 className={styles.title}>
-                                Connecting brands to people through design and
-                                code
+                                Connecting brands <br />
+                                to people through <br />
+                                <span className={styles.italicText}>
+                                    design
+                                </span>{" "}
+                                and{" "}
+                                <span className={styles.italicText}>code</span>
                             </h1>
                             <p
                                 ref={descriptionRef}
