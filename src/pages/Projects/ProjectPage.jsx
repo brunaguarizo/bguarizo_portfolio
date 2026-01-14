@@ -191,6 +191,12 @@ const ProjectPage = () => {
             tags: ["brand design"],
             href: "/rumbazo",
         },
+        {
+            id: 5,
+            image: "/mosaic/mosaic-cover.png",
+            tags: ["product design", "ux/ui", "frontend"],
+            href: "/mosaic",
+        },
     ];
 
     const filteredProjects =

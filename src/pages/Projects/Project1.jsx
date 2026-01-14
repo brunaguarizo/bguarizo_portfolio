@@ -507,9 +507,9 @@ const Project1 = () => {
             <div ref={navigationRef}>
                 <NavigationButtons
                     prevLink='/'
-                    nextLink='/#projects'
+                    nextLink='/projects'
                     prevLabel='Back to Home'
-                    nextLabel='Next Project'
+                    nextLabel='More Projects'
                 />
             </div>
         </div>

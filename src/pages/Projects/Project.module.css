@@ -44,6 +44,19 @@
     margin: var(--spacing-lg) 0;
 }
 
+.content_2col > .image {
+    flex: 0 0 calc(50% - var(--spacing-md) / 2);
+    width: calc(50% - var(--spacing-md) / 2);
+    margin: 0;
+    align-self: flex-start;
+}
+
+.content_2col > div:not(.content) {
+    flex: 0 0 calc(50% - var(--spacing-md) / 2);
+    width: calc(50% - var(--spacing-md) / 2);
+    min-width: 0;
+}
+
 .content {
     display: flex;
     flex-direction: column;

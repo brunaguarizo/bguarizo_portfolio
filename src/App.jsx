@@ -7,6 +7,7 @@ import Askfolio from "./pages/Projects/askfolio";
 import Forge from "./pages/Projects/forge";
 import Goomer from "./pages/Projects/goomer";
 import Rumbazo from "./pages/Projects/rumbazo";
+import Mosaic from "./pages/Projects/mosaic";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
@@ -48,6 +49,10 @@ function App() {
                     <Route
                         path='/rumbazo'
                         element={<Rumbazo />}
+                    />
+                    <Route
+                        path='/mosaic'
+                        element={<Mosaic />}
                     />
                     <Route
                         path='/projects'
