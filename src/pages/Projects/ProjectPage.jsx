@@ -187,8 +187,14 @@ const ProjectPage = () => {
         {
             id: 5,
             image: "/mosaic/mosaic-cover.png",
-            tags: ["brand design", "ux/ui", "frontend", "motion"],
+            tags: ["product design", "ux/ui", "frontend"],
             href: "/mosaic",
+        },
+        {
+            id: 6,
+            image: "/brewly/brewly-cover.png",
+            tags: ["ux/ui", "frontend"],
+            href: "/brewly",
         },
     ];
 

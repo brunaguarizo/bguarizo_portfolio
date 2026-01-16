@@ -10,8 +10,9 @@ const ProjectsGrid = () => {
         "/askfolio/askfolio.png", // Index 0 - Project1
         "/forge/forge-cover.png", // Index 1 - Project2
         "/goomer/goomer-image7.png", // Index 2 - Goomer
-        "/mosaic/mosaic-cover.png", // Index 4 - Mosaic
-        "/rumbazo/rumbazo-image7.png", // Index 3 - Rumbazo
+        "/mosaic/mosaic-cover.png", // Index 3 - Mosaic
+        "/rumbazo/rumbazo-image7.png", // Index 4 - Rumbazo
+        "/brewly/brewly-cover.png", // Index 5 - Brewly
     ];
 
     const gridLayout = [
@@ -47,6 +48,8 @@ const ProjectsGrid = () => {
         { col: 3, rowStart: 6, rowSpan: 2, isLarger: false }, // Item 8
         // Row 8-9: Item 4 (col1, row-start-8, row-span-2) - Mosaic
         { col: 1, rowStart: 8, rowSpan: 2, isLarger: false }, // Item 4 - Mosaic
+        // Row 10-11: Item 5 (col2, row-start-10, row-span-2) - Brewly
+        { col: 2, rowStart: 10, rowSpan: 2, isLarger: false }, // Item 5 - Brewly
     ];
 
     const reorganizedImages = projectImages.map((image, index) => ({
@@ -84,6 +87,8 @@ const ProjectsGrid = () => {
                                     ? "/mosaic"
                                     : item.index === 4
                                     ? "/rumbazo"
+                                    : item.index === 5
+                                    ? "/brewly"
                                     : undefined
                             }
                         />

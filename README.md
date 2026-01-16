@@ -2,7 +2,7 @@
 
 ## Technologies
 
--   React 18
+-   React
 -   Vite
 -   JSX
 -   CSS Modules

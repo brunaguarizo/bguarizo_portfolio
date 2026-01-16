@@ -8,6 +8,7 @@ import Forge from "./pages/Projects/forge";
 import Goomer from "./pages/Projects/goomer";
 import Rumbazo from "./pages/Projects/rumbazo";
 import Mosaic from "./pages/Projects/mosaic";
+import Brewly from "./pages/Projects/brewly";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
@@ -53,6 +54,10 @@ function App() {
                     <Route
                         path='/mosaic'
                         element={<Mosaic />}
+                    />
+                    <Route
+                        path='/brewly'
+                        element={<Brewly />}
                     />
                     <Route
                         path='/projects'

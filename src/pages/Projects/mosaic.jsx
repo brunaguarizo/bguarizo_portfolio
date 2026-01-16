@@ -773,8 +773,8 @@ const OnboardingFlow = () => {
         <div 
           className="progress-fill"
           style={{ width: \`\${((currentStep + 1) / steps.length) * 100}%\` }}
-        />
-      </div>
+                />
+            </div>
       
       {renderStep()}
     </div>
