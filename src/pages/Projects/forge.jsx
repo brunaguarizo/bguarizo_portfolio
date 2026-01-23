@@ -444,7 +444,7 @@ const Forge = () => {
                 Forge
             </h1>
             <h2 className={styles.title_details}>
-                Bridging the skilled trades gap through AI-guided exploration.
+            Bridging the skilled trades gap through AI-guided exploration.
             </h2>
 
             <div
@@ -453,23 +453,7 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        Navigating career choices after high school can be
-                        overwhelming, especially when students lack awareness or
-                        face social stigmas regarding skilled trades. To address
-                        this, we developed Forge, an AI-powered career discovery
-                        app, by transforming traditional, text-heavy guidance
-                        into an engaging and interactive experience. This
-                        platform introduces a core feature called AI Career
-                        Simulations, which allows students to virtually
-                        "experience" a day in the life of various trades while
-                        receiving personalized feedback based on their skills
-                        and interests. By breaking down complex certification
-                        steps and highlighting local opportunities in British
-                        Columbia, Forge creates a more transparent and engaging
-                        discovery process. The result is a gamified tool that
-                        empowers students to move from uncertainty to making
-                        confident and informed decisions about their
-                        professional futures.
+                    Navigating career choices after high school can be overwhelming, especially when students lack awareness or face social stigmas regarding skilled trades. To address this, we developed Forge, an AI-powered career discovery app that transforms traditional, text-heavy guidance into an engaging, interactive experience. The platform introduces a core feature called AI Career Simulations, allowing students to virtually "experience" a day in the life of various trades while receiving personalized feedback based on their skills and interests. By breaking down complex certification steps and highlighting local opportunities in British Columbia, Forge creates a more transparent discovery process. The result is a gamified tool that empowers students to move from uncertainty to making confident, informed decisions about their professional futures.
                     </p>
                 </div>
 
@@ -487,8 +471,7 @@ const Forge = () => {
                     </p>
                     <h2 className={styles.section_title}>Team</h2>
                     <p className={styles.section_description}>
-                        A multidisciplinary squad of 8 members <br /> including
-                        Designers and Full-stack Developers.
+                    A multidisciplinary squad of 8 members, <br/>including designers and full-stack developers.
                     </p>
                 </div>
             </div>
@@ -515,61 +498,42 @@ const Forge = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                        By 2028, over 700,000 skilled tradespeople are expected
-                        to retire across Canada, yet the industry faces a
-                        critical lack of new talent. Our research identified
-                        three primary barriers for students:
+                    By 2028, over 700,000 skilled tradespeople are expected to retire across Canada, yet the industry faces a critical lack of new talent. Our research identified three primary barriers for students:
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>Social Stigma:</strong> Trades are often
-                            viewed as "lesser" compared to university paths.
+                            <strong>Social Stigma:</strong> Trades are often viewed as "lesser" compared to university paths.
                         </li>
                         <li>
-                            <strong>Information Overload:</strong> Current
-                            resources are scattered, text-heavy, and difficult
-                            to navigate.
+                            <strong>Information Overload:</strong> Current resources are scattered, text-heavy, and difficult to navigate.
                         </li>
                         <li>
-                            <strong>The "Too Late" Factor:</strong> 89% of
-                            students only discover these pathways when they are
-                            already under pressure to make a final decision.
+                            <strong>The "Too Late" Factor:</strong> 89% of students only discover these pathways when they are already under pressure to make a final decision.
                         </li>
                     </ul>
                     <p className={styles.section_description}>
-                        Our goal was to create a trusted digital guide that
-                        grows with the student, moving from vague curiosity to a
-                        confident, informed career path. We aimed to make career
-                        discovery personalized, engaging, and accessible.
+                    Our goal was to create a trusted digital guide that grows with the student, moving them from vague curiosity to a confident, informed career path. We aimed to make career discovery personalized, engaging, and accessible.
                     </p>
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>
                         Research & Insights
                     </h2>
                     <p className={styles.section_description}>
-                        We conducted a comprehensive study involving 9 survey
-                        participants, secondary research via the Canadian
-                        Apprenticeship Forum, and Reddit forum analysis to
-                        capture real-world frustrations.
+                    We conducted a comprehensive study involving survey participants, secondary research via the Canadian Apprenticeship Forum, and Reddit forum analysis to capture real-world frustrations.
                     </p>
                     <ul
                         ref={secondListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>Accessibility:</strong> 77.8% of
-                            participants struggle to find clear information on
-                            trade job types.
+                            <strong>Accessibility:</strong> 77.8% of participants struggle to find clear information on trade job types.
                         </li>
                         <li>
-                            <strong>Insecurity:</strong> 89% feel overwhelmed by
-                            requirements and certification steps.
+                            <strong>Insecurity:</strong> 89% feel overwhelmed by requirements and certification steps.
                         </li>
                         <li>
-                            <strong> Preference:</strong> Students favor
-                            hands-on, visual learning over traditional
-                            government websites.
+                            <strong> Preference:</strong> Students favor hands-on, visual learning over traditional government websites.
                         </li>
                     </ul>
                 </div>
@@ -602,18 +566,7 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Process</h2>
                     <p className={styles.section_description}>
-                        Forge was developed through an Agile framework of
-                        constant iteration, utilizing daily standups and weekly
-                        execution meetings to align our multidisciplinary squad.
-                        Guided by advisors across design, full-stack, and the
-                        trades industry, we performed competitive analysis and
-                        deep user research, including surveys, secondary
-                        research analysis, until we mapped out a comprehensive
-                        user journey. This workflow progressed from wireframes
-                        and lo-fi sketches through hi-fi prototyping to full
-                        frontend and backend coding . Every feature was
-                        validated through rigorous usability testing before our
-                        final presentation in December 2025.
+                    Forge was developed through an Agile framework of constant iteration, utilizing daily standups and weekly execution meetings to align our multidisciplinary squad. Guided by advisors across design, full-stack development, and the trades industry, we performed competitive analysis and deep user research. This workflow progressed from wireframes and lo-fi sketches through hi-fi prototyping to full frontend and backend coding. Every feature was validated through rigorous usability testing before our final presentation in December 2025.
                     </p>
                 </div>
                 <div className={styles.content}></div>
@@ -660,31 +613,20 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                        Experience before committing. For that, we designed a
-                        brand that embodies optimism, growth, and clarity. The
-                        brand uses a vibrant palette of orange, representing
-                        action and energy, and green for growth and success. The
-                        typography is bold and modern, designed to resonate with
-                        Gen Z while maintaining professional trust. Forge isn't
-                        just an information hub, it has much more to offer:
+                    Experience before committing. To achieve this, we designed a brand that embodies optimism, growth, and clarity. The brand uses a vibrant palette of orange, representing action and energy, and green for growth and success. The typography is bold and modern, designed to resonate with Gen Z while maintaining professional trust. Forge is more than just an information hub; it offers a comprehensive ecosystem:
                     </p>
                     <ul
                         ref={thirdListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>AI Simulation: </strong>Users "play" through
-                            a day in the life of a trade (e.g., an industrial
-                            plumber) to see if it fits their lifestyle.
+                            <strong>AI Simulation: </strong>Users "play" through a day in the life of a trade (e.g., an industrial plumber) to see if it fits their lifestyle.
                         </li>
                         <li>
                             <strong>Gamified Pathways:</strong>
-                            Progress is tracked through milestones, turning
-                            complex certifications into achievable steps.
+                            Progress is tracked through milestones, turning complex certifications into achievable steps.
                         </li>
                         <li>
-                            <strong>Interactive Map: </strong>Connecting
-                            students to local training programs and in-demand
-                            jobs in British Columbia.
+                            <strong>Interactive Map: </strong>Connects students to local training programs and in-demand jobs in British Columbia.
                         </li>
                     </ul>
                 </div>
@@ -742,26 +684,11 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results & Impact</h2>
                     <p className={styles.section_description}>
-                        Presenting Forge at the Telus Theatre (BCIT Burnaby) in
-                        December 2025 served as the ultimate validation of our
-                        mission to humanize the trades. While our initial
-                        research showed that students were often overwhelmed by
-                        broad career categories, our final testing proved that
-                        introducing specific trade subcategorization, such as
-                        distinguishing between Industrial and Commercial roles,
-                        effectively eliminated choice paralysis for our users.
-                        <br /> <br /> The project culminated in a high-stakes
-                        showcase for an audience of over 300 attendees,
-                        including key government and academic figures such as
-                        Mayor Mike Hurley, and several Members of Parliament and
-                        the Legislative Assembly. <br /> <br />
-                        By demonstrating the app's capability to senior
-                        leadership from global tech leaders, we moved beyond a
-                        conceptual prototype to a recognized, viable tool. The
-                        result is a platform that both government officials and
-                        industry experts now view as a critical bridge between
-                        British Columbia’s high schools and the future of
-                        technical institutions.
+                    Presenting Forge at the Telus Theatre, at BCIT-Burnaby, in December 2025 served as the ultimate validation of our mission to humanize the trades. While our initial research showed that students were often overwhelmed by broad career categories, our final testing proved that introducing specific trade subcategorization, such as distinguishing between Industrial and Commercial roles,effectively eliminated choice paralysis for our users.<br/><br/>
+
+The project culminated in a high-stakes showcase for an audience of over 300 attendees, including key government and academic figures such as Mayor Mike Hurley, and several Members of Parliament and the Legislative Assembly.<br/><br/>
+
+By demonstrating the app's capability to senior leadership from global tech giants, we moved beyond a conceptual prototype to a recognized, viable tool. The result is a platform that both government officials and industry experts now view as a critical bridge between British Columbia’s high schools and the future of technical institutions.
                     </p>
                 </div>
             </div>
@@ -801,20 +728,9 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Future Iterations</h2>
                     <p className={styles.section_description}>
-                        Moving forward, we plan to pilot Forge directly within
-                        British Columbia high schools to gather real-world
-                        feedback from students and educators. This phase will
-                        involve iterative usability testing to refine our AI
-                        simulations, ensuring they effectively bridge the gap
-                        between classroom discovery and technical career entry.{" "}
-                        <br /> <br />
-                        Our long-term roadmap expands Forge into an "every-day
-                        app" that supports users throughout their professional
-                        journey. This includes establishing government
-                        partnerships for grant access, launching a mentorship
-                        module to connect students with industry pros, and
-                        developing a career tracker for apprentices to log
-                        certifications and worked hours in real-time.
+                    Moving forward, we plan to pilot Forge directly within British Columbia high schools to gather real-world feedback from students and educators. This phase will involve iterative usability testing to refine our AI simulations, ensuring they effectively bridge the gap between classroom discovery and technical career entry.<br/> <br/>
+
+Our long-term roadmap expands Forge into an "everyday app" that supports users throughout their professional journey. This includes establishing government partnerships for grant access, launching a mentorship module to connect students with industry pros, and developing a career tracker for apprentices to log certifications and hours worked in real-time.
                     </p>
                 </div>
                 <div className={styles.content}></div>
