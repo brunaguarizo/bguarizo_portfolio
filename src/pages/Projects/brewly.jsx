@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import styles from "./Project.module.css";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 import CodeWindow from "../../components/CodeWindow/CodeWindow";
+import Button from "../../components/Button/Button";
 
 const Brewly = () => {
     const titleRef = useRef(null);
@@ -446,7 +447,18 @@ const Brewly = () => {
             </h1>
             <h2 className={styles.title_details}>
             A platform for craft beer enthusiasts.
+
+            <div className={styles.buttons_container}>
+                <a className={styles.link}href='https://app-brewly.vercel.app/' target='_blank'>
+                    Explore the Prototype
+                </a>
+                <a className={styles.link} href='https://github.com/app-brewly/app-brewly' target='_blank'>
+                    View Source Code
+                </a>
+            </div>
             </h2>
+
+          
 
             <div
                 ref={firstSectionRef}
