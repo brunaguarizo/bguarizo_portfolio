@@ -10,8 +10,6 @@
     font-weight: 600;
     line-height: 1.1;
     color: var(--white);
-    margin: 0;
-    padding: 0;
     padding-bottom: var(--spacing-2xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -21,8 +19,6 @@
     font-weight: 600;
     line-height: 1.1;
     color: var(--white);
-    margin: 0;
-    padding: 0;
 }
 
 .content_2col {
@@ -43,30 +39,24 @@
 }
 
 .section_title {
-    font-size: 12px;
+    font-size: var(--font-size-small);
     font-weight: 600;
     color: var(--gray-light);
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
 }
 
 .section_title_2 {
-    font-size: 12px;
+    font-size: var(--font-size-small);
     font-weight: 600;
     color: var(--gray-light);
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
     padding-bottom: var(--spacing-md);
 }
 
 .section_description {
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     line-height: 1.6;
     color: var(--white);
-    margin: 0;
-    padding: 0;
     max-width: 90%;
 }
 
@@ -188,6 +178,7 @@
     text-transform: uppercase;
     font-weight: 600;
     font-family: "Inter", sans-serif;
+    white-space: nowrap;
 }
 
 /* Tablet Styles */

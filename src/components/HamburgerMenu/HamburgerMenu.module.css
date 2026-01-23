@@ -11,13 +11,14 @@
     width: 30px;
     height: 30px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .line {
     width: 25px;
     height: 2px;
     background: var(--white);
-    transition: all var(--transition-normal);
+    transition: transform var(--transition-normal), top var(--transition-normal);
     transform-origin: center;
     position: absolute;
 }

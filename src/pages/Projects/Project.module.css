@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    margin: 0;
     padding: var(--spacing-4xl) var(--spacing-lg);
     box-sizing: border-box;
 }
@@ -10,8 +9,6 @@
     font-weight: 600;
     line-height: 1.1;
     color: var(--white);
-    margin: 0;
-    padding: 0;
     padding-bottom: var(--spacing-lg);
 }
 
@@ -20,8 +17,6 @@
     font-weight: 600;
     line-height: 1.1;
     color: var(--gray-light);
-    margin: 0;
-    padding: 0;
     padding-bottom: var(--spacing-2xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -31,8 +26,6 @@
     font-weight: 600;
     line-height: 1.1;
     color: var(--white);
-    margin: 0;
-    padding: 0;
 }
 
 .content_2col {
@@ -47,7 +40,6 @@
 .content_2col > .image {
     flex: 0 0 calc(50% - var(--spacing-md) / 2);
     width: calc(50% - var(--spacing-md) / 2);
-    margin: 0;
     align-self: flex-start;
 }
 
@@ -66,29 +58,23 @@
 }
 
 .section_title {
-    font-size: 12px;
+    font-size: var(--font-size-small);
     font-weight: 600;
     color: var(--gray-light);
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
 }
 
 .section_description {
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     line-height: 1.6;
     color: var(--white);
-    margin: 0;
-    padding: 0;
     max-width: 90%;
 }
 
 .section_list {
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     line-height: 1.6;
     color: var(--white);
-    margin: 0;
-    padding: 0;
     padding-left: var(--spacing-lg);
     max-width: 90%;
     list-style-type: disc;
@@ -114,8 +100,6 @@
     flex-direction: row;
     gap: var(--spacing-md);
     align-items: flex-start;
-    padding: 0;
-    margin: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;

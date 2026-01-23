@@ -64,8 +64,6 @@
     align-items: center;
     text-align: center;
     gap: var(--spacing-lg);
-    margin: 0;
-    padding: 0;
 }
 
 .title {
@@ -73,8 +71,6 @@
     line-height: 1.1;
     font-weight: 600;
     color: var(--white);
-    margin: 0;
-    padding: 0;
 }
 
 .italicText {
@@ -86,8 +82,6 @@
     font-size: var(--font-size-regular);
     color: var(--white);
     max-width: 700px;
-    margin: 0;
-    padding: 0;
 }
 
 .scroll_button {
@@ -175,8 +169,6 @@
     font-weight: 600;
     color: var(--white);
     line-height: 1.2;
-    margin: 0;
-    padding: 0;
     font-family: "Inter", sans-serif;
 }
 
@@ -315,8 +307,6 @@
 
 /* About Section Styles */
 .about {
-    padding: 0;
-    margin: 0;
     background: var(--black);
     position: relative;
 }
@@ -353,8 +343,6 @@
 
 .about_container {
     width: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: row;
     gap: var(--spacing-3xl);
@@ -369,7 +357,6 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding-left: 0;
     max-width: 600px;
 }
 
@@ -397,7 +384,7 @@
 
 .skill_tag {
     background: var(--gray-very-dark);
-    padding: 10px 19px;
+    padding: 10px var(--spacing-md);
     border-radius: var(--radius-sm);
     font-size: var(--font-size-small);
     color: var(--white);
@@ -428,7 +415,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 8px 0;
+    padding: var(--spacing-xs) 0;
     width: 100%;
 }
 
@@ -461,13 +448,14 @@
 
 .current_badge {
     background: rgba(255, 255, 255, 0.1);
-    padding: 4px 8px;
+    padding: 4px var(--spacing-xs);
     border-radius: var(--radius-sm);
     font-size: 10px;
     color: var(--white);
     text-transform: uppercase;
     font-weight: 600;
     font-family: "Inter", sans-serif;
+    white-space: nowrap;
 }
 
 .button_container {
@@ -479,8 +467,6 @@
     justify-content: flex-end;
     align-items: flex-start;
     flex-shrink: 0;
-    margin-right: 0;
-    padding-right: 0;
 }
 
 .profile_img {
@@ -488,8 +474,7 @@
     height: 600px;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 4px;
-    display: block;
+    border-radius: var(--radius-sm);
 }
 
 @media (max-width: 1024px) {
