@@ -169,7 +169,7 @@ const ProjectPage = () => {
         {
             id: 2,
             image: "/forge/forge-cover.png",
-            tags: ["brand design", "ux/ui"],
+            tags: ["brand design", "ux/ui", "frontend"],
             href: "/forge",
         },
         {
@@ -187,13 +187,13 @@ const ProjectPage = () => {
         {
             id: 5,
             image: "/mosaic/mosaic-cover.png",
-            tags: ["product design", "ux/ui", "frontend"],
+            tags: ["product design", "ux/ui", "frontend", "motion", "brand design"],
             href: "/mosaic",
         },
         {
             id: 6,
             image: "/brewly/brewly-cover.png",
-            tags: ["ux/ui", "frontend"],
+            tags: ["ux/ui", "frontend", "brand design"],
             href: "/brewly",
         },
     ];

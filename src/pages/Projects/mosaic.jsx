@@ -445,6 +445,17 @@ const Mosaic = () => {
                 Mosaic
             </h1>
             <h2 className={styles.title_details}>Building your professional story, piece by piece.
+            <div className={styles.buttons_container}>
+                <a className={styles.link}href='https://mosaic-app-nu.vercel.app/' target='_blank'>
+                    Explore the Prototype
+                </a>
+                <a className={styles.link} href='https://github.com/brunaguarizo/mosaic_app' target='_blank'>
+                    View Source Code
+                </a>
+                <a className={styles.link} href='https://mosaicstyleguide.vercel.app/' target='_blank'>
+                   Check the Style Guide
+                </a>
+            </div>
             </h2>
 
             <div

@@ -445,6 +445,12 @@ const Forge = () => {
             </h1>
             <h2 className={styles.title_details}>
             Bridging the skilled trades gap through AI-guided exploration.
+            <div className={styles.buttons_container}>
+               
+                <a className={styles.link} href='https://github.com/orgs/Forge-IDSP/repositories' target='_blank'>
+                    View Source Code
+                </a>
+            </div>
             </h2>
 
             <div
