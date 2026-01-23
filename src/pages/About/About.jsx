@@ -285,13 +285,7 @@ const AboutMe = () => {
                 <div className={styles.content}>
                     <h2 ref={sectionTitleRef} className={styles.section_title}>Hey there!</h2>
                     <p ref={sectionDescriptionRef} className={styles.section_description}>
-                        I'm Bruna Guarizo, a Brazilian multidisciplinary
-                        designer and frontend developer based in Vancouver. I
-                        believe that truly and impactful design creates
-                        meaningful connections between brands and people. I
-                        bridge the gap between concept and reality, combining
-                        strategic design with technical precision to build
-                        end-to-end digital products.
+                   I'm Bruna Guarizo, a multidisciplinary designer and frontend developer based in Vancouver. I believe that impactful design creates meaningful connections between brands and people. By combining strategic branding with technical precision, I bridge the gap between concept and reality to build seamless, end-to-end digital products.
                     </p>
                     <div ref={skillsRef} className={styles.skills}>
                         {skills.map((skill, index) => (

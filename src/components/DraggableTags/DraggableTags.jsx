@@ -3,16 +3,14 @@ import Matter from "matter-js";
 import styles from "./DraggableTags.module.css";
 
 const TAGS = [
-    "Art History",
-    "Painting",
-    "Handmade Crafts",
-    "Sketching & Doodling",
-    "Video Games",
-    "Music",
-    "Series & Movies",
-    "Board Games",
-    "DIY",
-    "Cooking",
+    "Figma",
+    "Photoshop",
+    "Illustrator",
+    "InDesign",
+    "After Effects",
+    "Premiere Pro",
+   
+    "JavaScript (ES6+)", "HTML5", "CSS3", "React", "Git", "GitHub", "Vercel",  "VS Code", "Webfow", "Wix"
 ];
 
 const DraggableTags = ({ tags = TAGS, title }) => {
@@ -244,7 +242,7 @@ const DraggableTags = ({ tags = TAGS, title }) => {
 
     return (
         <div className={styles.wrapper}>
-            {title && <h2 className={styles.title}>Things I like</h2>}
+            {title && <h2 className={styles.title}>My Tools</h2>}
             <div
                 ref={containerRef}
                 className={styles.tagsContainer}>
