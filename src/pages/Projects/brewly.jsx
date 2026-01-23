@@ -445,7 +445,7 @@ const Brewly = () => {
                 Brewly
             </h1>
             <h2 className={styles.title_details}>
-                A platform for craft beer enthusiasts.
+            A platform for craft beer enthusiasts.
             </h2>
 
             <div
@@ -454,12 +454,7 @@ const Brewly = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        Brewly is a mobile-first web application engineered to
-                        create personalized beer lists fetching data from an
-                        external API. The objective was to build an app with
-                        React’s component-based structure, with a modular
-                        scalable app and work with CRUD operations (create,
-                        delete, retrieve, and update data).
+                    Brewly is an application engineered to create personalized beer lists by fetching data from an external API. The objective was to build a scalable, modular application using React’s component-based structure while implementing full CRUD operations (Create, Read, Update, Delete).
                     </p>
                 </div>
 
@@ -498,50 +493,32 @@ const Brewly = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                        The primary challenge was finding a good beer API, which
-                        had:
+                    Since the primary requirement of the project was fetching data from an API, the challenge was sourcing a reliable API that met three specific criteria:
                     </p>
                     <ul className={styles.section_list}>
                         <li className={styles.section_description}>
-                            Free with no authentication needed
-                        </li>
+Free access (no complex authentication required).                        </li>
                         <li className={styles.section_description}>
-                            High quality images
-                        </li>
+                        High-quality image assets.                        </li>
                         <li className={styles.section_description}>
-                            Beer description and specifications
-                        </li>
+                        Detailed beer descriptions and specifications.                        </li>
                     </ul>
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>
                         Code Architecture & Strategy
                     </h2>
                     <p className={styles.section_description}>
-                        The codebase was structured to prioritize mobile
-                        performance and touch interaction.
+                    The codebase was structured to prioritize mobile performance and touch interaction.
                     </p>
                     <ul>
-                        <li className={styles.section_description}>
-                            <strong>Vite Framework: </strong>Utilized Vite for
-                            lightning-fast builds, ensuring the lightweight
-                            bundle loads instantly on 4G networks typical of
-                            mobile usage.
+                                              <li className={styles.section_description}>
+                            <strong>Modular Components: </strong>Engineered a system of reusable UI building blocks to ensure visual consistency and reduce code duplication. By integrating the classnames utility, I encapsulated complex style logic directly within these components, keeping the parent page logic clean and strictly focused on data flow.
                         </li>
                         <li className={styles.section_description}>
-                            <strong>Modular Component: </strong>Engineered a
-                            system of reusable UI building blocks to ensure
-                            visual consistency and reduce code duplication
-                            across views. By integrating the classnames utility
-                            within these modular components, I encapsulated
-                            complex style logic directly inside the components,
-                            keeping the parent page logic clean and strictly
-                            focused on data flow.
+                            <strong>Routing: </strong>Leveraged React Router to manage navigation without refreshing the page, preserving the "app shell" while content updates dynamically.
                         </li>
                         <li className={styles.section_description}>
-                            <strong>Routing: </strong>Leveraged React Router to
-                            manage navigation without refreshing the page,
-                            preserving the "app shell" while content updates
-                            dynamically.
+                            <strong>Vite Framework: </strong>We utilized Vite for lightning-fast builds, ensuring the lightweight bundle loads instantly on 4G networks typical of mobile usage.
                         </li>
                     </ul>
                 </div>
@@ -556,133 +533,133 @@ const Brewly = () => {
                     <CodeWindow
                         title='services/beerApi.js'
                         language='javascript'
-                        code={`// Beer API Service
-// Fetches beer data from external API endpoints
+                        code={`// Brew Buddy API: https://brewbuddy.dev/
+const API_BASE_URL = "https://brewbuddy.dev/api/v1/beers";
 
-const API_BASE_URL = 'https://api.punkapi.com/v2/beers';
+// Fetch API
+const fetchAPI = async (url) => {
+    try {
+        const response = await fetch(url, {
+            headers: { Accept: "application/json" },
+        });
+
+        if (!response.ok) {
+            throw new Error(\`HTTP error! status: \${response.status}\`);
+        }
+
+        const data = await response.json();
+
+        // Validate that we got an array
+        if (!Array.isArray(data)) {
+            throw new Error("API response is not an array");
+        }
+
+        return data;
+    } catch (error) {
+        // Handle network errors, CORS errors, etc.
+        if (error.name === "TypeError" && error.message.includes("fetch")) {
+            throw new Error(
+                "Network error: Unable to reach the API. Please check your internet connection or CORS settings."
+            );
+        }
+        throw error;
+    }
+};
 
 /**
  * Fetch beers from the API
  * @param {Object} params - Query parameters
+ * @param {number} params.per_page - Number of beers per page
  * @param {number} params.page - Page number
- * @param {number} params.per_page - Items per page
- * @param {string} params.beer_name - Filter by beer name
- * @param {number} params.abv_gt - Filter by ABV greater than
- * @param {number} params.abv_lt - Filter by ABV less than
- * @param {string} params.brewed_before - Filter by brewed before date
- * @param {string} params.brewed_after - Filter by brewed after date
  * @returns {Promise<Array>} Array of beer objects
  */
+
 export const fetchBeers = async (params = {}) => {
-  try {
-    const queryParams = new URLSearchParams();
-    
-    // Add pagination
-    if (params.page) queryParams.append('page', params.page);
-    if (params.per_page) queryParams.append('per_page', params.per_page);
-    
-    // Add filters
-    if (params.beer_name) queryParams.append('beer_name', params.beer_name);
-    if (params.abv_gt) queryParams.append('abv_gt', params.abv_gt);
-    if (params.abv_lt) queryParams.append('abv_lt', params.abv_lt);
-    if (params.brewed_before) queryParams.append('brewed_before', params.brewed_before);
-    if (params.brewed_after) queryParams.append('brewed_after', params.brewed_after);
-    
-    const url = \`\${API_BASE_URL}?\${queryParams.toString()}\`;
-    
-    const response = await fetch(url);
-    
-    if (!response.ok) {
-      throw new Error(\`API Error: \${response.status} \${response.statusText}\`);
+    try {
+        const queryParams = new URLSearchParams();
+
+        if (params.per_page) {
+            queryParams.append("limit", params.per_page);
+        }
+        if (params.page) {
+            queryParams.append(
+                "offset",
+                (params.page - 1) * (params.per_page || 25)
+            );
+        }
+
+        const url = \`\${API_BASE_URL}\${
+            queryParams.toString() ? \`?\${queryParams.toString()}\` : ""
+        }\`;
+
+        const data = await fetchAPI(url);
+        return data;
+    } catch (error) {
+        throw error;
     }
-    
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching beers:', error);
-    throw error;
-  }
 };
 
 /**
  * Fetch a single beer by ID
- * @param {number} id - Beer ID
+ * @param {string} id - Beer ID (UUID)
  * @returns {Promise<Object>} Beer object
  */
 export const fetchBeerById = async (id) => {
-  try {
-    const response = await fetch(\`\${API_BASE_URL}/\${id}\`);
-    
-    if (!response.ok) {
-      throw new Error(\`API Error: \${response.status} \${response.statusText}\`);
+    try {
+        // The API doesn't support direct ID, so we fetch in batches
+        let offset = 0;
+        const limit = 50;
+
+        while (true) {
+            const url = \`\${API_BASE_URL}?limit=\${limit}&offset=\${offset}\`;
+            const data = await fetchAPI(url);
+
+            const foundBeer = data.find((beer) => beer.id === id);
+            if (foundBeer) return foundBeer;
+
+            if (data.length < limit) break;
+            offset += limit;
+        }
+
+        throw new Error(\`Beer with ID \${id} not found\`);
+    } catch (error) {
+        throw error;
     }
-    
-    const data = await response.json();
-    return data[0]; // API returns array with single beer
-  } catch (error) {
-    console.error(\`Error fetching beer \${id}:\`, error);
-    throw error;
-  }
 };
 
 /**
- * Fetch random beer
- * @returns {Promise<Object>} Random beer object
+ * Transform API beer data to app format
+ * @param {Object} beer - Beer object from API
+ * @returns {Object} Transformed beer object
  */
-export const fetchRandomBeer = async () => {
-  try {
-    const response = await fetch(\`\${API_BASE_URL}/random\`);
-    
-    if (!response.ok) {
-      throw new Error(\`API Error: \${response.status} \${response.statusText}\`);
-    }
-    
-    const data = await response.json();
-    return data[0];
-  } catch (error) {
-    console.error('Error fetching random beer:', error);
-    throw error;
-  }
-};
+export const transformBeerData = (beer) => {
+    // API stores description/tagline in translations array, get English version
+    const englishTranslation =
+        beer.translations?.find((t) => t.language?.code === "en") ||
+        beer.translations?.[0] ||
+        {};
 
-/**
- * Search beers by name
- * @param {string} searchTerm - Search query
- * @param {number} page - Page number
- * @returns {Promise<Array>} Array of matching beers
- */
-export const searchBeers = async (searchTerm, page = 1) => {
-  return fetchBeers({
-    beer_name: searchTerm,
-    page: page,
-    per_page: 25
-  });
-};
-
-/**
- * Filter beers by ABV range
- * @param {number} minAbv - Minimum ABV
- * @param {number} maxAbv - Maximum ABV
- * @param {number} page - Page number
- * @returns {Promise<Array>} Array of filtered beers
- */
-export const filterBeersByAbv = async (minAbv, maxAbv, page = 1) => {
-  return fetchBeers({
-    abv_gt: minAbv,
-    abv_lt: maxAbv,
-    page: page,
-    per_page: 25
-  });
+    return {
+        id: beer.id,
+        name: beer.name,
+        brewery:
+            beer.brewery?.name ||
+            englishTranslation.slogan ||
+            "Unknown Brewery",
+        tagline: englishTranslation.slogan || "",
+        description: englishTranslation.description || "",
+        image: beer.image?.url || null,
+        abv: beer.abv,
+        ibu: beer.ibu,
+        srm: beer.srm,
+        firstBrewed: beer.released_year?.toString() || null,
+    };
 };`}
                     />
                 </div>
             </div>
 
-            <img
-                src='/brewly/brewly-image3.png'
-                alt='Brewly image'
-                className={styles.image}
-            />
+        
 
             <div
                 ref={thirdSectionRef}
@@ -692,39 +669,21 @@ export const filterBeersByAbv = async (minAbv, maxAbv, page = 1) => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                        <strong>Log In and Sign Up: </strong>Authentication flow
-                        to verify legal drinking age and allow users to create
-                        an account or log in.
+                        <strong>Log In and Sign Up: </strong>An authentication flow that verifies the legal drinking age before allowing users to create an account or log in.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Feed: </strong>Displays beers fetched from an
-                        external API, including images, names, and key
-                        specifications. Implements the Retrieve operation and
-                        showcases data-fetching.
+                        <strong>Feed: </strong>A dynamic feed that displays beers fetched from an external API, including images, names, and key specifications. This feature demonstrates real-time data retrieval.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Filter: </strong>Users can filter beers based on
-                        categories such as style, ABV, and brewery, to enhance
-                        navigation and improve usability.
+                        <strong>Filter: </strong>To enhance navigation and usability, users can filter beers based on categories such as style, ABV, and brewery.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Collections: </strong>Full CRUD functionality to
-                        create personalized beer collections, update collections
-                        and their beers, delete collections or individual beers,
-                        retrieve all stored collections.
+                        <strong>Collections: </strong>Full CRUD functionality allowing users to create personalized beer collections, add/remove beers, and update or delete entire lists.
                     </p>{" "}
                     <p className={styles.section_description}>
-                        <strong>Profile: </strong>Users can view and edit their
-                        profile information, applying update functionality and
-                        improving personalization.
+                        <strong>Profile and Settings: </strong>Users can manage their personal data and view Help/About sections. We implemented React Router here to ensure polished, seamless navigation similar to a native app.
                     </p>
-                    <p className={styles.section_description}>
-                        <strong>Settings: </strong>Includes Help, Security, and
-                        About Us sections. Implements React Router for
-                        navigation and uses a component library to ensure a
-                        polished and consistent UI.
-                    </p>
-                </div>
+                                   </div>
             </div>
 
             <img
@@ -737,73 +696,108 @@ export const filterBeersByAbv = async (minAbv, maxAbv, page = 1) => {
                 <CodeWindow
                     title='components/BeerCard.jsx'
                     language='javascript'
-                    code={`import React from 'react';
-import classNames from 'classnames';
-import styles from './BeerCard.module.css';
+                    code={`import styles from "./BeerCard.module.css";
+import ButtonFav from "../ButtonFav/ButtonFav";
+import ButtonKnowMore from "../ButtonKnowMore/ButtonKnowMore.jsx";
+import beercan from "../../assets/beercan.png";
 
-/**
- * Modular BeerCard component
- * Reusable component for displaying beer information
- * Uses classnames utility for conditional styling
- */
-const BeerCard = ({ 
-  beer, 
-  variant = 'default', 
-  onClick,
-  showDetails = true 
-}) => {
-  const cardClasses = classNames(
-    styles.beerCard,
-    {
-      [styles.beerCardCompact]: variant === 'compact',
-      [styles.beerCardFeatured]: variant === 'featured',
-      [styles.beerCardClickable]: onClick !== undefined
-    }
-  );
+function BeerCard({
+    type,
+    collection_name,
+    onCollectionClick,
+    onKnowMoreClick,
 
-  const handleClick = () => {
-    if (onClick) {
-      onClick(beer);
-    }
-  };
+    // Props from API
+    beerName,
+    brewery,
+    image,
+    beerId,
 
-  return (
-    <div 
-      className={cardClasses}
-      onClick={handleClick}
-      role={onClick ? 'button' : undefined}
-      tabIndex={onClick ? 0 : undefined}
-    >
-      <div className={styles.beerImageContainer}>
-        <img 
-          src={beer.image_url || '/placeholder-beer.png'} 
-          alt={beer.name}
-          className={styles.beerImage}
-          loading="lazy"
-        />
-        {beer.abv && (
-          <span className={styles.abvBadge}>
-            {beer.abv}% ABV
-          </span>
-        )}
-      </div>
-      
-      <div className={styles.beerInfo}>
-        <h3 className={styles.beerName}>{beer.name}</h3>
-        <p className={styles.beerTagline}>{beer.tagline}</p>
-        
-        {showDetails && (
-          <div className={styles.beerDetails}>
-            <span className={styles.beerStyle}>{beer.style}</span>
-            {beer.ibu && (
-              <span className={styles.beerIbu}>IBU: {beer.ibu}</span>
+    //Favorite Props
+    isFavorited,
+    onFavClick,
+}) {
+    return (
+        <div>
+            {type === "feed" && (
+                <div className={styles.card_container}>
+                    <img
+                        src={image || beercan}
+                        alt={beerName || "Beer can"}
+                        className={styles.card_image}
+                    />
+                    <div className={styles.card_text}>
+                        <h3 className={styles.card_title}>
+                            {beerName || "Beer not available"}
+                        </h3>
+                        <p className={styles.card_subtitle}>
+                            {brewery || "Brewery not available."}
+                        </p>
+                    </div>
+                    <div className={styles.button_container}>
+                        <ButtonFav
+                            onClick={onFavClick}
+                            isFavorited={isFavorited}
+                        />
+
+                        <ButtonKnowMore onClick={onKnowMoreClick} />
+                    </div>
+                </div>
             )}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
+            {type === "collections" && (
+                <div
+                    className={styles.collection_container}
+                    onClick={onCollectionClick}
+                    style={{ cursor: "pointer" }}>
+                    <img
+                        src={image || beercan}
+                        alt='Beer can'
+                        className={styles.card_image}
+                    />
+                    <div className={styles.card_text}>
+                        <h3 className={styles.card_title}>{collection_name}</h3>
+                    </div>
+                </div>
+            )}
+            {type === "collection info" && (
+                <div className={styles.card_container}>
+                    <img
+                        src={image || beercan}
+                        alt={beerName || "Beer can"}
+                        className={styles.card_image}
+                    />
+                    <div className={styles.card_text}>
+                        <h3 className={styles.card_title}>
+                            {beerName || "Beer name"}
+                        </h3>
+                        <p className={styles.card_subtitle}>
+                            {brewery || "Brewery name"}
+                        </p>
+                    </div>
+                    <div className={styles.button_container}>
+                        <ButtonKnowMore onClick={onKnowMoreClick} />
+                    </div>
+                </div>
+            )}
+            {type === "scroll" && (
+                <div
+                    className={styles.scroll_container}
+                    onClick={onCollectionClick}
+                    style={{
+                        cursor: onCollectionClick ? "pointer" : "default",
+                    }}>
+                    <img
+                        src={image || beercan}
+                        alt='Beer can'
+                        className={styles.scroll_image}
+                    />
+
+                    <h3 className={styles.scroll_title}>{collection_name}</h3>
+                </div>
+            )}
+        </div>
+    );
+}
 
 export default BeerCard;`}
                 />
@@ -825,19 +819,7 @@ export default BeerCard;`}
                         Results and Code Quality
                     </h2>
                     <p className={styles.section_description}>
-                        Brewly meets all project requirements through an
-                        engaging, mobile-first interface that begins with a
-                        secure authentication flow for age verification. The
-                        core experience is powered by a dynamic Feed that
-                        fetches data from an external API, allowing users to
-                        explore beer specifications with the aid of smart
-                        filters for style, ABV, and brewery. Beyond discovery,
-                        we implemented full CRUD functionality within the
-                        Collections feature, enabling users to create, update,
-                        and delete personalized lists, while the Profile and
-                        Settings sections utilize React Router to provide
-                        seamless, app-like navigation and comprehensive user
-                        data management.
+                    Brewly meets all project requirements through an engaging, mobile-first interface. The core experience is powered by a robust data-fetching strategy, allowing users to explore beer specifications with the aid of smart filters. Beyond discovery, the implementation of full CRUD functionality within the "Collections" feature and the seamless navigation provided by React Router demonstrates a command of complex state management and modern frontend architecture.
                     </p>
                 </div>
             </div>
