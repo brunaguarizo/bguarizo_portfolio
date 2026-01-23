@@ -444,7 +444,7 @@ const Rumbazo = () => {
                 Rumbazo
             </h1>
             <h2 className={styles.title_details}>
-                The ultimate Latin block party in Las Vegas.
+            The ultimate Latin block party in Las Vegas.
             </h2>
 
             <div
@@ -453,16 +453,7 @@ const Rumbazo = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        Rumbazo is not just a music festival; it is a vibrant
-                        celebration of Latin culture held annually in the heart
-                        of Downtown Las Vegas during Hispanic Heritage Month.
-                        More than a festival, it positions itself as "The
-                        Biggest Latin Block Party of the Year," bringing
-                        together music, art, and culinary experiences. To match
-                        this energy, we developed a brand identity that captures
-                        the heat, rhythm, and diversity of Latin America,
-                        transforming a calendar event into a must-attend
-                        cultural destination.
+                    Rumbazo is not just a music festival; it is a vibrant celebration of Latin culture held annually in the heart of Downtown Las Vegas during Hispanic Heritage Month. More than a festival, it positions itself as "The Biggest Latin Block Party of the Year," bringing together music, art, and culinary experiences. To match this energy, we developed a brand identity that captures the heat, rhythm, and diversity of Latin America, transforming a calendar event into a must-attend cultural destination.
                     </p>
                 </div>
 
@@ -476,8 +467,7 @@ const Rumbazo = () => {
                         Visual Identity
                         <br />
                         Brand Designer
-                        <br />
-                        Brand Strategy
+                     
                     </p>
                     <h2 className={styles.section_title}>Team</h2>
                     <p className={styles.section_description}>
@@ -518,27 +508,16 @@ const Rumbazo = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                        The main challenge was to create a unified visual
-                        language for a culture that is inherently diverse.
-                        "Latin culture" is a mosaic of different colors,
-                        flavors, sounds, and traditions.
+                    The main challenge was to create a unified visual language for a culture that is inherently diverse. "Latin culture" is a mosaic of different colors, flavors, sounds, and traditions.
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>The Complexity: </strong>How do you
-                            represent such a vast mix of cultures without
-                            falling into stereotypes or visual chaos?
+                            <strong>The Complexity: </strong>How do you represent such a vast mix of cultures without falling into stereotypes or visual chaos?
                         </li>
                         <li>
-                            <strong>The Goal: </strong>We needed a brand that
-                            felt inclusive yet specific enough to stand out in
-                            the competitive Las Vegas entertainment landscape.
-                            The identity had to scream "celebration" and
-                            translate the feeling of a street carnival into a
-                            cohesive brand system suitable for large-scale
-                            stages, digital media, and merchandise.
+                            <strong>The Goal: </strong>We needed a brand that felt inclusive yet distinct enough to stand out in the competitive Las Vegas entertainment landscape. The identity had to scream "celebration" and translate the feeling of a street carnival into a cohesive brand system suitable for large-scale stages, digital media, and merchandise.
                         </li>
                     </ul>
 
@@ -546,18 +525,7 @@ const Rumbazo = () => {
 
                     <h2 className={styles.section_title}>Brand Strategy</h2>
                     <p className={styles.section_description}>
-                        Our strategy was anchored in the concept "All parties in
-                        one," born from studying the common threads that unite
-                        Latin festivities across the globe, from the heat of the
-                        sun and street dancing to the vibrant colors of flags
-                        and costumes. To translate this energy, we moved away
-                        from polished, corporate aesthetics to embrace a "raw
-                        and real" vibe, utilizing a design system of organic
-                        shapes inspired by streamers, flames, and feathers to
-                        convey constant movement. This dynamic nature was
-                        reinforced by a high-contrast palette of warm and cold
-                        tones, ensuring the brand felt energetic, loud, and
-                        impossible to ignore.
+                    Our strategy was anchored in the concept "All parties in one." We studied the common threads that unite Latin festivities across the globe, from the heat of the sun and street dancing to the vibrant colors of flags and costumes. To translate this energy, we moved away from polished, corporate aesthetics to embrace a "raw and real" vibe. We utilized a design system of organic shapes inspired by streamers, flames, and feathers to convey constant movement. This dynamic nature was reinforced by a high-contrast palette of warm and cold tones, ensuring the brand felt energetic, loud, and impossible to ignore.
                     </p>
                 </div>
             </div>
@@ -600,18 +568,10 @@ const Rumbazo = () => {
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>The "Block Party" Vibe: </strong>The
-                            graphics were designed to mimic the chaotic beauty
-                            of a street party. We used bold typography that
-                            feels loud and proud, paired with graphical elements
-                            that look like they are dancing.
+                            <strong>The "Block Party" Vibe: </strong>The graphics were designed to mimic the chaotic beauty of a street party. We used bold typography that feels loud and proud, paired with graphical elements that appear to be dancing.
                         </li>
                         <li>
-                            <strong>Scalability: </strong>The system was built
-                            to be flexible, allowing it to wrap everything from
-                            massive stage screens and totem poles to social
-                            media assets and wristbands, ensuring a consistent
-                            immersive experience for attendees
+                            <strong>Scalability: </strong>The system was built to be flexible, allowing it to wrap everything from massive stage screens and totem poles to social media assets and wristbands, ensuring a consistent, immersive experience for attendees.
                         </li>
                     </ul>
                 </div>
@@ -659,34 +619,19 @@ const Rumbazo = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results and Impact</h2>
                     <p className={styles.section_description}>
-                        Since the launch of the new brand, Rumbazo has
-                        solidified its place as a premier event in the Las Vegas
-                        cultural calendar.
+                    Since the launch of the new brand, Rumbazo has solidified its place as a premier event in the Las Vegas cultural calendar.
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>Record Attendance: </strong>The branding
-                            helped drive massive engagement, culminating in the
-                            2024 edition which hit the highest attendance since
-                            its debut, attracting thousands of attendees to the
-                            Downtown Las Vegas Events Center.
+                            <strong>Record Attendance: </strong>The branding helped drive massive engagement, culminating in the 2024 edition which achieved record-breaking attendance numbers, attracting thousands of fans to the Downtown Las Vegas Events Center.
                         </li>
                         <li>
-                            <strong>Major Partnerships: </strong>The strong,
-                            professional brand identity helped secure
-                            high-profile partnerships, including Billboard as
-                            the official media partner and Estrella Jalisco
-                            (Anheuser-Busch) as the presenting sponsor.
+                            <strong>Major Partnerships: </strong>The strong, professional brand identity helped secure high-profile partnerships, including Billboard as the official media partner and Estrella Jalisco (Anheuser-Busch) as the presenting sponsor.
                         </li>
                         <li>
-                            <strong>Cultural Landmark: </strong>The festival
-                            successfully established itself as the go-to
-                            destination for Mexican Independence Day weekend,
-                            featuring top-tier artists like Nicky Jam, Maluma,
-                            and Luis R Conriquez, proving that the brand
-                            successfully resonated with its target audience.
+                            <strong>Cultural Landmark: </strong>The festival successfully established itself as the go-to destination for Mexican Independence Day weekend, featuring top-tier artists like Nicky Jam, Maluma, and Luis R Conriquez, proving that the brand resonated deeply with its target audience.
                         </li>
                     </ul>
                 </div>
