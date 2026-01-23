@@ -453,17 +453,7 @@ const Goomer = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        Founded in 2014, Goomer is a technology company
-                        dedicated to helping restaurants achieve excellence in
-                        service. Initially known for its digital menu tablets,
-                        the company evolved to include delivery solutions and QR
-                        Code ordering. However, despite its close relationship
-                        with clients and a "partner-first" philosophy, the brand
-                        had become outdated. It felt functional but "bland,"
-                        failing to reflect the company's vibrant evolution. The
-                        goal was to rebrand Goomer to match its ambition: moving
-                        from a tool provider to an essential growth partner for
-                        food service businesses.
+                    Founded in 2014, Goomer is a technology company dedicated to helping restaurants achieve excellence in service. Initially known for digital menu tablets, the company evolved to include delivery solutions and QR Code ordering. However, despite its close relationship with clients and a "partner-first" philosophy, the brand had become outdated. It felt functional but "bland," failing to reflect the company's vibrant evolution. The goal was to rebrand Goomer to match its ambition: moving from a tool provider to an essential growth partner for food service businesses.
                     </p>
                 </div>
 
@@ -477,8 +467,7 @@ const Goomer = () => {
                         Visual Identity
                         <br />
                         Brand Designer
-                        <br />
-                        Brand Strategy
+                
                     </p>
                     <h2 className={styles.section_title}>Team</h2>
                     <p className={styles.section_description}>
@@ -487,9 +476,9 @@ const Goomer = () => {
                         Motion Design: Douglas Farias <br />
                         Illustration: Robson Fernandez <br />
                         Strategy: Juliana Willhelm, Jéssica Lago, and David
-                        Jozef <br /> Copywriting: Giovanni Ghilardi Project{" "}
+                        Jozef <br /> Copywriting: Giovanni Ghilardi
                         <br />
-                        Management: Patrícia Perrone <br />
+                       Project Management: Patrícia Perrone <br />
                         Agency: Brand Gym
                     </p>
                 </div>
@@ -517,48 +506,26 @@ const Goomer = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                        The primary challenge was a clear misalignment between
-                        identity and reality. Although Goomer was valued by its
-                        customers for its partnership-driven approach, its
-                        visual presentation was cold, purely functional, and
-                        lacked the "seasoning" needed to stand out. This
-                        "blandness" made the brand indistinguishable from
-                        generic tech utilities, failing to reflect its true
-                        value. Our goal was to shift the narrative from a simple
-                        "digital menu app" to a "complete ecosystem for
-                        restaurant success," effectively preparing the company
-                        for a period of aggressive market expansion.
+                    The primary challenge was a clear misalignment between identity and reality. Although Goomer was valued by its customers for its partnership-driven approach, its visual presentation was cold, purely functional, and lacked the "seasoning" needed to stand out. This "blandness" made the brand indistinguishable from generic tech utilities. Our goal was to shift the narrative from a simple "digital menu app" to a "complete ecosystem for restaurant success," effectively preparing the company for a period of aggressive market expansion.
                     </p>
 
                     <div className={styles.space}></div>
 
                     <h2 className={styles.section_title}>Brand Strategy</h2>
                     <p className={styles.section_description}>
-                        Our strategy centered on the insight that Goomer brings
-                        more than just digital orders, it brings people
-                        together. We defined Goomer as the brand that retains
-                        customers and recreates dining experiences.
+                    Our strategy centered on the insight that Goomer brings more than just digital orders; it brings people together. We defined Goomer as a brand that champions the restaurant owner and reimagines the dining experience.
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>The Human Touch: </strong>We brought
-                            humanity to the forefront of both verbal and visual
-                            communication.
+                            <strong>The Human Touch: </strong>We brought humanity to the forefront of both verbal and visual communication.
                         </li>
                         <li>
-                            <strong>The Tagline: </strong>We established the
-                            promise: "The right ingredient for your restaurant
-                            to grow". This positioned Goomer not as a vendor,
-                            but as an essential part of the kitchen's success
-                            formula.
+                            <strong>The Tagline: </strong>We established the promise: "The right ingredient for your restaurant to grow." This positioned Goomer not as a vendor, but as an essential part of the kitchen's success formula.
                         </li>
                         <li>
-                            <strong>Partnership: </strong>The strategy
-                            emphasized that Goomer "sits at the same table" as
-                            the restaurant owner, ready to listen and solve
-                            problems together.
+                            <strong>Partnership: </strong>The strategy emphasized that Goomer "sits at the same table" as the restaurant owner, ready to listen and solve problems together.
                         </li>
                     </ul>
                 </div>
@@ -599,27 +566,18 @@ const Goomer = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                        We added spice to every touchpoint:
-                    </p>
+                    We added spice to every touchpoint:                    </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>Visual Identity: </strong>We developed a new
-                            logo that is friendlier and more approachable.
+                            <strong>Visual Identity: </strong>We developed a new logo that is friendlier and more approachable.
                         </li>
                         <li>
-                            <strong>Illustration System: </strong> We created a
-                            fun, vibrant illustration style that depicts the
-                            chaotic, passionate reality of restaurant owners and
-                            staff.
+                            <strong>Illustration System: </strong> We created a fun, vibrant illustration style that depicts the chaotic, passionate reality of restaurant owners and staff.
                         </li>
                         <li>
-                            <strong>Tone of Voice: </strong>The communication
-                            became warmer and more empathetic, using culinary
-                            metaphors ("seasoning," "ingredients") to speak the
-                            same language as the chefs and entrepreneurs we
-                            serve.
+                            <strong>Tone of Voice: </strong>The communication became warmer and more empathetic, using culinary metaphors ("seasoning," "ingredients") to speak the same language as the chefs and entrepreneurs we serve.
                         </li>
                     </ul>
                 </div>
@@ -685,33 +643,19 @@ const Goomer = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results and Impact</h2>
                     <p className={styles.section_description}>
-                        The rebranding was a pivotal moment that prepared Goomer
-                        for massive scale. Shortly after the new brand identity
-                        was implemented, Goomer solidified its position as a
-                        market leader in Brazil.
+                    The rebranding was a pivotal moment that prepared Goomer for massive scale. Shortly after the new brand identity was implemented, Goomer solidified its position as a market leader in Brazil.
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>Strategic Funding: </strong>The new
-                            professional and cohesive brand helped validate the
-                            company's vision to investors, contributing to a
-                            successful Series A funding round of R$ 15 million
-                            led by Bridge One and Domo Invest in 2021.
+                            <strong>Strategic Funding: </strong>The new professional and cohesive brand helped validate the company's vision to investors, contributing to a successful Series A funding round of R$ 15 million led by Bridge One and Domo Invest in 2021.
                         </li>
                         <li>
-                            <strong>Market Expansion: </strong> The rebrand
-                            supported a period of hyper-growth. By 2023, Goomer
-                            had expanded to serve over 160,000 restaurants
-                            across Brazil, managing millions of orders annually.
+                            <strong>Market Expansion: </strong>The rebrand supported a period of hyper-growth. By 2023, Goomer had expanded to serve over 160,000 restaurants across Brazil, managing millions of orders annually.
                         </li>
                         <li>
-                            <strong>Consolidation: </strong> The strength of the
-                            new brand played a role in Goomer's ability to
-                            acquire competitors and assert dominance in the
-                            digital menu sector, proving that the "right
-                            ingredient" was indeed the key to growth.
+                            <strong>Consolidation: </strong>The strength of the new brand played a key role in Goomer's ability to acquire competitors and assert dominance in the digital menu sector, proving that the "right ingredient" was indeed the key to growth.
                         </li>
                     </ul>
                 </div>
