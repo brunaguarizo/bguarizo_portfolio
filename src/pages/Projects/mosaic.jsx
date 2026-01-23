@@ -444,8 +444,7 @@ const Mosaic = () => {
                 className={styles.title}>
                 Mosaic
             </h1>
-            <h2 className={styles.title_details}>
-                Building your professional story, piece by piece.
+            <h2 className={styles.title_details}>Building your professional story, piece by piece.
             </h2>
 
             <div
@@ -454,19 +453,7 @@ const Mosaic = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        For junior designers and developers, the biggest hurdle
-                        to landing a job is often the lack of a robust
-                        portfolio. They have the skills, but without real
-                        clients, they lack the "ammunition", such as the
-                        context, constraints, and content, needed to build
-                        impressive case studies. Mosaic is a web application
-                        designed to solve this "experience paradox." It
-                        functions as an interactive brief generator that
-                        constructs realistic project scenarios based on the
-                        user's answers. By simulating a real client
-                        relationship, Mosaic provides the tailored content and
-                        requirements users need to create meaningful projects
-                        and showcase their true potential.
+                    For junior designers and developers, the biggest hurdle to landing a job is often the lack of a robust portfolio. They have the skills, but without real clients, they lack the "ammunition", which means context, constraints, and content, needed to build impressive case studies. Mosaic is a web application designed to solve this "experience paradox." It functions as an interactive brief generator that constructs realistic project scenarios based on the user's answers. By simulating a real client relationship, Mosaic provides the tailored content and requirements users need to showcase their true potential.
                     </p>
                 </div>
 
@@ -511,7 +498,7 @@ const Mosaic = () => {
                         student portfolios.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>The "Lorem Ipsum" Trap:</strong> Without a real
+                        <strong>"Lorem Ipsum":</strong> Without a real
                         brief, personal projects often look superficial,
                         focusing only on visuals without solving a user problem.
                     </p>
@@ -530,17 +517,7 @@ const Mosaic = () => {
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>Brand Strategy</h2>
                     <p className={styles.section_description}>
-                        The strategy was anchored in the concept of "pieces of a
-                        whole," reflecting the idea that just as a mosaic is
-                        composed of individual fragments, a successful career is
-                        built project by project. Our positioning focused on
-                        empowerment, specifically "giving ammunition" to the
-                        user by providing the necessary tools and scenarios to
-                        execute their best work, rather than doing it for them.
-                        This philosophy translated visually into a grid layout
-                        within the UI, representing the diversity of challenges
-                        and illustrating how distinct skills stack together to
-                        form a complete, robust professional profile.
+                        The strategy was anchored in the concept of "pieces of a whole," reflecting the idea that just as a mosaic is composed of individual fragments, a successful career is built project by project. Our positioning focused on empowerment, specifically "giving ammunition" to the user by providing the necessary tools to execute their best work. This philosophy translated visually into a grid layout within the UI, representing the diversity of challenges and illustrating how distinct skills stack together to form a robust professional profile.
                     </p>
                 </div>
             </div>
@@ -592,25 +569,14 @@ const Mosaic = () => {
                         design challenges.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Interactive Scenarios:</strong> Instead of a
-                        static list of prompts, the app guides the user through
-                        a questionnaire (e.g., "What industry interests you?",
-                        "Do you want to practice Mobile or Web design?").
+                        <strong>Interactive Scenarios:</strong> Instead of a static list of prompts, the app guides the user through a questionnaire (e.g., "What industry interests you?", "Do you want to practice Mobile or Web design?").
                     </p>
 
                     <p className={styles.section_description}>
-                        <strong>The "Brief" Engine:</strong> Based on these
-                        answers, the app generates a detailed "Client Case,"
-                        complete with a company backstory, a specific problem
-                        statement, target audience data, and project
-                        constraints.
+                        <strong>The "Brief" Engine:</strong> Based on these answers, the app generates a detailed "Client Case," complete with a company backstory, a specific problem statement, target audience data, and project constraints.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Outcome:</strong> This gives the user a solid
-                        foundation to start their project immediately, ensuring
-                        their final portfolio piece is grounded in a realistic
-                        business context rather than abstract ideas.
-                    </p>
+                        <strong>Outcome:</strong> This gives the user a solid foundation to start their project immediately, ensuring their final portfolio piece is grounded in a realistic business context rather than abstract ideas.</p>
                 </div>
             </div>
 
@@ -653,9 +619,7 @@ const Mosaic = () => {
                         Technical Implementation
                     </h2>
                     <p className={styles.section_description}>
-                        Built with Next.js and React, Mosaic leverages modern
-                        web technologies to deliver a seamless user experience.
-                        Here's a glimpse into our codebase:
+                    Built with Next.js and React, Mosaic leverages modern web technologies to deliver a seamless user experience. Below is a glimpse into the logic behind our onboarding flow and project generation hooks:
                     </p>
                 </div>
             </div>
@@ -670,118 +634,101 @@ const Mosaic = () => {
                 <CodeWindow
                     title='components/OnboardingFlow.jsx'
                     language='javascript'
-                    code={`'use client';
+                    code={`"use client";
+import StatusBar from "@/app/_ui/StatusBar/StatusBar";
+import { useRouter } from "next/navigation";
+import styles from "./StepOne.module.css";
+import Image from "next/image";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+export default function Home() {
+    const router = useRouter();
+    const handleNext = () => {
+        router.replace("/Onboarding/StepTwo");
+    };
+    const handleSkip = () => {
+        router.replace("/SignIn/SignIn");
+    };
 
-const OnboardingFlow = () => {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const router = useRouter();
-
-  // Step One: Industry Selection
-  const stepOne = {
-    id: 'industry',
-    title: 'Step One: Choose Your Industry',
-    question: 'What industry interests you?',
-    options: ['Tech', 'Healthcare', 'Finance', 'E-commerce', 'Education']
-  };
-
-  // Step Two: Platform Selection
-  const stepTwo = {
-    id: 'platform',
-    title: 'Step Two: Select Platform',
-    question: 'Do you want to practice Mobile or Web design?',
-    options: ['Mobile', 'Web', 'Both']
-  };
-
-  // Step Three: Experience Level
-  const stepThree = {
-    id: 'experience',
-    title: 'Step Three: Experience Level',
-    question: 'What level of complexity are you looking for?',
-    options: ['Beginner', 'Intermediate', 'Advanced']
-  };
-
-  // Step Four: Project Type
-  const stepFour = {
-    id: 'projectType',
-    title: 'Step Four: Project Type',
-    question: 'What type of project do you want to work on?',
-    options: ['Landing Page', 'Dashboard', 'Mobile App', 'E-commerce', 'SaaS']
-  };
-
-  const steps = [stepOne, stepTwo, stepThree, stepFour];
-
-  const handleAnswer = (stepId, answer) => {
-    setAnswers(prev => ({ ...prev, [stepId]: answer }));
-    
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(prev => prev + 1);
-    } else {
-      // Generate brief based on all answers
-      generateBrief({ ...answers, [stepId]: answer });
-    }
-  };
-
-  const generateBrief = async (userAnswers) => {
-    // Call API to generate personalized brief
-    const response = await fetch('/api/generate-brief', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userAnswers)
-    });
-    
-    const brief = await response.json();
-    router.push(\`/brief/\${brief.id}\`);
-  };
-
-  const renderStep = () => {
-    const step = steps[currentStep];
-    
     return (
-      <div className="step-container">
-        <div className="step-header">
-          <h3>{step.title}</h3>
-          <span className="step-indicator">
-            {currentStep + 1} / {steps.length}
-          </span>
-        </div>
-        
-        <div className="question-card">
-          <h2>{step.question}</h2>
-          <div className="options-grid">
-            {step.options.map((option) => (
-              <button
-                key={option}
-                onClick={() => handleAnswer(step.id, option)}
-                className="option-button"
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  };
+        <div className={styles.container}>
+            {/* Status Bar */}
+            <StatusBar />
+            <button
+                className={styles.skipButton}
+                onClick={handleSkip}>
+                Skip
+                <svg
+                    className={styles.icon}
+                    width='13'
+                    height='15'
+                    viewBox='0 0 13 15'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M4.59999 7.5L0.724994 2.075C0.491661 1.74167 0.462494 1.39583 0.637494 1.0375C0.812494 0.679167 1.10833 0.5 1.52499 0.5C1.69166 0.5 1.84999 0.5375 1.99999 0.6125C2.14999 0.6875 2.26666 0.791667 2.34999 0.925L7.04999 7.5L2.34999 14.075C2.26666 14.2083 2.14999 14.3125 1.99999 14.3875C1.84999 14.4625 1.69166 14.5 1.52499 14.5C1.12499 14.5 0.833327 14.3208 0.649994 13.9625C0.466661 13.6042 0.491661 13.2583 0.724994 12.925L4.59999 7.5ZM10.55 7.5L6.67499 2.075C6.44166 1.74167 6.41249 1.39583 6.58749 1.0375C6.76249 0.679167 7.05833 0.5 7.47499 0.5C7.64166 0.5 7.79999 0.5375 7.94999 0.6125C8.09999 0.6875 8.21666 0.791667 8.29999 0.925L13 7.5L8.29999 14.075C8.21666 14.2083 8.09999 14.3125 7.94999 14.3875C7.79999 14.4625 7.64166 14.5 7.47499 14.5C7.07499 14.5 6.78333 14.3208 6.59999 13.9625C6.41666 13.6042 6.44166 13.2583 6.67499 12.925L10.55 7.5Z'
+                        fill='#2B5FFC'
+                    />
+                </svg>
+            </button>
 
-  return (
-    <div className="onboarding-container">
-      <div className="progress-bar">
-        <div 
-          className="progress-fill"
-          style={{ width: \`\${((currentStep + 1) / steps.length) * 100}%\` }}
-                />
+            {/* Illustration */}
+            <div className={styles.illustration}>
+                <div className={styles.illustrationWrapper}>
+                    <Image
+                        src='/onboarding/Image_01.png'
+                        quality={100}
+                        unoptimized={true}
+                        width={361}
+                        height={460}
+                        alt='Graphics'
+                    />
+                </div>
             </div>
-      
-      {renderStep()}
-    </div>
-  );
-};
 
-export default OnboardingFlow;`}
+            {/* Progress Dots */}
+            <div className={styles.dots}>
+                <span className={styles.dot + " " + styles.active}></span>
+                <span className={styles.dot}></span>
+                <span className={styles.dot}></span>
+                <span className={styles.dot}></span>
+            </div>
+
+            {/* Content */}
+            <div className={styles.content}>
+                <h1 className={styles.title}>
+                    Build your portfolio,
+                    <br />
+                    step by step
+                </h1>
+                <p className={styles.text}>
+                    Easily create a professional portfolio with
+                    <br /> our guided process. Follow clear steps <br />
+                    to showcase your skills, projects, and experience
+                    effortlessly.
+                </p>
+            </div>
+
+            {/* Arrows */}
+            <button
+                className={styles.nextButton}
+                onClick={handleNext}>
+                <div style={{ width: "45px" }}></div>
+                <svg
+                    className={styles.right}
+                    width='44'
+                    height='52'
+                    viewBox='0 0 44 52'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M17.2929 35.2929C17.6834 35.6834 18.3166 35.6834 18.7071 35.2929L27.2929 26.7071C27.6834 26.3166 27.6834 25.6834 27.2929 25.2929L18.7071 16.7071C18.3166 16.3166 17.6834 16.3166 17.2929 16.7071L16.9321 17.0679C16.5416 17.4584 16.5416 18.0916 16.9321 18.4821L24.45 26L16.9321 33.5179C16.5416 33.9084 16.5416 34.5416 16.9321 34.9321L17.2929 35.2929Z'
+                        fill='currentColor'
+                    />
+                </svg>
+            </button>
+        </div>
+    );
+}`}
                 />
             </div>
 
@@ -794,115 +741,7 @@ export default OnboardingFlow;`}
                 className={styles.image}
             />
 
-            <div>
-                <CodeWindow
-                    title='hooks/useCreateProject.js'
-                    language='javascript'
-                    code={`'use client';
-
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-
-export const useCreateProject = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const router = useRouter();
-
-  const createProject = async (projectData) => {
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      // Step 1: Validate project data
-      const validatedData = validateProjectData(projectData);
-      
-      // Step 2: Generate project brief
-      const brief = await generateBrief(validatedData);
-      
-      // Step 3: Create project record
-      const response = await fetch('/api/projects', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...validatedData,
-          brief: brief,
-          createdAt: new Date().toISOString()
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to create project');
-      }
-
-      const project = await response.json();
-      
-      // Step 4: Save to user's project list
-      await saveToUserProjects(project.id);
-      
-      // Step 5: Navigate to project page
-      router.push(\`/projects/\${project.id}\`);
-      
-      return project;
-    } catch (err) {
-      setError(err.message);
-      throw err;
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const validateProjectData = (data) => {
-    const required = ['industry', 'platform', 'experience', 'projectType'];
-    const missing = required.filter(field => !data[field]);
-    
-    if (missing.length > 0) {
-      throw new Error(\`Missing required fields: \${missing.join(', ')}\`);
-    }
-    
-    return {
-      industry: data.industry,
-      platform: data.platform,
-      experience: data.experience,
-      projectType: data.projectType,
-      preferences: data.preferences || {}
-    };
-  };
-
-  const generateBrief = async (data) => {
-    const response = await fetch('/api/generate-brief', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    
-    if (!response.ok) {
-      throw new Error('Failed to generate brief');
-    }
-    
-    return await response.json();
-  };
-
-  const saveToUserProjects = async (projectId) => {
-    const userProjects = JSON.parse(
-      localStorage.getItem('userProjects') || '[]'
-    );
-    
-    userProjects.push({
-      id: projectId,
-      addedAt: new Date().toISOString()
-    });
-    
-    localStorage.setItem('userProjects', JSON.stringify(userProjects));
-  };
-
-  return {
-    createProject,
-    isLoading,
-    error
-  };
-};`}
-                />
-            </div>
+            
 
             <div
                 ref={fourthSectionRef}
@@ -911,28 +750,16 @@ export const useCreateProject = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results and Impact</h2>
                     <p className={styles.section_description}>
-                        The project successfully validated the need for
-                        structured practice in the design community.
+                    The project successfully validated the need for structured practice in the design community.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>User Validation:</strong> Usability testing
-                        showed that users felt more confident starting a project
-                        when given specific constraints. The "randomized client"
-                        feature was cited as a key motivator to break creative
-                        blocks.
+                        <strong>User Validation:</strong> Usability testing showed that users felt more confident starting a project when given specific constraints. The "randomized client" feature was cited as a key motivator to break creative blocks.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Functional Prototype:</strong> The application
-                        was fully developed and deployed using Next.js,
-                        demonstrating not just a design concept but a working
-                        tool that processes user logic to output dynamic
-                        content.
+                        <strong>Functional Prototype:</strong> The application was fully developed and deployed using Next.js, demonstrating not just a design concept but a working tool that processes user logic to output dynamic content.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Skill Showcase:</strong> Beyond the tool itself,
-                        the development of Mosaic served as its own case study,
-                        proving my ability to build a full-stack application
-                        from concept to deployment.
+                        <strong>Skill Showcase:</strong> Beyond the tool itself, the development of Mosaic served as its own case study, proving the ability to build a full-stack application from concept to deployment.
                     </p>
                 </div>
             </div>
@@ -949,11 +776,7 @@ export const useCreateProject = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Future Iterations</h2>
                     <p className={styles.section_description}>
-                        Future plans include coding the backend integrating an
-                        AI API to generate infinite unique client personas and
-                        adding a "Community Showcase" where users can upload and
-                        compare how different designers solved the exact same
-                        Mosaic brief.
+                    Future plans include integrating an AI API into the backend to generate infinite, unique client personas. We also aim to add a "Community Showcase," allowing users to upload their work and compare how different designers solved the exact same Mosaic brief.
                     </p>
                 </div>
                 <div className={styles.content}></div>
