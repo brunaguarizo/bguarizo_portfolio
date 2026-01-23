@@ -453,15 +453,7 @@ const Askfolio = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        In a world of information overload, finding specific,
-                        reliable answers can be frustrating. Ask Folio arrived
-                        at Brand Gym with a unique business model for the
-                        Brazilian market: a platform offering 15-minute video
-                        calls to solve daily doubts with specialists—from
-                        veterinarians and nutritionists to financial
-                        consultants. The result is a brand identity that
-                        transforms the anxiety of the unknown into the relief of
-                        finding a quick, intuitive, and trustworthy answer.
+                    In a world of information overload, finding specific, reliable answers can be frustrating. Askfolio came to Brand Gym with a unique business model for the Brazilian market: a platform offering 15-minute video calls to solve everyday questions with specialists—from veterinarians and nutritionists to financial consultants. The result is a brand identity that transforms the anxiety of the unknown into the relief of finding a quick, intuitive, and trustworthy answer.
                     </p>
                 </div>
 
@@ -474,7 +466,6 @@ const Askfolio = () => {
                     <p className={styles.section_description}>
                         Visual Identity
                         <br /> Brand Designer
-                        <br /> Brand Strategy <br />
                     </p>
                     <h2 className={styles.section_title}>Team</h2>
                     <p className={styles.section_description}>
@@ -512,38 +503,25 @@ const Askfolio = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                        The primary challenge was positioning a new category of
-                        service in the Brazilian market. We needed to create a
-                        visual and verbal universe that could simultaneously
-                        appeal to two different fronts:
+                    The primary challenge was positioning a new category of service in the Brazilian market. We needed to create a visual and verbal universe that could appeal to two distinct audiences simultaneously:
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>For Users: </strong>It needed to promise
-                            relief and speed "answers in minutes".
+                            <strong>For Users: </strong>It needed to promise relief and speed, "answers in minutes."
                         </li>
                         <li>
-                            <strong>For Experts:</strong> It needed to signal
-                            professionalism and a viable business opportunity.
-                            The goal was to move away from the coldness of
-                            search engines and humanize the experience of
-                            finding answers, positioning the brand as the bridge
-                            between a doubt and a solution.
+                            <strong>For Experts:</strong> It needed to signal professionalism and a viable business opportunity.
                         </li>
                     </ul>
+                    <p className={styles.section_description}>
+                    The goal was to move away from the coldness of search engines and humanize the experience of finding answers, positioning the brand as the bridge between a question and a solution.
+                    </p>
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>Brand Strategy</h2>
                     <p className={styles.section_description}>
-                        Our strategy focused on the emotional core of the
-                        product: Relief. We identified that the true value of
-                        Ask Folio wasn't just the video call itself, but the
-                        feeling of "opening a window" to an expert precisely
-                        when a doubt arises. We combined the Naming strategy
-                        with the brand narrative to highlight this immediate
-                        value proposition—the comfort of having a specialized
-                        answer crafted just for you, exactly when you need it.
+                    Our strategy focused on the emotional core of the product: Relief. We identified that the true value of Askfolio wasn't just the video call itself, but the feeling of "opening a window" to an expert precisely when a need arises. We aligned the Naming strategy with the brand narrative to highlight this immediate value proposition, which isthe comfort of having a specialized answer crafted just for you, exactly when you need it.
                     </p>
                 </div>
             </div>
@@ -569,8 +547,7 @@ const Askfolio = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                        We designed a visual identity that embodies the concepts
-                        of "opening windows" and "establishing connections."
+                    We designed a visual identity that embodies the concepts of "opening windows" and "establishing connections."
                     </p>
                     <ul
                         ref={firstListRef}
@@ -646,14 +623,7 @@ const Askfolio = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results and Impact</h2>
                     <p className={styles.section_description}>
-                        The final identity successfully captures the essence of
-                        "opening a window" to knowledge. By visualizing the
-                        concept of quick connections, the branding transmits the
-                        idea that expert help is always just a few clicks away.
-                        The visual system is flexible enough to span various
-                        categories—from pet care to finance—while maintaining a
-                        unified look that communicates speed, intuition, and
-                        reliability.
+                    The final identity successfully captures the essence of "opening a window" to knowledge. By visualizing the concept of quick connections, the branding conveys the idea that expert help is always just a few clicks away. The visual system is flexible enough to span various categories, from pet care to finance, while maintaining a unified look that communicates speed, intuition, and reliability.
                     </p>
                 </div>
             </div>
