@@ -98,7 +98,7 @@ const ProjectsGrid = () => {
                     <Link
                         to='/projects'
                         className={styles.allProjectsLink}>
-                        See More
+                        See All
                     </Link>
                 </div>
             </div>

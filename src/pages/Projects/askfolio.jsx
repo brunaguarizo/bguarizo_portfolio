@@ -444,7 +444,7 @@ const Askfolio = () => {
                 Askfolio
             </h1>
             <h2 className={styles.title_details}>
-                Connecting Users to Instant Expert Advice.
+                Connecting users to instant expert advice.
             </h2>
 
             <div

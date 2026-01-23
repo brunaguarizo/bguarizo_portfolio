@@ -305,11 +305,7 @@ const Home = () => {
                             <p
                                 ref={descriptionRef}
                                 className={styles.description}>
-                                Hey there, I'm Bruna, a brand and graphic
-                                designer with almost 10 years of experience
-                                transitioning into frontend development and
-                                product design, to deliver end-to-end
-                                experiences.
+                               A brand and graphic designer with almost 10 years of experience, transitioning into frontend development and product design.
                             </p>
                             <button
                                 ref={scrollButtonRef}
@@ -352,14 +348,7 @@ const Home = () => {
                         <p
                             ref={aboutDescriptionRef}
                             className={styles.about_description}>
-                            I'm Bruna Guarizo, a Brazilian multidisciplinary
-                            designer transitioning into frontend development and
-                            product design based in Vancouver. I believe that
-                            impactful design creates meaningful connections
-                            between brands and people. I bridge the gap between
-                            concept and reality, combining strategic design with
-                            technical precision to deliver end-to-end digital
-                            products.
+                            Hey there! I'm Bruna Guarizo, a multidisciplinary designer and frontend developer based in Vancouver. I believe that impactful design creates meaningful connections between brands and people. By combining strategic branding with technical precision, I bridge the gap between concept and reality to build seamless, end-to-end digital products.
                         </p>
                         <div
                             ref={skillsRef}

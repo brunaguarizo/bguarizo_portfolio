@@ -445,7 +445,7 @@ const Mosaic = () => {
                 Mosaic
             </h1>
             <h2 className={styles.title_details}>
-                Bridging the skilled trades gap through AI-guided exploration.
+                Building your professional story, piece by piece.
             </h2>
 
             <div
