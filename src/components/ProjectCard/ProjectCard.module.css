@@ -94,6 +94,12 @@
     font-family: "Inter", sans-serif;
 }
 
+.projectTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
 .projectTag {
     display: inline-block;
     background: rgba(255, 255, 255, 0.15);
@@ -182,6 +188,10 @@
 
     .projectDescription {
         font-size: var(--font-size-small);
+    }
+
+    .projectTags {
+        gap: 6px;
     }
 
     .projectTag {

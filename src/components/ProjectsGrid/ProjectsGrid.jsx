@@ -11,37 +11,38 @@ const ProjectsGrid = () => {
             image: "/askfolio/askfolio.png",
             title: "Askfolio",
             description: "Quick video calls with specialists",
-            tag: "Brand Design",
+            tags: ["Brand Design"],
         },
         {
             image: "/forge/forge-cover.png",
             title: "Forge",
-            description: "Brand identity and visual system",
-            tag: "Brand Design",
+            description: "AI-powered career discovery app for trades",
+            tags: ["Brand Design", "UX/UI Design", "Frontend"],
         },
         {
             image: "/goomer/goomer-image7.png",
             title: "Goomer",
-            description: "Food delivery platform redesign",
-            tag: "Brand Design",
+            description: "Food digital menu platform for restaurants",
+            tags: ["Brand Design"],
         },
         {
             image: "/mosaic/mosaic-cover.png",
             title: "Mosaic",
-            description: "Product design and development",
-            tag: "Product Design",
+            description:
+                "Interactive brief generator app for juniors’ portfolio",
+            tags: ["UX/UI Design", "Frontend", "Motion", "Brand Design"],
         },
         {
             image: "/rumbazo/rumbazo-image7.png",
             title: "Rumbazo",
-            description: "Music festival brand identity",
-            tag: "Brand Design",
+            description: "Las Vegas Latin music festival",
+            tags: ["Brand Design"],
         },
         {
             image: "/brewly/brewly-cover.png",
             title: "Brewly",
-            description: "Craft beer discovery platform",
-            tag: "UX/UI",
+            description: "Craft beer discovery app",
+            tags: ["Frontend", "UX/UI Design", "Brand Design"],
         },
     ];
 
@@ -100,7 +101,7 @@ const ProjectsGrid = () => {
                             image={item.image}
                             title={item.title}
                             description={item.description}
-                            tag={item.tag}
+                            tags={item.tags}
                             index={item.index}
                             col={item.col}
                             rowStart={item.rowStart}

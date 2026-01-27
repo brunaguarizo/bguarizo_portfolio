@@ -7,7 +7,7 @@ const ProjectCard = ({
     image,
     title,
     description,
-    tag,
+    tags = [],
     index,
     col,
     rowStart,
@@ -46,8 +46,14 @@ const ProjectCard = ({
                 {description && (
                     <p className={styles.projectDescription}>{description}</p>
                 )}
-                {tag && (
-                    <span className={styles.projectTag}>{tag}</span>
+                {tags && tags.length > 0 && (
+                    <div className={styles.projectTags}>
+                        {tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className={styles.projectTag}>
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 )}
             </div>
             <div className={styles.projectButtonWrapper}>
