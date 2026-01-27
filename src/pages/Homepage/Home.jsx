@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "./Home.module.css";
 import WavyBackground from "../../components/WavyBackground/WavyBackground";
 import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
 import Button from "../../components/Button/Button";
+import SwitchButton from "../../components/SwitchButton/SwitchButton";
 
 const Home = () => {
+    const [filterMode, setFilterMode] = useState("design");
     // Refs for elements that will be animated
     const heroRef = useRef(null);
     const projectsRef = useRef(null);
@@ -301,11 +303,12 @@ const Home = () => {
                                 className={styles.title}>
                                 Connecting brands <br />
                                 to people through <br />
-                                <span className={styles.italicText}>
-                                    design
-                                </span>{" "}
-                                and{" "}
-                                <span className={styles.italicText}>code.</span>
+                                <SwitchButton
+                                    value={filterMode}
+                                    onChange={setFilterMode}
+                                    leftLabel="design"
+                                    rightLabel="code"
+                                />
                             </h1>
 
                             {/* <button
@@ -333,7 +336,7 @@ const Home = () => {
                 </WavyBackground>
             </section>
             <div ref={projectsRef}>
-                <ProjectsGrid />
+                <ProjectsGrid filterMode={filterMode} />
             </div>
             <section
                 ref={aboutRef}

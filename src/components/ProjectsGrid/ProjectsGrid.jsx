@@ -5,7 +5,7 @@ import { images } from "../../assets/images";
 import Button from "../Button/Button";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
-const ProjectsGrid = () => {
+const ProjectsGrid = ({ filterMode = "design" }) => {
     const projects = [
         {
             image: "/askfolio/askfolio.png",
@@ -17,7 +17,7 @@ const ProjectsGrid = () => {
             image: "/forge/forge-cover.png",
             title: "Forge",
             description: "AI-powered career discovery app for trades",
-            tags: ["Brand Design", "UX/UI Design", "Frontend"],
+            tags: ["UX/UI Design", "Frontend"],
         },
         {
             image: "/goomer/goomer-image7.png",
@@ -42,7 +42,7 @@ const ProjectsGrid = () => {
             image: "/brewly/brewly-cover.png",
             title: "Brewly",
             description: "Craft beer discovery app",
-            tags: ["Frontend", "UX/UI Design", "Brand Design"],
+            tags: ["Frontend", "UX/UI Design"],
         },
     ];
 
@@ -83,11 +83,54 @@ const ProjectsGrid = () => {
         { col: 2, rowStart: 10, rowSpan: 2, isLarger: false }, // Item 5 - Brewly
     ];
 
-    const reorganizedProjects = projects.map((project, index) => ({
-        ...project,
-        index: index,
-        ...gridLayout[index],
-    }));
+    // Filter projects based on filterMode
+    const designProjects = projects.filter((project) => {
+        return project.tags.some((tag) => {
+            const tagLower = tag.toLowerCase();
+            return (
+                tagLower.includes("brand design") || tagLower === "brand design"
+            );
+        });
+    });
+
+    const codeProjects = projects.filter((project) => {
+        return project.tags.some((tag) => {
+            const tagLower = tag.toLowerCase();
+            return tagLower.includes("frontend") || tagLower === "frontend";
+        });
+    });
+
+    // Select projects based on filterMode
+    const selectedProjects =
+        filterMode === "design" ? designProjects : codeProjects;
+
+    // Ensure we always show a multiple of 3 projects to avoid incomplete rows
+    // If we have less than 3 projects, show all. Otherwise, show the largest multiple of 3
+    const projectsToShow =
+        selectedProjects.length < 3
+            ? selectedProjects.length
+            : Math.floor(selectedProjects.length / 3) * 3;
+    const filteredProjects = selectedProjects.slice(0, projectsToShow);
+
+    // Map selected projects to the original grid layout positions
+    // Only map as many projects as we have, without repetition
+    const reorganizedProjects = filteredProjects.map(
+        (project, projectIndex) => {
+            // Use the layout from gridLayout, but only for available projects
+            const layout = gridLayout[projectIndex] || gridLayout[0];
+
+            // Find the original index in the full projects array
+            const originalProjectIndex = projects.findIndex(
+                (p) => p.image === project.image,
+            );
+
+            return {
+                ...project,
+                index: originalProjectIndex,
+                ...layout,
+            };
+        },
+    );
 
     return (
         <section

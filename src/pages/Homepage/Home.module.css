@@ -71,6 +71,11 @@
     line-height: 1.1;
     font-weight: 600;
     color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
 }
 
 .italicText {
