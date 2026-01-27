@@ -27,7 +27,11 @@ const Header = () => {
                             : ""
                     }`}
                     onClick={() => setIsMenuOpen(false)}>
-                    <img src="/bg logo.svg" alt="bguarizo logo" className={`${styles.logo_image} ${styles.logo_size}`} />
+                    <img
+                        src='/bg logo.svg'
+                        alt='bguarizo logo'
+                        className={`${styles.logo_image} ${styles.logo_size}`}
+                    />
                 </Link>
                 <ul
                     className={`${styles.nav_list} ${
@@ -56,6 +60,17 @@ const Header = () => {
                             onClick={() => setIsMenuOpen(false)}>
                             About Me
                         </Link>
+                    </li>
+
+                    <li>
+                        <a
+                            className={styles.nav_link}
+                            href='https://github.com/brunaguarizo'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            onClick={() => setIsMenuOpen(false)}>
+                            GitHub
+                        </a>
                     </li>
 
                     <li>

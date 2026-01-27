@@ -101,7 +101,7 @@ const Home = () => {
                         duration: 1,
                         stagger: 0.2,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
 
@@ -124,7 +124,7 @@ const Home = () => {
                             end: "top 50%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -149,7 +149,7 @@ const Home = () => {
                                 start: "top 80%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
 
@@ -173,7 +173,7 @@ const Home = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
 
@@ -197,7 +197,7 @@ const Home = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
 
@@ -221,7 +221,7 @@ const Home = () => {
                                 start: "top 80%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -254,7 +254,7 @@ const Home = () => {
                                 start: "top 80%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -267,7 +267,7 @@ const Home = () => {
         return () => {
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
-                    trigger.kill()
+                    trigger.kill(),
                 );
             }
         };
@@ -291,6 +291,11 @@ const Home = () => {
                         <div
                             className={styles.content}
                             ref={heroRef}>
+                            <p
+                                ref={descriptionRef}
+                                className={styles.description}>
+                                A multidisciplinary designer based in Vancouver
+                            </p>
                             <h1
                                 ref={titleRef}
                                 className={styles.title}>
@@ -302,12 +307,8 @@ const Home = () => {
                                 and{" "}
                                 <span className={styles.italicText}>code.</span>
                             </h1>
-                            <p
-                                ref={descriptionRef}
-                                className={styles.description}>
-                               A brand and graphic designer with almost 10 years of experience, transitioning into frontend development and product design.
-                            </p>
-                            <button
+
+                            {/* <button
                                 ref={scrollButtonRef}
                                 className={styles.scroll_button}
                                 onClick={scrollToProjects}
@@ -326,7 +327,7 @@ const Home = () => {
                                         strokeLinejoin='round'
                                     />
                                 </svg>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </WavyBackground>
@@ -348,7 +349,13 @@ const Home = () => {
                         <p
                             ref={aboutDescriptionRef}
                             className={styles.about_description}>
-                            Hey there! I'm Bruna Guarizo, a multidisciplinary designer and frontend developer based in Vancouver. I believe that impactful design creates meaningful connections between brands and people. By combining strategic branding with technical precision, I bridge the gap between concept and reality to build seamless, end-to-end digital products.
+                            Hey there! I'm Bruna Guarizo, a multidisciplinary
+                            designer and frontend developer based in Vancouver.
+                            I believe that impactful design creates meaningful
+                            connections between brands and people. By combining
+                            strategic branding with technical precision, I
+                            bridge the gap between concept and reality to build
+                            seamless, end-to-end digital products.
                         </p>
                         <div
                             ref={skillsRef}

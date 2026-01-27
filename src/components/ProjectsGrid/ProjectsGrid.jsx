@@ -6,13 +6,43 @@ import Button from "../Button/Button";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 const ProjectsGrid = () => {
-    const projectImages = [
-        "/askfolio/askfolio.png", // Index 0 - Project1
-        "/forge/forge-cover.png", // Index 1 - Project2
-        "/goomer/goomer-image7.png", // Index 2 - Goomer
-        "/mosaic/mosaic-cover.png", // Index 3 - Mosaic
-        "/rumbazo/rumbazo-image7.png", // Index 4 - Rumbazo
-        "/brewly/brewly-cover.png", // Index 5 - Brewly
+    const projects = [
+        {
+            image: "/askfolio/askfolio.png",
+            title: "Askfolio",
+            description: "Quick video calls with specialists",
+            tag: "Brand Design",
+        },
+        {
+            image: "/forge/forge-cover.png",
+            title: "Forge",
+            description: "Brand identity and visual system",
+            tag: "Brand Design",
+        },
+        {
+            image: "/goomer/goomer-image7.png",
+            title: "Goomer",
+            description: "Food delivery platform redesign",
+            tag: "Brand Design",
+        },
+        {
+            image: "/mosaic/mosaic-cover.png",
+            title: "Mosaic",
+            description: "Product design and development",
+            tag: "Product Design",
+        },
+        {
+            image: "/rumbazo/rumbazo-image7.png",
+            title: "Rumbazo",
+            description: "Music festival brand identity",
+            tag: "Brand Design",
+        },
+        {
+            image: "/brewly/brewly-cover.png",
+            title: "Brewly",
+            description: "Craft beer discovery platform",
+            tag: "UX/UI",
+        },
     ];
 
     const gridLayout = [
@@ -52,8 +82,8 @@ const ProjectsGrid = () => {
         { col: 2, rowStart: 10, rowSpan: 2, isLarger: false }, // Item 5 - Brewly
     ];
 
-    const reorganizedImages = projectImages.map((image, index) => ({
-        image: image,
+    const reorganizedProjects = projects.map((project, index) => ({
+        ...project,
         index: index,
         ...gridLayout[index],
     }));
@@ -64,10 +94,13 @@ const ProjectsGrid = () => {
             className={styles.projects}>
             <div className={styles.container}>
                 <div className={styles.grid}>
-                    {reorganizedImages.map((item) => (
+                    {reorganizedProjects.map((item) => (
                         <ProjectCard
                             key={item.index}
                             image={item.image}
+                            title={item.title}
+                            description={item.description}
+                            tag={item.tag}
                             index={item.index}
                             col={item.col}
                             rowStart={item.rowStart}
@@ -80,16 +113,16 @@ const ProjectsGrid = () => {
                                 item.index === 0
                                     ? "/askfolio"
                                     : item.index === 1
-                                    ? "/forge"
-                                    : item.index === 2
-                                    ? "/goomer"
-                                    : item.index === 3
-                                    ? "/mosaic"
-                                    : item.index === 4
-                                    ? "/rumbazo"
-                                    : item.index === 5
-                                    ? "/brewly"
-                                    : undefined
+                                      ? "/forge"
+                                      : item.index === 2
+                                        ? "/goomer"
+                                        : item.index === 3
+                                          ? "/mosaic"
+                                          : item.index === 4
+                                            ? "/rumbazo"
+                                            : item.index === 5
+                                              ? "/brewly"
+                                              : undefined
                             }
                         />
                     ))}

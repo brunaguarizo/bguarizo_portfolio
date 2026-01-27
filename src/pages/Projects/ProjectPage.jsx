@@ -41,7 +41,7 @@ const ProjectPage = () => {
                         y: 0,
                         duration: 1,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
 
@@ -65,7 +65,7 @@ const ProjectPage = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -89,7 +89,7 @@ const ProjectPage = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -111,7 +111,7 @@ const ProjectPage = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
         };
@@ -123,7 +123,7 @@ const ProjectPage = () => {
         return () => {
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
-                    trigger.kill()
+                    trigger.kill(),
                 );
             }
         };
@@ -150,7 +150,7 @@ const ProjectPage = () => {
                         duration: 0.6,
                         stagger: 0.05,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
         }
@@ -187,7 +187,13 @@ const ProjectPage = () => {
         {
             id: 5,
             image: "/mosaic/mosaic-cover.png",
-            tags: ["product design", "ux/ui", "frontend", "motion", "brand design"],
+            tags: [
+                "product design",
+                "ux/ui",
+                "frontend",
+                "motion",
+                "brand design",
+            ],
             href: "/mosaic",
         },
         {
@@ -203,8 +209,8 @@ const ProjectPage = () => {
             ? projects
             : projects.filter((project) =>
                   project.tags.some(
-                      (tag) => tag.toLowerCase() === selectedTag.toLowerCase()
-                  )
+                      (tag) => tag.toLowerCase() === selectedTag.toLowerCase(),
+                  ),
               );
 
     return (

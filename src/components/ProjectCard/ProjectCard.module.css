@@ -29,8 +29,13 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-    opacity: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 40%,
+        transparent 70%
+    );
+    opacity: 1;
     transition: opacity var(--transition-normal);
     z-index: 1;
     pointer-events: none;
@@ -52,12 +57,57 @@
     transform: translate(-50%, -50%);
     filter: grayscale(1);
     border-radius: var(--radius-sm);
-    transition: filter var(--transition-normal), transform var(--transition-normal);
+    transition:
+        filter var(--transition-normal),
+        transform var(--transition-normal);
 }
 
 .projectItem:hover .projectImage {
     filter: grayscale(0);
-    transform: translate(-50%, -50%) scale(1.10);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.projectInfo {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    z-index: 5;
+    pointer-events: none;
+    transition: transform var(--transition-normal);
+}
+
+.projectTitle {
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    color: var(--white);
+    margin: 0 0 var(--spacing-xs) 0;
+    font-family: "Inter", sans-serif;
+}
+
+.projectDescription {
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    color: var(--white);
+    margin: 0 0 var(--spacing-sm) 0;
+    line-height: 1.3;
+    font-family: "Inter", sans-serif;
+}
+
+.projectTag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 4px var(--spacing-xs);
+    border-radius: var(--radius-sm);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+}
+
+.projectItem:hover .projectInfo {
+    transform: translateY(calc(-1 * (var(--spacing-md) + 50px)));
 }
 
 .projectButtonWrapper {
@@ -76,7 +126,9 @@
 .projectButtonWrapper button {
     width: 100%;
     opacity: 0;
-    transition: opacity var(--transition-normal), box-shadow var(--transition-normal);
+    transition:
+        opacity var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
 .projectItem:hover .projectButtonWrapper button {
@@ -91,7 +143,8 @@
 }
 
 @keyframes borderGlow {
-    0%, 100% {
+    0%,
+    100% {
         box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 30px 6px;
     }
     50% {
@@ -113,6 +166,27 @@
 
     .projectItem::before {
         opacity: 1;
+    }
+
+    .projectInfo {
+        bottom: calc(var(--spacing-md) + 50px);
+    }
+
+    .projectItem:hover .projectInfo {
+        transform: translateY(calc(-1 * (var(--spacing-md) + 50px)));
+    }
+
+    .projectTitle {
+        font-size: 12px;
+    }
+
+    .projectDescription {
+        font-size: var(--font-size-small);
+    }
+
+    .projectTag {
+        font-size: 10px;
+        padding: 3px var(--spacing-xs);
     }
 
     .projectButtonWrapper {
