@@ -424,17 +424,17 @@ const Home = () => {
                     className={styles.wavy_content}>
                     <div className={styles.contact_container}>
                         <div className={styles.contact_content}>
+                            <p
+                                ref={contactDescriptionRef}
+                                className={styles.description}>
+                                Let's combine strategy and code to bring your
+                                vision to life
+                            </p>
                             <h2
                                 ref={contactTitleRef}
                                 className={styles.contact_title}>
                                 Ready to build impactful digital products?
                             </h2>
-                            <p
-                                ref={contactDescriptionRef}
-                                className={styles.description}>
-                                Let's combine strategy and code to bring your
-                                vision to life.
-                            </p>
 
                             <div ref={contactButtonRef}>
                                 <Button

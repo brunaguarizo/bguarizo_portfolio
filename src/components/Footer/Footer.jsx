@@ -28,7 +28,6 @@ const Footer = () => {
                         className={styles.socialLink}>
                         LinkedIn
                     </a>
-                    <span className={styles.separator}>|</span>
 
                     <span className={styles.separator}>|</span>
                     <a
