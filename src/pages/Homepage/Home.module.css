@@ -3,7 +3,7 @@
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     overflow: visible;
     width: 100vw;
@@ -22,7 +22,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
+    height: 150px;
     background: linear-gradient(to bottom, transparent, var(--black));
     z-index: 1;
     pointer-events: none;
@@ -71,6 +71,11 @@
     line-height: 1.1;
     font-weight: 600;
     color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
 }
 
 .italicText {
@@ -79,9 +84,10 @@
 }
 
 .description {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-medium);
     color: var(--white);
     max-width: 700px;
+    text-transform: uppercase;
 }
 
 .scroll_button {
@@ -174,7 +180,7 @@
 
 @media (max-width: 1024px) {
     .hero {
-        min-height: 100vh;
+        min-height: 75vh;
         padding-top: calc(var(--spacing-3xl) + 100px);
         padding-bottom: var(--spacing-xl);
     }
@@ -212,11 +218,11 @@
     }
 
     .hero {
-        min-height: 100vh;
+        min-height: 70vh;
         margin-left: calc(-1 * var(--spacing-sm));
         margin-right: calc(-1 * var(--spacing-sm));
         padding-top: calc(var(--spacing-2xl) + 80px);
-        padding-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
     }
 
     .container {

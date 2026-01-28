@@ -5,6 +5,9 @@ import { ProjectButton } from "../Button/Button";
 
 const ProjectCard = ({
     image,
+    title,
+    description,
+    tags = [],
     index,
     col,
     rowStart,
@@ -35,9 +38,24 @@ const ProjectCard = ({
         <>
             <img
                 src={image}
-                alt={`Project ${index + 1}`}
+                alt={title || `Project ${index + 1}`}
                 className={styles.projectImage}
             />
+            <div className={styles.projectInfo}>
+                {title && <h3 className={styles.projectTitle}>{title}</h3>}
+                {description && (
+                    <p className={styles.projectDescription}>{description}</p>
+                )}
+                {tags && tags.length > 0 && (
+                    <div className={styles.projectTags}>
+                        {tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className={styles.projectTag}>
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                )}
+            </div>
             <div className={styles.projectButtonWrapper}>
                 <ProjectButton />
             </div>

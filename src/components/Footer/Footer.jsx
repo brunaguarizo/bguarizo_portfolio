@@ -14,20 +14,21 @@ const Footer = () => {
                 </a>
                 <div className={styles.socialLinks}>
                     <a
+                        href='/Bruna_Guarizo-Resume.pdf'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={styles.socialLink}>
+                        Resume
+                    </a>
+                    <span className={styles.separator}>|</span>
+                    <a
                         href='https://www.linkedin.com/in/brunaguarizo'
                         target='_blank'
                         rel='noopener noreferrer'
                         className={styles.socialLink}>
                         LinkedIn
                     </a>
-                    <span className={styles.separator}>|</span>
-                    <a
-                        href='https://github.com/brunaguarizo'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className={styles.socialLink}>
-                        GitHub
-                    </a>
+
                     <span className={styles.separator}>|</span>
                     <a
                         href='https://www.behance.net/bguarizo'
