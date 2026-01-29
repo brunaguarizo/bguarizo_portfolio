@@ -3,11 +3,18 @@ import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 import { ProjectButton } from "../Button/Button";
 
+const defaultProjectContent = {
+    image: "/askfolio/askfolio.png",
+    title: "Askfolio",
+    description: "Quick video calls with specialists",
+    tags: ["Brand Design"],
+};
+
 const ProjectCard = ({
-    image,
-    title,
-    description,
-    tags = [],
+    image = defaultProjectContent.image,
+    title = defaultProjectContent.title,
+    description = defaultProjectContent.description,
+    tags = defaultProjectContent.tags,
     index,
     col,
     rowStart,
@@ -18,14 +25,30 @@ const ProjectCard = ({
     isMiddleThirdRow,
     href,
     simpleLayout = false,
+    compactLayout = false,
+    onClick,
 }) => {
+    const scrollToTop = () => {
+        if (typeof window !== "undefined") {
+            window.scrollTo({ top: 0, behavior: "auto" });
+        }
+    };
+
+    const handleClick = (event) => {
+        scrollToTop();
+        if (onClick) {
+            onClick(event);
+        }
+    };
     const isInternalLink = href && !href.startsWith("http");
     const linkProps = {
         className: `${styles.projectItem} ${
             isLarger ? styles.largerCard : ""
         } ${isMiddleFirstRow ? styles.middleFirstRow : ""} ${
             isMiddleSecondRow ? styles.middleSecondRow : ""
-        } ${isMiddleThirdRow ? styles.middleThirdRow : ""}`,
+        } ${isMiddleThirdRow ? styles.middleThirdRow : ""} ${
+            compactLayout ? styles.compact : ""
+        }`,
         style: simpleLayout
             ? {}
             : {
@@ -66,6 +89,7 @@ const ProjectCard = ({
         return (
             <Link
                 to={href}
+                onClick={handleClick}
                 {...linkProps}>
                 {content}
             </Link>
@@ -77,6 +101,7 @@ const ProjectCard = ({
             href={href || "https://www.behance.net/"}
             target={href ? undefined : "_blank"}
             rel={href ? undefined : "noopener noreferrer"}
+            onClick={handleClick}
             {...linkProps}>
             {content}
         </a>

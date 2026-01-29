@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import styles from "./ProjectPage.module.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Button from "../../components/Button/Button";
+import { projectsData } from "../../data/projectsData";
 
 const ProjectPage = () => {
     const [selectedTag, setSelectedTag] = useState("all");
@@ -158,51 +159,7 @@ const ProjectPage = () => {
 
     const tags = ["all", "brand design", "UX/UI", "frontend", "motion"];
 
-    // Mock data - you can replace with real data
-    const projects = [
-        {
-            id: 1,
-            image: "/askfolio/askfolio.png",
-            tags: ["brand design"],
-            href: "/askfolio",
-        },
-        {
-            id: 2,
-            image: "/forge/forge-cover.png",
-            tags: ["brand design", "ux/ui", "frontend"],
-            href: "/forge",
-        },
-        {
-            id: 3,
-            image: "/goomer/goomer-image7.png",
-            tags: ["brand design"],
-            href: "/goomer",
-        },
-        {
-            id: 4,
-            image: "/rumbazo/rumbazo-image7.png",
-            tags: ["brand design"],
-            href: "/rumbazo",
-        },
-        {
-            id: 5,
-            image: "/mosaic/mosaic-cover.png",
-            tags: [
-                "product design",
-                "ux/ui",
-                "frontend",
-                "motion",
-                "brand design",
-            ],
-            href: "/mosaic",
-        },
-        {
-            id: 6,
-            image: "/brewly/brewly-cover.png",
-            tags: ["ux/ui", "frontend", "brand design"],
-            href: "/brewly",
-        },
-    ];
+    const projects = projectsData;
 
     const filteredProjects =
         selectedTag === "all"
@@ -244,6 +201,9 @@ const ProjectPage = () => {
                         <ProjectCard
                             key={project.id}
                             image={project.image}
+                            title={project.title}
+                            description={project.description}
+                            tags={project.tags}
                             index={index}
                             col={1}
                             rowStart={1}
@@ -263,8 +223,7 @@ const ProjectPage = () => {
                     className={styles.cta_section}>
                     <Button
                         onClick={() =>
-                            (window.location.href =
-                                "mailto:b.guarizo@hotmail.com")
+                            (window.location.href = "mailto:guarizob@gmail.com")
                         }>
                         Get in Touch
                     </Button>

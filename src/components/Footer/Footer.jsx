@@ -8,9 +8,9 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <a
-                    href='mailto:b.guarizo@hotmail.com'
+                    href='mailto:guarizob@gmail.com'
                     className={styles.email}>
-                    b.guarizo@hotmail.com
+                    guarizob@gmail.com
                 </a>
                 <div className={styles.socialLinks}>
                     <a

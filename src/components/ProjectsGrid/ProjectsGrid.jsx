@@ -1,50 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectsGrid.module.css";
-import { images } from "../../assets/images";
-import Button from "../Button/Button";
+import { projectsData } from "../../data/projectsData";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 const ProjectsGrid = ({ filterMode = "design" }) => {
-    const projects = [
-        {
-            image: "/askfolio/askfolio.png",
-            title: "Askfolio",
-            description: "Quick video calls with specialists",
-            tags: ["Brand Design"],
-        },
-        {
-            image: "/forge/forge-cover.png",
-            title: "Forge",
-            description: "AI-powered career discovery app for trades",
-            tags: ["UX/UI Design", "Frontend"],
-        },
-        {
-            image: "/goomer/goomer-image7.png",
-            title: "Goomer",
-            description: "Food digital menu platform for restaurants",
-            tags: ["Brand Design"],
-        },
-        {
-            image: "/mosaic/mosaic-cover.png",
-            title: "Mosaic",
-            description:
-                "Interactive brief generator app for juniors’ portfolio",
-            tags: ["UX/UI Design", "Frontend", "Motion", "Brand Design"],
-        },
-        {
-            image: "/rumbazo/rumbazo-image7.png",
-            title: "Rumbazo",
-            description: "Las Vegas Latin music festival",
-            tags: ["Brand Design"],
-        },
-        {
-            image: "/brewly/brewly-cover.png",
-            title: "Brewly",
-            description: "Craft beer discovery app",
-            tags: ["Frontend", "UX/UI Design"],
-        },
-    ];
+    const projects = projectsData;
 
     const gridLayout = [
         // Row 1-2: Item 0 (col1, row-start-2, row-span-2), Item 1 (col2, row-start-1, row-span-3), Item 2 (col3, row-start-2, row-span-2)

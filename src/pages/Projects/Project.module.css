@@ -16,6 +16,7 @@
     font-size: var(--font-size-heading-xl);
     font-weight: 600;
     line-height: 1.1;
+    width: 75%;
     color: var(--white);
     padding-bottom: var(--spacing-2xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -242,8 +243,6 @@
     .title_details {
         padding-bottom: var(--spacing-lg);
     }
-    .subtitle {
-    }
 
     .content_2col {
         gap: var(--spacing-lg);
@@ -290,11 +289,14 @@
 
 @media (max-width: 480px) {
     .title {
+        font-size: var(--font-size-display-sm);
     }
 
     .title_details {
+        font-size: var(--font-size-display-md);
     }
 
     .subtitle {
+        font-size: var(--font-size-display-sm);
     }
 }

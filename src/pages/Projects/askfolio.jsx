@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./Project.module.css";
-import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
+import ProjectsCarousel from "../../components/ProjectsCarousel/ProjectsCarousel";
 
 const Askfolio = () => {
     const titleRef = useRef(null);
@@ -698,15 +698,7 @@ const Askfolio = () => {
                 alt='Askfolio image'
                 className={styles.image}
             />
-
-            <div ref={navigationRef}>
-                <NavigationButtons
-                    prevLink='/'
-                    nextLink='/projects'
-                    prevLabel='Back to Home'
-                    nextLabel='More Projects'
-                />
-            </div>
+            <ProjectsCarousel />
         </div>
     );
 };
