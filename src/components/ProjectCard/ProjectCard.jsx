@@ -25,6 +25,7 @@ const ProjectCard = ({
     isMiddleThirdRow,
     href,
     simpleLayout = false,
+    compactLayout = false,
 }) => {
     const isInternalLink = href && !href.startsWith("http");
     const linkProps = {
@@ -32,7 +33,9 @@ const ProjectCard = ({
             isLarger ? styles.largerCard : ""
         } ${isMiddleFirstRow ? styles.middleFirstRow : ""} ${
             isMiddleSecondRow ? styles.middleSecondRow : ""
-        } ${isMiddleThirdRow ? styles.middleThirdRow : ""}`,
+        } ${isMiddleThirdRow ? styles.middleThirdRow : ""} ${
+            compactLayout ? styles.compact : ""
+        }`,
         style: simpleLayout
             ? {}
             : {

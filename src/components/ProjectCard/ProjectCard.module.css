@@ -13,6 +13,10 @@
     height: 500px;
 }
 
+.projectItem.compact {
+    height: 300px;
+}
+
 .projectItem.middleFirstRow {
     transform: translateY(80px);
 }

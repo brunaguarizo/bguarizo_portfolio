@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import styles from "./ProjectPage.module.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Button from "../../components/Button/Button";
+import { projectsData } from "../../data/projectsData";
 
 const ProjectPage = () => {
     const [selectedTag, setSelectedTag] = useState("all");
@@ -158,57 +159,7 @@ const ProjectPage = () => {
 
     const tags = ["all", "brand design", "UX/UI", "frontend", "motion"];
 
-    const projects = [
-        {
-            id: 1,
-            image: "/askfolio/askfolio.png",
-            title: "Askfolio",
-            description: "Quick video calls with specialists",
-            tags: ["Brand Design"],
-            href: "/askfolio",
-        },
-        {
-            id: 2,
-            image: "/forge/forge-cover.png",
-            title: "Forge",
-            description: "AI-powered career discovery app for trades",
-            tags: ["UX/UI Design", "Frontend"],
-            href: "/forge",
-        },
-        {
-            id: 3,
-            image: "/goomer/goomer-image7.png",
-            title: "Goomer",
-            description: "Food digital menu platform for restaurants",
-            tags: ["Brand Design"],
-            href: "/goomer",
-        },
-        {
-            id: 4,
-            image: "/rumbazo/rumbazo-image7.png",
-            title: "Rumbazo",
-            description: "Las Vegas Latin music festival",
-            tags: ["Brand Design"],
-            href: "/rumbazo",
-        },
-        {
-            id: 5,
-            image: "/mosaic/mosaic-cover.png",
-            title: "Mosaic",
-            description:
-                "Interactive brief generator app for juniors’ portfolio",
-            tags: ["UX/UI Design", "Frontend", "Motion", "Brand Design"],
-            href: "/mosaic",
-        },
-        {
-            id: 6,
-            image: "/brewly/brewly-cover.png",
-            title: "Brewly",
-            description: "Craft beer discovery app",
-            tags: ["Frontend", "UX/UI Design"],
-            href: "/brewly",
-        },
-    ];
+    const projects = projectsData;
 
     const filteredProjects =
         selectedTag === "all"
