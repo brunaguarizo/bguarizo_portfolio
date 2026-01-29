@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import styles from "./Project.module.css";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 import CodeWindow from "../../components/CodeWindow/CodeWindow";
+import { FlatButton } from "../../components/Button/Button";
 
 const Mosaic = () => {
     const titleRef = useRef(null);
@@ -47,7 +48,7 @@ const Mosaic = () => {
                         y: 0,
                         duration: 1,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
 
@@ -71,7 +72,7 @@ const Mosaic = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -95,7 +96,7 @@ const Mosaic = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -119,7 +120,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -144,7 +145,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -169,7 +170,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -193,7 +194,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -217,7 +218,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -243,7 +244,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -269,7 +270,7 @@ const Mosaic = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -294,7 +295,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -318,7 +319,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -344,7 +345,7 @@ const Mosaic = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -374,7 +375,7 @@ const Mosaic = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -397,7 +398,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -431,7 +432,7 @@ const Mosaic = () => {
             window.removeEventListener("load", handleLoad);
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
-                    trigger.kill()
+                    trigger.kill(),
                 );
             }
         };
@@ -444,18 +445,70 @@ const Mosaic = () => {
                 className={styles.title}>
                 Mosaic
             </h1>
-            <h2 className={styles.title_details}>Building your professional story, piece by piece.
-            <div className={styles.buttons_container}>
-                <a className={styles.link}href='https://mosaic-app-nu.vercel.app/' target='_blank'>
-                    Explore the Prototype
-                </a>
-                <a className={styles.link} href='https://github.com/brunaguarizo/mosaic_app' target='_blank'>
-                    View Source Code
-                </a>
-                <a className={styles.link} href='https://mosaicstyleguide.vercel.app/' target='_blank'>
-                   Check the Style Guide
-                </a>
-            </div>
+            <h2 className={styles.title_details}>
+                Building your professional story, piece by piece.
+                <div className={styles.buttons_container}>
+                    <FlatButton
+                        disableGlow
+                        onClick={() =>
+                            window.open(
+                                "https://mosaic-app-nu.vercel.app/",
+                                "_blank",
+                            )
+                        }>
+                        <span>Explore the Prototype</span>
+                        <div className={styles.button_icon}>
+                            <svg
+                                width='20'
+                                height='20'
+                                viewBox='0 0 256 256'>
+                                <path
+                                    fill='white'
+                                    d='M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z'></path>
+                            </svg>
+                        </div>
+                    </FlatButton>
+                    <FlatButton
+                        disableGlow
+                        onClick={() =>
+                            window.open(
+                                "https://github.com/brunaguarizo/mosaic_app",
+                                "_blank",
+                            )
+                        }>
+                        <span>View Source Code</span>
+                        <div className={styles.button_icon}>
+                            <svg
+                                width='20'
+                                height='20'
+                                viewBox='0 0 256 256'>
+                                <path
+                                    fill='white'
+                                    d='M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z'></path>
+                            </svg>
+                        </div>
+                    </FlatButton>
+                    <FlatButton
+                        disableGlow
+                        onClick={() =>
+                            window.open(
+                                "https://mosaicstyleguide.vercel.app/",
+                                "_blank",
+                            )
+                        }>
+                        <span>Check the Style Guide</span>
+                        <div className={styles.button_icon}>
+                            <svg
+                                width='20'
+                                height='20'
+                                viewBox='0 0 256 256'>
+                                <path
+                                    fill='white'
+                                    d='M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z'></path>
+                            </svg>
+                        </div>
+                    </FlatButton>
+                </div>
             </h2>
 
             <div
@@ -464,7 +517,21 @@ const Mosaic = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                    For junior designers and developers, the biggest hurdle to landing a job is often the lack of a robust portfolio. They have the skills, but without real clients, they lack the "ammunition", which means context, constraints, and content, needed to build impressive case studies. Mosaic is a web application designed to solve this "experience paradox." It functions as an interactive brief generator that constructs realistic project scenarios based on the user's answers. By simulating a real client relationship, Mosaic provides the tailored content and requirements users need to showcase their true potential.
+                        For junior designers and developers, the biggest hurdle
+                        to landing a job is often the lack of a robust
+                        portfolio. They have the skills, but without real
+                        clients, they lack the "ammunition", which means
+                        context, constraints, and content, needed to build
+                        impressive case studies.{" "}
+                        <strong>
+                            Mosaic is a web application designed as an
+                            interactive brief generator
+                        </strong>{" "}
+                        that constructs realistic project scenarios based on the
+                        user's answers. By simulating a real client
+                        relationship, Mosaic provides the tailored content and
+                        requirements users need to showcase their true
+                        potential.
                     </p>
                 </div>
 
@@ -509,9 +576,9 @@ const Mosaic = () => {
                         student portfolios.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>"Lorem Ipsum":</strong> Without a real
-                        brief, personal projects often look superficial,
-                        focusing only on visuals without solving a user problem.
+                        <strong>"Lorem Ipsum":</strong> Without a real brief,
+                        personal projects often look superficial, focusing only
+                        on visuals without solving a user problem.
                     </p>
                     <p className={styles.section_description}>
                         <strong>Decision Paralysis:</strong> Emerging
@@ -528,7 +595,19 @@ const Mosaic = () => {
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>Brand Strategy</h2>
                     <p className={styles.section_description}>
-                        The strategy was anchored in the concept of "pieces of a whole," reflecting the idea that just as a mosaic is composed of individual fragments, a successful career is built project by project. Our positioning focused on empowerment, specifically "giving ammunition" to the user by providing the necessary tools to execute their best work. This philosophy translated visually into a grid layout within the UI, representing the diversity of challenges and illustrating how distinct skills stack together to form a robust professional profile.
+                        The strategy was anchored in the concept of "pieces of a
+                        whole," reflecting the idea that just as a mosaic is
+                        composed of individual fragments, a successful career is
+                        built project by project.{" "}
+                        <strong>
+                            Our positioning focused on empowerment, specifically
+                            "giving ammunition" to the user by providing the
+                            necessary tools to execute their best work.
+                        </strong>{" "}
+                        This philosophy translated visually into a grid layout
+                        within the UI, representing the diversity of challenges
+                        and illustrating how distinct skills stack together to
+                        form a robust professional profile.
                     </p>
                 </div>
             </div>
@@ -580,14 +659,25 @@ const Mosaic = () => {
                         design challenges.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Interactive Scenarios:</strong> Instead of a static list of prompts, the app guides the user through a questionnaire (e.g., "What industry interests you?", "Do you want to practice Mobile or Web design?").
+                        <strong>Interactive Scenarios:</strong> Instead of a
+                        static list of prompts, the app guides the user through
+                        a questionnaire (e.g., "What industry interests you?",
+                        "Do you want to practice Mobile or Web design?").
                     </p>
 
                     <p className={styles.section_description}>
-                        <strong>The "Brief" Engine:</strong> Based on these answers, the app generates a detailed "Client Case," complete with a company backstory, a specific problem statement, target audience data, and project constraints.
+                        <strong>The "Brief" Engine:</strong> Based on these
+                        answers, the app generates a detailed "Client Case,"
+                        complete with a company backstory, a specific problem
+                        statement, target audience data, and project
+                        constraints.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Outcome:</strong> This gives the user a solid foundation to start their project immediately, ensuring their final portfolio piece is grounded in a realistic business context rather than abstract ideas.</p>
+                        <strong>Outcome:</strong> This gives the user a solid
+                        foundation to start their project immediately, ensuring
+                        their final portfolio piece is grounded in a realistic
+                        business context rather than abstract ideas.
+                    </p>
                 </div>
             </div>
 
@@ -630,7 +720,10 @@ const Mosaic = () => {
                         Technical Implementation
                     </h2>
                     <p className={styles.section_description}>
-                    Built with Next.js and React, Mosaic leverages modern web technologies to deliver a seamless user experience. Below is a glimpse into the logic behind our onboarding flow and project generation hooks:
+                        <strong>Built with Next.js and React</strong>, Mosaic
+                        leverages modern web technologies to deliver a seamless
+                        user experience. Below is a glimpse into the logic
+                        behind our onboarding flow and project generation hooks:
                     </p>
                 </div>
             </div>
@@ -752,8 +845,6 @@ export default function Home() {
                 className={styles.image}
             />
 
-            
-
             <div
                 ref={fourthSectionRef}
                 className={styles.content_2col}>
@@ -761,16 +852,28 @@ export default function Home() {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results and Impact</h2>
                     <p className={styles.section_description}>
-                    The project successfully validated the need for structured practice in the design community.
+                        The project successfully validated the need for
+                        structured practice in the design community.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>User Validation:</strong> Usability testing showed that users felt more confident starting a project when given specific constraints. The "randomized client" feature was cited as a key motivator to break creative blocks.
+                        <strong>User Validation:</strong> Usability testing
+                        showed that users felt more confident starting a project
+                        when given specific constraints. The "randomized client"
+                        feature was cited as a key motivator to break creative
+                        blocks.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Functional Prototype:</strong> The application was fully developed and deployed using Next.js, demonstrating not just a design concept but a working tool that processes user logic to output dynamic content.
+                        <strong>Functional Prototype:</strong> The application
+                        was fully developed and deployed using Next.js,
+                        demonstrating not just a design concept but a working
+                        tool that processes user logic to output dynamic
+                        content.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Skill Showcase:</strong> Beyond the tool itself, the development of Mosaic served as its own case study, proving the ability to build a full-stack application from concept to deployment.
+                        <strong>Skill Showcase:</strong> Beyond the tool itself,
+                        the development of Mosaic served as its own case study,
+                        proving the ability to build a full-stack application
+                        from concept to deployment.
                     </p>
                 </div>
             </div>
@@ -787,7 +890,12 @@ export default function Home() {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Future Iterations</h2>
                     <p className={styles.section_description}>
-                    Future plans include integrating an AI API into the backend to generate infinite, unique client personas. We also aim to add a "Community Showcase," allowing users to upload their work and compare how different designers solved the exact same Mosaic brief.
+                        Future plans include{" "}
+                        <strong>integrating an AI API</strong> into the backend
+                        to generate infinite, unique client personas. We also
+                        aim to <strong>add a "Community Showcase,"</strong>{" "}
+                        allowing users to upload their work and compare how
+                        different designers solved the exact same Mosaic brief.
                     </p>
                 </div>
                 <div className={styles.content}></div>

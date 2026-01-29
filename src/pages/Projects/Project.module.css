@@ -5,24 +5,24 @@
 }
 
 .title {
-    font-size: clamp(48px, 8vw, 120px);
+    font-size: var(--font-size-heading-sm);
     font-weight: 600;
     line-height: 1.1;
-    color: var(--white);
+    color: var(--gray-light);
     padding-bottom: var(--spacing-lg);
 }
 
 .title_details {
-    font-size: clamp(16px, 8vw, 20px);
+    font-size: var(--font-size-heading-xl);
     font-weight: 600;
     line-height: 1.1;
-    color: var(--gray-light);
+    color: var(--white);
     padding-bottom: var(--spacing-2xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .subtitle {
-    font-size: 60px;
+    font-size: var(--font-size-heading-lg);
     font-weight: 600;
     line-height: 1.1;
     color: var(--white);
@@ -66,9 +66,13 @@
 
 .section_description {
     font-size: var(--font-size-medium);
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--white);
     max-width: 90%;
+}
+
+.section_description strong {
+    font-weight: 600;
 }
 
 .section_list {
@@ -157,7 +161,7 @@
     text-decoration: underline;
 }
 
-.link:hover{
+.link:hover {
     opacity: 0.7;
 }
 
@@ -168,6 +172,15 @@
     margin-top: var(--spacing-lg);
 }
 
+.button_icon {
+    margin-left: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
     .container {
@@ -175,18 +188,12 @@
     }
 
     .title {
-        font-size: clamp(40px, 6vw, 80px);
         padding-bottom: var(--spacing-xl);
     }
 
     .title_details {
-        font-size: clamp(14px, 6vw, 18px);
         padding-bottom: var(--spacing-xl);
     }
-    .subtitle {
-        font-size: clamp(36px, 5vw, 48px);
-    }
-
     .content_2col {
         flex-direction: column;
         gap: var(--spacing-xl);
@@ -229,16 +236,13 @@
     }
 
     .title {
-        font-size: clamp(32px, 8vw, 60px);
         padding-bottom: var(--spacing-lg);
     }
 
     .title_details {
-        font-size: clamp(12px, 4vw, 16px);
         padding-bottom: var(--spacing-lg);
     }
     .subtitle {
-        font-size: clamp(28px, 6vw, 40px);
     }
 
     .content_2col {
@@ -248,7 +252,7 @@
     }
 
     .section_title {
-        font-size: 11px;
+        font-size: var(--font-size-small);
     }
 
     .section_description {
@@ -281,5 +285,16 @@
 
     .space {
         margin-top: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+    }
+
+    .title_details {
+    }
+
+    .subtitle {
     }
 }
