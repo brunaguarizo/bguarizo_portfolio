@@ -158,48 +158,54 @@ const ProjectPage = () => {
 
     const tags = ["all", "brand design", "UX/UI", "frontend", "motion"];
 
-    // Mock data - you can replace with real data
     const projects = [
         {
             id: 1,
             image: "/askfolio/askfolio.png",
-            tags: ["brand design"],
+            title: "Askfolio",
+            description: "Quick video calls with specialists",
+            tags: ["Brand Design"],
             href: "/askfolio",
         },
         {
             id: 2,
             image: "/forge/forge-cover.png",
-            tags: ["brand design", "ux/ui", "frontend"],
+            title: "Forge",
+            description: "AI-powered career discovery app for trades",
+            tags: ["UX/UI Design", "Frontend"],
             href: "/forge",
         },
         {
             id: 3,
             image: "/goomer/goomer-image7.png",
-            tags: ["brand design"],
+            title: "Goomer",
+            description: "Food digital menu platform for restaurants",
+            tags: ["Brand Design"],
             href: "/goomer",
         },
         {
             id: 4,
             image: "/rumbazo/rumbazo-image7.png",
-            tags: ["brand design"],
+            title: "Rumbazo",
+            description: "Las Vegas Latin music festival",
+            tags: ["Brand Design"],
             href: "/rumbazo",
         },
         {
             id: 5,
             image: "/mosaic/mosaic-cover.png",
-            tags: [
-                "product design",
-                "ux/ui",
-                "frontend",
-                "motion",
-                "brand design",
-            ],
+            title: "Mosaic",
+            description:
+                "Interactive brief generator app for juniors’ portfolio",
+            tags: ["UX/UI Design", "Frontend", "Motion", "Brand Design"],
             href: "/mosaic",
         },
         {
             id: 6,
             image: "/brewly/brewly-cover.png",
-            tags: ["ux/ui", "frontend", "brand design"],
+            title: "Brewly",
+            description: "Craft beer discovery app",
+            tags: ["Frontend", "UX/UI Design"],
             href: "/brewly",
         },
     ];
@@ -244,6 +250,9 @@ const ProjectPage = () => {
                         <ProjectCard
                             key={project.id}
                             image={project.image}
+                            title={project.title}
+                            description={project.description}
+                            tags={project.tags}
                             index={index}
                             col={1}
                             rowStart={1}
@@ -263,8 +272,7 @@ const ProjectPage = () => {
                     className={styles.cta_section}>
                     <Button
                         onClick={() =>
-                            (window.location.href =
-                                "mailto:guarizob@gmail.com")
+                            (window.location.href = "mailto:guarizob@gmail.com")
                         }>
                         Get in Touch
                     </Button>

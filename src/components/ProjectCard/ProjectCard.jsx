@@ -3,11 +3,18 @@ import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 import { ProjectButton } from "../Button/Button";
 
+const defaultProjectContent = {
+    image: "/askfolio/askfolio.png",
+    title: "Askfolio",
+    description: "Quick video calls with specialists",
+    tags: ["Brand Design"],
+};
+
 const ProjectCard = ({
-    image,
-    title,
-    description,
-    tags = [],
+    image = defaultProjectContent.image,
+    title = defaultProjectContent.title,
+    description = defaultProjectContent.description,
+    tags = defaultProjectContent.tags,
     index,
     col,
     rowStart,
