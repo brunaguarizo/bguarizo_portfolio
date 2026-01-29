@@ -443,7 +443,7 @@ const Home = () => {
                                 <Button
                                     onClick={() =>
                                         (window.location.href =
-                                            "mailto:b.guarizo@hotmail.com")
+                                            "mailto:guarizob@gmail.com")
                                     }>
                                     Get In Touch
                                 </Button>

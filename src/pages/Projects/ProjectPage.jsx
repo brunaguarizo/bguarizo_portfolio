@@ -264,7 +264,7 @@ const ProjectPage = () => {
                     <Button
                         onClick={() =>
                             (window.location.href =
-                                "mailto:b.guarizo@hotmail.com")
+                                "mailto:guarizob@gmail.com")
                         }>
                         Get in Touch
                     </Button>
