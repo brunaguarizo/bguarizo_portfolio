@@ -26,7 +26,20 @@ const ProjectCard = ({
     href,
     simpleLayout = false,
     compactLayout = false,
+    onClick,
 }) => {
+    const scrollToTop = () => {
+        if (typeof window !== "undefined") {
+            window.scrollTo({ top: 0, behavior: "auto" });
+        }
+    };
+
+    const handleClick = (event) => {
+        scrollToTop();
+        if (onClick) {
+            onClick(event);
+        }
+    };
     const isInternalLink = href && !href.startsWith("http");
     const linkProps = {
         className: `${styles.projectItem} ${
@@ -76,6 +89,7 @@ const ProjectCard = ({
         return (
             <Link
                 to={href}
+                onClick={handleClick}
                 {...linkProps}>
                 {content}
             </Link>
@@ -87,6 +101,7 @@ const ProjectCard = ({
             href={href || "https://www.behance.net/"}
             target={href ? undefined : "_blank"}
             rel={href ? undefined : "noopener noreferrer"}
+            onClick={handleClick}
             {...linkProps}>
             {content}
         </a>

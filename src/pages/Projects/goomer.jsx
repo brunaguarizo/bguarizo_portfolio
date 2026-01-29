@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./Project.module.css";
-import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
+import ProjectsCarousel from "../../components/ProjectsCarousel/ProjectsCarousel";
 
 const Goomer = () => {
     const titleRef = useRef(null);
@@ -19,6 +19,12 @@ const Goomer = () => {
     const fourthSectionRef = useRef(null);
     const secondImage2ColRef = useRef(null);
     const navigationRef = useRef(null);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.scrollTo(0, 0);
+        }
+    }, []);
 
     useEffect(() => {
         // Wait for ScrollTrigger from CDN to load
@@ -765,14 +771,7 @@ const Goomer = () => {
                 />
             </div>
 
-            <div ref={navigationRef}>
-                <NavigationButtons
-                    prevLink='/'
-                    nextLink='/projects'
-                    prevLabel='Back to Home'
-                    nextLabel='More Projects'
-                />
-            </div>
+            <ProjectsCarousel />
         </div>
     );
 };

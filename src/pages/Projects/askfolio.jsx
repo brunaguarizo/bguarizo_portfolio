@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./Project.module.css";
-import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 import ProjectsCarousel from "../../components/ProjectsCarousel/ProjectsCarousel";
 
 const Askfolio = () => {

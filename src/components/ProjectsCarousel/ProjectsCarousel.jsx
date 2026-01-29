@@ -78,6 +78,9 @@ const ProjectsCarousel = () => {
                             href={project.href}
                             simpleLayout={true}
                             compactLayout={true}
+                            onClick={() =>
+                                window.scrollTo({ top: 0, behavior: "auto" })
+                            }
                         />
                     </div>
                 ))}
