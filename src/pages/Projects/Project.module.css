@@ -5,18 +5,18 @@
 }
 
 .title {
-    font-size: var(--font-size-heading-xl);
+    font-size: var(--font-size-heading-sm);
     font-weight: 600;
     line-height: 1.1;
-    color: var(--white);
+    color: var(--gray-light);
     padding-bottom: var(--spacing-lg);
 }
 
 .title_details {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-heading-xl);
     font-weight: 600;
     line-height: 1.1;
-    color: var(--gray-light);
+    color: var(--white);
     padding-bottom: var(--spacing-2xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -66,9 +66,13 @@
 
 .section_description {
     font-size: var(--font-size-medium);
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--white);
     max-width: 90%;
+}
+
+.section_description strong {
+    font-weight: 600;
 }
 
 .section_list {

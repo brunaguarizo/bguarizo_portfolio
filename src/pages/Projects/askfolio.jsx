@@ -46,7 +46,7 @@ const Askfolio = () => {
                         y: 0,
                         duration: 1,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
 
@@ -70,7 +70,7 @@ const Askfolio = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -94,7 +94,7 @@ const Askfolio = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -118,7 +118,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -143,7 +143,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -168,7 +168,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -192,7 +192,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -216,7 +216,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -242,7 +242,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -268,7 +268,7 @@ const Askfolio = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -293,7 +293,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -317,7 +317,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -343,7 +343,7 @@ const Askfolio = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -373,7 +373,7 @@ const Askfolio = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -396,7 +396,7 @@ const Askfolio = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -430,7 +430,7 @@ const Askfolio = () => {
             window.removeEventListener("load", handleLoad);
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
-                    trigger.kill()
+                    trigger.kill(),
                 );
             }
         };
@@ -453,7 +453,21 @@ const Askfolio = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                    In a world of information overload, finding specific, reliable answers can be frustrating. Askfolio came to Brand Gym with a unique business model for the Brazilian market: a platform offering 15-minute video calls to solve everyday questions with specialists—from veterinarians and nutritionists to financial consultants. The result is a brand identity that transforms the anxiety of the unknown into the relief of finding a quick, intuitive, and trustworthy answer.
+                        In a world of information overload, finding specific,
+                        reliable answers can be frustrating. Askfolio came to
+                        Brand Gym with a unique business model for the Brazilian
+                        market:{" "}
+                        <strong>
+                            a platform offering 15-minute video calls to solve
+                            everyday questions with specialists
+                        </strong>
+                        —from veterinarians and nutritionists to financial
+                        consultants. The result is a{" "}
+                        <strong>
+                            brand identity that transforms the anxiety of the
+                            unknown into the relief of finding a quick,
+                            intuitive, and trustworthy answer.
+                        </strong>
                     </p>
                 </div>
 
@@ -503,25 +517,47 @@ const Askfolio = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                    The primary challenge was positioning a new category of service in the Brazilian market. We needed to create a visual and verbal universe that could appeal to two distinct audiences simultaneously:
+                        The primary challenge was{" "}
+                        <strong>positioning a new category of service</strong>{" "}
+                        in the Brazilian market. We needed to create a visual
+                        and verbal universe that could appeal to two distinct
+                        audiences simultaneously:
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>For Users: </strong>It needed to promise relief and speed, "answers in minutes."
+                            <strong>For Users: </strong>It needed to promise
+                            relief and speed, "answers in minutes."
                         </li>
                         <li>
-                            <strong>For Experts:</strong> It needed to signal professionalism and a viable business opportunity.
+                            <strong>For Experts:</strong> It needed to signal
+                            professionalism and a viable business opportunity.
                         </li>
                     </ul>
                     <p className={styles.section_description}>
-                    The goal was to move away from the coldness of search engines and humanize the experience of finding answers, positioning the brand as the bridge between a question and a solution.
+                        The goal was to move away from the coldness of search
+                        engines and{" "}
+                        <strong>
+                            humanize the experience of finding answers
+                        </strong>
+                        , positioning the brand as the bridge between a question
+                        and a solution.
                     </p>
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>Brand Strategy</h2>
                     <p className={styles.section_description}>
-                    Our strategy focused on the emotional core of the product: Relief. We identified that the true value of Askfolio wasn't just the video call itself, but the feeling of "opening a window" to an expert precisely when a need arises. We aligned the Naming strategy with the brand narrative to highlight this immediate value proposition, which isthe comfort of having a specialized answer crafted just for you, exactly when you need it.
+                        Our strategy focused on the emotional core of the
+                        product: <strong>Relief</strong>. We identified that the
+                        true value of Askfolio wasn't just the video call
+                        itself, but the feeling of "opening a window" to an
+                        expert precisely when a need arises. We aligned the
+                        Naming strategy with the brand narrative to highlight
+                        this immediate value proposition,{" "}
+                        <strong>
+                            which is the comfort of having a specialized answer
+                            crafted just for you, exactly when you need it.
+                        </strong>
                     </p>
                 </div>
             </div>
@@ -547,7 +583,9 @@ const Askfolio = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                    We designed a visual identity that embodies the concepts of "opening windows" and "establishing connections."
+                        We designed a visual identity that embodies the concepts
+                        of <strong>"opening windows"</strong> and{" "}
+                        <strong>"establishing connections"</strong>.
                     </p>
                     <ul
                         ref={firstListRef}
@@ -623,7 +661,16 @@ const Askfolio = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results and Impact</h2>
                     <p className={styles.section_description}>
-                    The final identity successfully captures the essence of "opening a window" to knowledge. By visualizing the concept of quick connections, the branding conveys the idea that expert help is always just a few clicks away. The visual system is flexible enough to span various categories, from pet care to finance, while maintaining a unified look that communicates speed, intuition, and reliability.
+                        The final identity successfully captures the essence of
+                        "opening a window" to knowledge. By visualizing the
+                        concept of quick connections, the branding conveys the
+                        idea that expert help is always just a few clicks away.
+                        The visual system is flexible enough to span various
+                        categories, from pet care to finance, while maintaining
+                        a unified look that{" "}
+                        <strong>
+                            communicates speed, intuition, and reliability.
+                        </strong>
                     </p>
                 </div>
             </div>
