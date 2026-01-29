@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import styles from "./Project.module.css";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
 import CodeWindow from "../../components/CodeWindow/CodeWindow";
-import Button from "../../components/Button/Button";
+import { FlatButton } from "../../components/Button/Button";
 
 const Brewly = () => {
     const titleRef = useRef(null);
@@ -48,7 +48,7 @@ const Brewly = () => {
                         y: 0,
                         duration: 1,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
 
@@ -72,7 +72,7 @@ const Brewly = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -96,7 +96,7 @@ const Brewly = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -120,7 +120,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -145,7 +145,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -170,7 +170,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -194,7 +194,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -218,7 +218,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -244,7 +244,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -270,7 +270,7 @@ const Brewly = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -295,7 +295,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -319,7 +319,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -345,7 +345,7 @@ const Brewly = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -375,7 +375,7 @@ const Brewly = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -398,7 +398,7 @@ const Brewly = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -432,7 +432,7 @@ const Brewly = () => {
             window.removeEventListener("load", handleLoad);
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
-                    trigger.kill()
+                    trigger.kill(),
                 );
             }
         };
@@ -446,19 +446,50 @@ const Brewly = () => {
                 Brewly
             </h1>
             <h2 className={styles.title_details}>
-            A platform for craft beer enthusiasts.
-
-            <div className={styles.buttons_container}>
-                <a className={styles.link}href='https://app-brewly.vercel.app/' target='_blank'>
-                    Explore the Prototype
-                </a>
-                <a className={styles.link} href='https://github.com/app-brewly/app-brewly' target='_blank'>
-                    View Source Code
-                </a>
-            </div>
+                A platform for craft beer enthusiasts.
+                <div className={styles.buttons_container}>
+                    <FlatButton
+                        disableGlow
+                        onClick={() =>
+                            window.open(
+                                "https://app-brewly.vercel.app/",
+                                "_blank",
+                            )
+                        }>
+                        <span>Explore the Prototype</span>
+                        <div className={styles.button_icon}>
+                            <svg
+                                width='20'
+                                height='20'
+                                viewBox='0 0 256 256'>
+                                <path
+                                    fill='white'
+                                    d='M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z'></path>
+                            </svg>
+                        </div>
+                    </FlatButton>
+                    <FlatButton
+                        disableGlow
+                        onClick={() =>
+                            window.open(
+                                "https://github.com/app-brewly/app-brewly",
+                                "_blank",
+                            )
+                        }>
+                        <span>View Source Code</span>
+                        <div className={styles.button_icon}>
+                            <svg
+                                width='20'
+                                height='20'
+                                viewBox='0 0 256 256'>
+                                <path
+                                    fill='white'
+                                    d='M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z'></path>
+                            </svg>
+                        </div>
+                    </FlatButton>
+                </div>
             </h2>
-
-          
 
             <div
                 ref={firstSectionRef}
@@ -466,7 +497,15 @@ const Brewly = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                    Brewly is an application engineered to create personalized beer lists by fetching data from an external API. The objective was to build a scalable, modular application using React’s component-based structure while implementing full CRUD operations (Create, Read, Update, Delete).
+                        Brewly is an <strong>application</strong> engineered to
+                        create personalized beer lists by{" "}
+                        <strong>fetching data from an external API.</strong> The
+                        objective was to build a scalable, modular application
+                        using React’s component-based structure while
+                        implementing{" "}
+                        <strong>
+                            full CRUD operations (Create, Read, Update, Delete).
+                        </strong>
                     </p>
                 </div>
 
@@ -505,32 +544,54 @@ const Brewly = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                    Since the primary requirement of the project was fetching data from an API, the challenge was sourcing a reliable API that met three specific criteria:
+                        Since the primary requirement of the project was
+                        fetching data from an API,{" "}
+                        <strong>
+                            the challenge was sourcing a reliable API
+                        </strong>{" "}
+                        that met three specific criteria:
                     </p>
                     <ul className={styles.section_list}>
                         <li className={styles.section_description}>
-Free access (no complex authentication required).                        </li>
+                            Free access (no complex authentication
+                            required).{" "}
+                        </li>
                         <li className={styles.section_description}>
-                        High-quality image assets.                        </li>
+                            High-quality image assets.{" "}
+                        </li>
                         <li className={styles.section_description}>
-                        Detailed beer descriptions and specifications.                        </li>
+                            Detailed beer descriptions and specifications.{" "}
+                        </li>
                     </ul>
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>
                         Code Architecture & Strategy
                     </h2>
                     <p className={styles.section_description}>
-                    The codebase was structured to prioritize mobile performance and touch interaction.
+                        The codebase was structured to prioritize mobile
+                        performance and touch interaction.
                     </p>
                     <ul>
-                                              <li className={styles.section_description}>
-                            <strong>Modular Components: </strong>Engineered a system of reusable UI building blocks to ensure visual consistency and reduce code duplication. By integrating the classnames utility, I encapsulated complex style logic directly within these components, keeping the parent page logic clean and strictly focused on data flow.
+                        <li className={styles.section_description}>
+                            <strong>Modular Components: </strong>Engineered a
+                            system of reusable UI building blocks to ensure
+                            visual consistency and reduce code duplication. By
+                            integrating the classnames utility, I encapsulated
+                            complex style logic directly within these
+                            components, keeping the parent page logic clean and
+                            strictly focused on data flow.
                         </li>
                         <li className={styles.section_description}>
-                            <strong>Routing: </strong>Leveraged React Router to manage navigation without refreshing the page, preserving the "app shell" while content updates dynamically.
+                            <strong>Routing: </strong>Leveraged React Router to
+                            manage navigation without refreshing the page,
+                            preserving the "app shell" while content updates
+                            dynamically.
                         </li>
                         <li className={styles.section_description}>
-                            <strong>Vite Framework: </strong>We utilized Vite for lightning-fast builds, ensuring the lightweight bundle loads instantly on 4G networks typical of mobile usage.
+                            <strong>Vite Framework: </strong>We utilized Vite
+                            for lightning-fast builds, ensuring the lightweight
+                            bundle loads instantly on 4G networks typical of
+                            mobile usage.
                         </li>
                     </ul>
                 </div>
@@ -671,8 +732,6 @@ export const transformBeerData = (beer) => {
                 </div>
             </div>
 
-        
-
             <div
                 ref={thirdSectionRef}
                 className={styles.content_2col}>
@@ -681,21 +740,33 @@ export const transformBeerData = (beer) => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                        <strong>Log In and Sign Up: </strong>An authentication flow that verifies the legal drinking age before allowing users to create an account or log in.
+                        <strong>Log In and Sign Up: </strong>An authentication
+                        flow that verifies the legal drinking age before
+                        allowing users to create an account or log in.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Feed: </strong>A dynamic feed that displays beers fetched from an external API, including images, names, and key specifications. This feature demonstrates real-time data retrieval.
+                        <strong>Feed: </strong>A dynamic feed that displays
+                        beers fetched from an external API, including images,
+                        names, and key specifications. This feature demonstrates
+                        real-time data retrieval.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Filter: </strong>To enhance navigation and usability, users can filter beers based on categories such as style, ABV, and brewery.
+                        <strong>Filter: </strong>To enhance navigation and
+                        usability, users can filter beers based on categories
+                        such as style, ABV, and brewery.
                     </p>
                     <p className={styles.section_description}>
-                        <strong>Collections: </strong>Full CRUD functionality allowing users to create personalized beer collections, add/remove beers, and update or delete entire lists.
+                        <strong>Collections: </strong>Full CRUD functionality
+                        allowing users to create personalized beer collections,
+                        add/remove beers, and update or delete entire lists.
                     </p>{" "}
                     <p className={styles.section_description}>
-                        <strong>Profile and Settings: </strong>Users can manage their personal data and view Help/About sections. We implemented React Router here to ensure polished, seamless navigation similar to a native app.
+                        <strong>Profile and Settings: </strong>Users can manage
+                        their personal data and view Help/About sections. We
+                        implemented React Router here to ensure polished,
+                        seamless navigation similar to a native app.
                     </p>
-                                   </div>
+                </div>
             </div>
 
             <img
@@ -831,7 +902,15 @@ export default BeerCard;`}
                         Results and Code Quality
                     </h2>
                     <p className={styles.section_description}>
-                    Brewly meets all project requirements through an engaging, mobile-first interface. The core experience is powered by a robust data-fetching strategy, allowing users to explore beer specifications with the aid of smart filters. Beyond discovery, the implementation of full CRUD functionality within the "Collections" feature and the seamless navigation provided by React Router demonstrates a command of complex state management and modern frontend architecture.
+                        Brewly meets all project requirements through an
+                        engaging, mobile-first interface. The core experience is
+                        powered by a robust data-fetching strategy, allowing
+                        users to explore beer specifications with the aid of
+                        smart filters. Beyond discovery, the implementation of
+                        full CRUD functionality within the "Collections" feature
+                        and the seamless navigation provided by React Router
+                        demonstrates a command of complex state management and
+                        modern frontend architecture.
                     </p>
                 </div>
             </div>
