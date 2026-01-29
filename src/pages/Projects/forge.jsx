@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./Project.module.css";
 import NavigationButtons from "../../components/NavigationButtons/NavigationButtons";
+import { FlatButton } from "../../components/Button/Button";
 
 const Forge = () => {
     const titleRef = useRef(null);
@@ -46,7 +47,7 @@ const Forge = () => {
                         y: 0,
                         duration: 1,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
 
@@ -70,7 +71,7 @@ const Forge = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -94,7 +95,7 @@ const Forge = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -118,7 +119,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -143,7 +144,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -168,7 +169,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -192,7 +193,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -216,7 +217,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -242,7 +243,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -268,7 +269,7 @@ const Forge = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -293,7 +294,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -317,7 +318,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -343,7 +344,7 @@ const Forge = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -373,7 +374,7 @@ const Forge = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        }
+                        },
                     );
                 }
             }
@@ -396,7 +397,7 @@ const Forge = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -430,7 +431,7 @@ const Forge = () => {
             window.removeEventListener("load", handleLoad);
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
-                    trigger.kill()
+                    trigger.kill(),
                 );
             }
         };
@@ -444,13 +445,29 @@ const Forge = () => {
                 Forge
             </h1>
             <h2 className={styles.title_details}>
-            Bridging the skilled trades gap through AI-guided exploration.
-            <div className={styles.buttons_container}>
-               
-                <a className={styles.link} href='https://github.com/orgs/Forge-IDSP/repositories' target='_blank'>
-                    View Source Code
-                </a>
-            </div>
+                Bridging the skilled trades gap through AI-guided exploration.
+                <div className={styles.buttons_container}>
+                    <FlatButton
+                        disableGlow
+                        onClick={() =>
+                            window.open(
+                                "https://github.com/orgs/Forge-IDSP/repositories",
+                                "_blank",
+                            )
+                        }>
+                        <span>View Source Code</span>
+                        <div className={styles.button_icon}>
+                            <svg
+                                width='20'
+                                height='20'
+                                viewBox='0 0 256 256'>
+                                <path
+                                    fill='white'
+                                    d='M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z'></path>
+                            </svg>
+                        </div>
+                    </FlatButton>
+                </div>
             </h2>
 
             <div
@@ -459,7 +476,17 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                    Navigating career choices after high school can be overwhelming, especially when students lack awareness or face social stigmas regarding skilled trades. To address this, we developed Forge, an AI-powered career discovery app that transforms traditional, text-heavy guidance into an engaging, interactive experience. The platform introduces a core feature called AI Career Simulations, allowing students to virtually "experience" a day in the life of various trades while receiving personalized feedback based on their skills and interests. By breaking down complex certification steps and highlighting local opportunities in British Columbia, Forge creates a more transparent discovery process. The result is a gamified tool that empowers students to move from uncertainty to making confident, informed decisions about their professional futures.
+                        Navigating career choices after high school can be
+                        overwhelming, especially when students lack awareness or
+                        face social stigmas regarding skilled trades. To address
+                        this, we developed Forge. <br></br>
+                        <br></br>The main feature is{" "}
+                        <strong>"AI Career Simulations,"</strong>
+                        which allow users to virtually experience a day in the
+                        life of various trades while by a{" "}
+                        <strong>gamified discovery process. </strong>Forge
+                        empowers students to move from uncertainty to making
+                        confident, informed professional decisions.
                     </p>
                 </div>
 
@@ -477,7 +504,8 @@ const Forge = () => {
                     </p>
                     <h2 className={styles.section_title}>Team</h2>
                     <p className={styles.section_description}>
-                    A multidisciplinary squad of 8 members, <br/>including designers and full-stack developers.
+                        A multidisciplinary squad of 8 members, <br />
+                        including designers and full-stack developers.
                     </p>
                 </div>
             </div>
@@ -504,42 +532,65 @@ const Forge = () => {
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
                     <p className={styles.section_description}>
-                    By 2028, over 700,000 skilled tradespeople are expected to retire across Canada, yet the industry faces a critical lack of new talent. Our research identified three primary barriers for students:
+                        By 2028, over 700,000 skilled tradespeople are expected
+                        to retire across Canada, yet the industry faces a
+                        critical lack of new talent. Our research identified
+                        three primary barriers for students:
                     </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>Social Stigma:</strong> Trades are often viewed as "lesser" compared to university paths.
+                            <strong>Social Stigma:</strong> Trades are often
+                            viewed as "lesser" compared to university paths.
                         </li>
                         <li>
-                            <strong>Information Overload:</strong> Current resources are scattered, text-heavy, and difficult to navigate.
+                            <strong>Information Overload:</strong> Current
+                            resources are scattered, text-heavy, and difficult
+                            to navigate.
                         </li>
                         <li>
-                            <strong>The "Too Late" Factor:</strong> 89% of students only discover these pathways when they are already under pressure to make a final decision.
+                            <strong>The "Too Late" Factor:</strong> 89% of
+                            students only discover these pathways when they are
+                            already under pressure to make a final decision.
                         </li>
                     </ul>
                     <p className={styles.section_description}>
-                    Our goal was to create a trusted digital guide that grows with the student, moving them from vague curiosity to a confident, informed career path. We aimed to make career discovery personalized, engaging, and accessible.
+                        Our goal was to create a{" "}
+                        <strong>trusted digital guide</strong> that grows with
+                        the student, moving them from vague curiosity to a
+                        confident, informed career path. We aimed to make{" "}
+                        <strong>
+                            career discovery personalized, engaging, and
+                            accessible.
+                        </strong>
                     </p>
                     <div className={styles.space}></div>
                     <h2 className={styles.section_title}>
                         Research & Insights
                     </h2>
                     <p className={styles.section_description}>
-                    We conducted a comprehensive study involving survey participants, secondary research via the Canadian Apprenticeship Forum, and Reddit forum analysis to capture real-world frustrations.
+                        We conducted a comprehensive study involving survey
+                        participants, secondary research via the Canadian
+                        Apprenticeship Forum, and Reddit forum analysis to
+                        capture real-world frustrations.
                     </p>
                     <ul
                         ref={secondListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>Accessibility:</strong> 77.8% of participants struggle to find clear information on trade job types.
+                            <strong>Accessibility:</strong> 77.8% of
+                            participants struggle to find clear information on
+                            trade job types.
                         </li>
                         <li>
-                            <strong>Insecurity:</strong> 89% feel overwhelmed by requirements and certification steps.
+                            <strong>Insecurity:</strong> 89% feel overwhelmed by
+                            requirements and certification steps.
                         </li>
                         <li>
-                            <strong> Preference:</strong> Students favor hands-on, visual learning over traditional government websites.
+                            <strong> Preference:</strong> Students favor
+                            hands-on, visual learning over traditional
+                            government websites.
                         </li>
                     </ul>
                 </div>
@@ -572,7 +623,13 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Process</h2>
                     <p className={styles.section_description}>
-                    Forge was developed through an Agile framework of constant iteration, utilizing daily standups and weekly execution meetings to align our multidisciplinary squad. Guided by advisors across design, full-stack development, and the trades industry, we performed competitive analysis and deep user research. This workflow progressed from wireframes and lo-fi sketches through hi-fi prototyping to full frontend and backend coding. Every feature was validated through rigorous usability testing before our final presentation in December 2025.
+                        Forge was developed through an{" "}
+                        <strong>Agile framework</strong> of constant iteration,
+                        utilizing daily standups and weekly execution meetings
+                        to align our multidisciplinary squad. Guided by advisors
+                        across design, full-stack development, and the trades
+                        industry, we performed competitive analysis and deep
+                        user research.
                     </p>
                 </div>
                 <div className={styles.content}></div>
@@ -582,6 +639,33 @@ const Forge = () => {
                 alt='Forge image'
                 className={styles.image}
             />
+            <div
+                ref={thirdSectionRef}
+                className={styles.content_2col}>
+                <div className={styles.content}>
+                    <h2 className={styles.section_title}>User testing</h2>
+                    <p
+                        className={styles.section_description}
+                        alt='Forge image'>
+                        For the Forge usability study,{" "}
+                        <strong>we conducted 4 20-minute sessions </strong>to
+                        observe how participants interacted with the AI career
+                        simulation tasks. The primary objective was to identify
+                        specific screens where users experienced frustration and
+                        to validate the flow through post-task questions. We
+                        discovered that{" "}
+                        <strong>
+                            the most common issue were the icons not being clear
+                            enough, and that there were a redundancy of
+                            information
+                        </strong>{" "}
+                        considering the navbar and the bottom menu. On the
+                        following iteractions, we focused on fixing these and
+                        other common issues and made the app more user-friendly.
+                    </p>
+                </div>
+                <div className={styles.content}></div>
+            </div>
             <div
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
@@ -593,19 +677,6 @@ const Forge = () => {
                 <img
                     src='/forge/forge-image7.png'
                     alt='Forge image'
-                    className={styles.image}
-                />
-            </div>
-            <div
-                ref={secondImage2ColRef}
-                className={styles.image_2col}>
-                <img
-                    src='/forge/forge-image9.png'
-                    alt='Forge image'
-                    className={styles.image}
-                />
-                <img
-                    src='/forge/forge-image10.png'
                     alt='Forge image'
                     className={styles.image}
                 />
@@ -619,20 +690,37 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                    Experience before committing. To achieve this, we designed a brand that embodies optimism, growth, and clarity. The brand uses a vibrant palette of orange, representing action and energy, and green for growth and success. The typography is bold and modern, designed to resonate with Gen Z while maintaining professional trust. Forge is more than just an information hub; it offers a comprehensive ecosystem:
+                        Experience before committing. To achieve this, we
+                        designed a{" "}
+                        <strong>
+                            brand that embodies optimism, growth, and clarity.
+                        </strong>{" "}
+                        The brand uses a vibrant palette of orange, representing
+                        action and energy, and green for growth and success. The
+                        typography is bold and modern, designed to resonate with
+                        Gen Z while maintaining professional trust.{" "}
+                        <strong>
+                            Forge is more than just an information hub, it
+                            offers a comprehensive ecosystem:
+                        </strong>
                     </p>
                     <ul
                         ref={thirdListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>AI Simulation: </strong>Users "play" through a day in the life of a trade (e.g., an industrial plumber) to see if it fits their lifestyle.
+                            <strong>AI Simulation: </strong>Users "play" through
+                            a day in the life of a trade (e.g., an industrial
+                            plumber) to see if it fits their lifestyle.
                         </li>
                         <li>
                             <strong>Gamified Pathways:</strong>
-                            Progress is tracked through milestones, turning complex certifications into achievable steps.
+                            Progress is tracked through milestones, turning
+                            complex certifications into achievable steps.
                         </li>
                         <li>
-                            <strong>Interactive Map: </strong>Connects students to local training programs and in-demand jobs in British Columbia.
+                            <strong>Interactive Map: </strong>Connects students
+                            to local training programs and in-demand jobs in
+                            British Columbia.
                         </li>
                     </ul>
                 </div>
@@ -690,11 +778,25 @@ const Forge = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results & Impact</h2>
                     <p className={styles.section_description}>
-                    Presenting Forge at the Telus Theatre, at BCIT-Burnaby, in December 2025 served as the ultimate validation of our mission to humanize the trades. While our initial research showed that students were often overwhelmed by broad career categories, our final testing proved that introducing specific trade subcategorization, such as distinguishing between Industrial and Commercial roles,effectively eliminated choice paralysis for our users.<br/><br/>
-
-The project culminated in a high-stakes showcase for an audience of over 300 attendees, including key government and academic figures such as Mayor Mike Hurley, and several Members of Parliament and the Legislative Assembly.<br/><br/>
-
-By demonstrating the app's capability to senior leadership from global tech giants, we moved beyond a conceptual prototype to a recognized, viable tool. The result is a platform that both government officials and industry experts now view as a critical bridge between British Columbia’s high schools and the future of technical institutions.
+                        Presenting Forge at the Telus Theatre, at BCIT-Burnaby,
+                        in December 2025 served as the ultimate validation of
+                        our mission to humanize the trades.
+                        <br />
+                        <br />
+                        The project culminated in a high-stakes showcase for an
+                        audience of over 300 attendees, including key government
+                        and academic figures such as Mayor Mike Hurley, and
+                        several Members of Parliament and the Legislative
+                        Assembly.
+                        <br />
+                        <br />
+                        By demonstrating the app's capability to senior
+                        leadership from global tech giants, we moved beyond a
+                        conceptual prototype to a recognized, viable tool. The
+                        result is a platform that both government officials and
+                        industry experts now view as a critical bridge between
+                        British Columbia’s high schools and the future of
+                        technical institutions.
                     </p>
                 </div>
             </div>
@@ -734,9 +836,19 @@ By demonstrating the app's capability to senior leadership from global tech gian
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Future Iterations</h2>
                     <p className={styles.section_description}>
-                    Moving forward, we plan to pilot Forge directly within British Columbia high schools to gather real-world feedback from students and educators. This phase will involve iterative usability testing to refine our AI simulations, ensuring they effectively bridge the gap between classroom discovery and technical career entry.<br/> <br/>
-
-Our long-term roadmap expands Forge into an "everyday app" that supports users throughout their professional journey. This includes establishing government partnerships for grant access, launching a mentorship module to connect students with industry pros, and developing a career tracker for apprentices to log certifications and hours worked in real-time.
+                        Moving forward, we plan to connect Forge directly within
+                        British Columbia high schools to gather real-world
+                        feedback from students and educators.
+                        <br /> <br />
+                        Our long-term roadmap{" "}
+                        <strong>
+                            expands Forge into an "everyday app" that supports
+                            users throughout their professional journey,{" "}
+                        </strong>
+                        by adding government partnerships for grant access, a
+                        mentorship module, and developing a career tracker for
+                        apprentices to log certifications and hours worked in
+                        real-time.
                     </p>
                 </div>
                 <div className={styles.content}></div>
