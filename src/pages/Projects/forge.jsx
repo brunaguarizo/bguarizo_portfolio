@@ -677,7 +677,6 @@ const Forge = () => {
                 <img
                     src='/forge/forge-image7.png'
                     alt='Forge image'
-                    alt='Forge image'
                     className={styles.image}
                 />
             </div>
