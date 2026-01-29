@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./About.module.css";
 import DraggableTags from "../../components/DraggableTags/DraggableTags";
+import { FlatButton } from "../../components/Button/Button";
 
 const AboutMe = () => {
     const titleRef = useRef(null);
@@ -18,8 +19,6 @@ const AboutMe = () => {
         "Brand Strategy",
         "UX/UI Design",
         "Frontend Development",
-        "Visual Storytelling",
-        "Design Systems",
         "Visual Identity",
         "Motion Design",
     ];
@@ -116,7 +115,7 @@ const AboutMe = () => {
                         y: 0,
                         duration: 1,
                         ease: "power3.out",
-                    }
+                    },
                 );
             }
 
@@ -139,7 +138,7 @@ const AboutMe = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -163,15 +162,16 @@ const AboutMe = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
             // Work Experience animation
             if (workExperienceRef.current) {
-                const experienceItems = workExperienceRef.current.querySelectorAll(
-                    `.${styles.experienceItem}`
-                );
+                const experienceItems =
+                    workExperienceRef.current.querySelectorAll(
+                        `.${styles.experienceItem}`,
+                    );
                 gsap.fromTo(
                     experienceItems,
                     {
@@ -189,14 +189,14 @@ const AboutMe = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
             // Education animation
             if (educationRef.current) {
                 const educationItems = educationRef.current.querySelectorAll(
-                    `.${styles.experienceItem}`
+                    `.${styles.experienceItem}`,
                 );
                 gsap.fromTo(
                     educationItems,
@@ -215,7 +215,7 @@ const AboutMe = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -239,7 +239,7 @@ const AboutMe = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
 
@@ -261,7 +261,7 @@ const AboutMe = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    }
+                    },
                 );
             }
         };
@@ -272,22 +272,55 @@ const AboutMe = () => {
         // Cleanup
         return () => {
             if (typeof window !== "undefined" && window.ScrollTrigger) {
-                window.ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+                window.ScrollTrigger.getAll().forEach((trigger) =>
+                    trigger.kill(),
+                );
             }
         };
     }, []);
 
     return (
         <div className={styles.container}>
-            <h1 ref={titleRef} className={styles.title}>About Me</h1>
+            <div className={styles.heading_group}>
+                <h1
+                    ref={titleRef}
+                    className={styles.title}>
+                    About Me
+                </h1>
+                <div className={styles.resume_cta}>
+                    <a
+                        className={styles.resume_link}
+                        href='/Bruna_Guarizo-Resume.pdf'
+                        target='_blank'
+                        rel='noreferrer'>
+                        <FlatButton className={styles.resume_button}>
+                            Download Resume
+                        </FlatButton>
+                    </a>
+                </div>
+            </div>
 
             <div className={styles.content_2col}>
                 <div className={styles.content}>
-                    <h2 ref={sectionTitleRef} className={styles.section_title}>Hey there!</h2>
-                    <p ref={sectionDescriptionRef} className={styles.section_description}>
-                   I'm Bruna Guarizo, a multidisciplinary designer and frontend developer based in Vancouver. I believe that impactful design creates meaningful connections between brands and people. By combining strategic branding with technical precision, I bridge the gap between concept and reality to build seamless, end-to-end digital products.
+                    <h2
+                        ref={sectionTitleRef}
+                        className={styles.section_title}>
+                        Hey there!
+                    </h2>
+                    <p
+                        ref={sectionDescriptionRef}
+                        className={styles.section_description}>
+                        I'm Bruna Guarizo, a multidisciplinary designer based in
+                        Vancouver. <br></br>I believe that impactful design
+                        creates meaningful connections between brands and
+                        people. By combining my 10 years ofdesign background
+                        with my frontend skills, I bridge the gap between
+                        concept and reality to build seamless, end-to-end
+                        digital products.
                     </p>
-                    <div ref={skillsRef} className={styles.skills}>
+                    <div
+                        ref={skillsRef}
+                        className={styles.skills}>
                         {skills.map((skill, index) => (
                             <span
                                 key={index}
@@ -296,7 +329,9 @@ const AboutMe = () => {
                             </span>
                         ))}
                     </div>
-                    <div ref={workExperienceRef} className={styles.experience_section}>
+                    <div
+                        ref={workExperienceRef}
+                        className={styles.experience_section}>
                         <h2 className={styles.section_title_2}>
                             Work Experience
                         </h2>
@@ -323,7 +358,9 @@ const AboutMe = () => {
                             </div>
                         ))}
                     </div>
-                    <div ref={educationRef} className={styles.experience_section}>
+                    <div
+                        ref={educationRef}
+                        className={styles.experience_section}>
                         <h2 className={styles.section_title_2}>Education</h2>
                         {education.map((exp, index) => (
                             <div
@@ -355,15 +392,15 @@ const AboutMe = () => {
                 </div>
 
                 <div className={styles.content}>
+                    <div ref={draggableTagsRef}>
+                        <DraggableTags title='Roles' />
+                    </div>
                     <img
                         ref={imageRef}
                         src='/bruna.png'
                         alt='Bruna Guarizo'
                         className={styles.image}
                     />
-                    <div ref={draggableTagsRef}>
-                        <DraggableTags title='Roles' />
-                    </div>
                 </div>
             </div>
         </div>
