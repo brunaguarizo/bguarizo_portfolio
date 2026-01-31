@@ -10,6 +10,7 @@ import Rumbazo from "./pages/Projects/rumbazo";
 import Mosaic from "./pages/Projects/mosaic";
 import Brewly from "./pages/Projects/brewly";
 import Trinio from "./pages/Projects/trinio";
+import Latitud from "./pages/Projects/latitud";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
@@ -71,6 +72,10 @@ function App() {
                     <Route
                         path='/about'
                         element={<About />}
+                    />
+                    <Route
+                        path='/latitud'
+                        element={<Latitud />}
                     />
                 </Routes>
                 <Footer />

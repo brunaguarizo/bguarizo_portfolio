@@ -129,6 +129,8 @@ const ProjectsGrid = ({ filterMode = "design" }) => {
                                     ? "/brewly"
                                     : item.index === 6
                                     ? "/trinio"
+                                    : item.index === 7
+                                    ? "/latitud"
                                     : undefined
                             }
                         />
