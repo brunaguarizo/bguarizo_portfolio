@@ -51,7 +51,7 @@ export const projectsData = [
         id: 7,
         image: "/trinio/trinio-image3.png",
         title: "Trinio",
-        description: "One-click checkout optimization platform",
+        description: "One-click checkout optimization platform for e-commerce",
         tags: ["Brand Design"],
         href: "/trinio",
     },
@@ -60,8 +60,16 @@ export const projectsData = [
         image: "/latitud/latitud-image9.png",
         title: "Latitud",
         description:
-            "The community and venture capital for early-stage tech in Latin America.",
+            "The community and venture capital for early-stage tech in Latin America",
         tags: ["Brand Design"],
         href: "/latitud",
+    },
+    {
+        id: 9,
+        image: "/genial/genial-image14.png",
+        title: "Genial Care",
+        description: "Reimagining autism care through science and empathy",
+        tags: ["Brand Design"],
+        href: "/genial",
     },
 ];

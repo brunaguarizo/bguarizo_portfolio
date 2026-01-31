@@ -11,6 +11,7 @@ import Mosaic from "./pages/Projects/mosaic";
 import Brewly from "./pages/Projects/brewly";
 import Trinio from "./pages/Projects/trinio";
 import Latitud from "./pages/Projects/latitud";
+import Genial from "./pages/Projects/genial";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
@@ -76,6 +77,10 @@ function App() {
                     <Route
                         path='/latitud'
                         element={<Latitud />}
+                    />
+                    <Route
+                        path='/genial'
+                        element={<Genial />}
                     />
                 </Routes>
                 <Footer />
