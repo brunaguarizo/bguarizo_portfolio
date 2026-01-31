@@ -49,10 +49,19 @@ export const projectsData = [
     },
     {
         id: 7,
-        image: "/trinio/trinio-image9.png",
+        image: "/trinio/trinio-image3.png",
         title: "Trinio",
         description: "One-click checkout optimization platform",
         tags: ["Brand Design"],
         href: "/trinio",
+    },
+    {
+        id: 8,
+        image: "/latitud/latitud-image9.png",
+        title: "Latitud",
+        description:
+            "The community and venture capital for early-stage tech in Latin America.",
+        tags: ["Brand Design"],
+        href: "/latitud",
     },
 ];
