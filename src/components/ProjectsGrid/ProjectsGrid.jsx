@@ -118,16 +118,18 @@ const ProjectsGrid = ({ filterMode = "design" }) => {
                                 item.index === 0
                                     ? "/askfolio"
                                     : item.index === 1
-                                      ? "/forge"
-                                      : item.index === 2
-                                        ? "/goomer"
-                                        : item.index === 3
-                                          ? "/mosaic"
-                                          : item.index === 4
-                                            ? "/rumbazo"
-                                            : item.index === 5
-                                              ? "/brewly"
-                                              : undefined
+                                    ? "/forge"
+                                    : item.index === 2
+                                    ? "/goomer"
+                                    : item.index === 3
+                                    ? "/mosaic"
+                                    : item.index === 4
+                                    ? "/rumbazo"
+                                    : item.index === 5
+                                    ? "/brewly"
+                                    : item.index === 6
+                                    ? "/trinio"
+                                    : undefined
                             }
                         />
                     ))}
