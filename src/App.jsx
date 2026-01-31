@@ -9,6 +9,7 @@ import Goomer from "./pages/Projects/goomer";
 import Rumbazo from "./pages/Projects/rumbazo";
 import Mosaic from "./pages/Projects/mosaic";
 import Brewly from "./pages/Projects/brewly";
+import Trinio from "./pages/Projects/trinio";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
@@ -58,6 +59,10 @@ function App() {
                     <Route
                         path='/brewly'
                         element={<Brewly />}
+                    />
+                    <Route
+                        path='/trinio'
+                        element={<Trinio />}
                     />
                     <Route
                         path='/projects'

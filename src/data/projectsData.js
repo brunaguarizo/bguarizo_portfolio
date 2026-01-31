@@ -47,4 +47,12 @@ export const projectsData = [
         tags: ["Frontend", "UX/UI Design"],
         href: "/brewly",
     },
+    {
+        id: 7,
+        image: "/trinio/trinio-image9.png",
+        title: "Trinio",
+        description: "One-click checkout optimization platform",
+        tags: ["Brand Design"],
+        href: "/trinio",
+    },
 ];
