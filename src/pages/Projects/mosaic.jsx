@@ -48,7 +48,7 @@ const Mosaic = () => {
                         y: 0,
                         duration: 1,
                         ease: "power3.out",
-                    },
+                    }
                 );
             }
 
@@ -72,7 +72,7 @@ const Mosaic = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -96,7 +96,7 @@ const Mosaic = () => {
                             start: "top 80%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -120,7 +120,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -145,7 +145,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -170,7 +170,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -194,7 +194,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -218,7 +218,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -244,7 +244,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -270,7 +270,7 @@ const Mosaic = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        },
+                        }
                     );
                 }
             }
@@ -295,7 +295,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -319,7 +319,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -345,7 +345,7 @@ const Mosaic = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        },
+                        }
                     );
                 }
             }
@@ -375,7 +375,7 @@ const Mosaic = () => {
                                 start: "top 85%",
                                 toggleActions: "play none none none",
                             },
-                        },
+                        }
                     );
                 }
             }
@@ -398,7 +398,7 @@ const Mosaic = () => {
                             start: "top 85%",
                             toggleActions: "play none none none",
                         },
-                    },
+                    }
                 );
             }
 
@@ -432,7 +432,7 @@ const Mosaic = () => {
             window.removeEventListener("load", handleLoad);
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
-                    trigger.kill(),
+                    trigger.kill()
                 );
             }
         };
@@ -453,7 +453,7 @@ const Mosaic = () => {
                         onClick={() =>
                             window.open(
                                 "https://mosaic-app-nu.vercel.app/",
-                                "_blank",
+                                "_blank"
                             )
                         }>
                         <span>Explore the Prototype</span>
@@ -473,7 +473,7 @@ const Mosaic = () => {
                         onClick={() =>
                             window.open(
                                 "https://github.com/brunaguarizo/mosaic_app",
-                                "_blank",
+                                "_blank"
                             )
                         }>
                         <span>View Source Code</span>
@@ -493,7 +493,7 @@ const Mosaic = () => {
                         onClick={() =>
                             window.open(
                                 "https://mosaicstyleguide.vercel.app/",
-                                "_blank",
+                                "_blank"
                             )
                         }>
                         <span>Check the Style Guide</span>
@@ -539,7 +539,7 @@ const Mosaic = () => {
                     ref={secondSectionRef}
                     className={styles.content}>
                     <h2 className={styles.section_title}>Year</h2>
-                    <p className={styles.section_description}>2025</p>
+                    <p className={styles.section_description}>2024</p>
                     <h2 className={styles.section_title}>Role</h2>
                     <p className={styles.section_description}>
                         Product Designer (UX/UI)
