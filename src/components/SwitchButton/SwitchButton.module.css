@@ -1,3 +1,5 @@
+/* SwitchButton.module.css */
+
 .switchContainer {
     display: inline-flex;
     align-items: center;
@@ -11,36 +13,42 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
+    padding: 0 40px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 100px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 500px;
     height: 120px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .switchThumb {
     position: absolute;
-    transform: translateY(-50%);
     top: 50%;
     left: 20px;
     width: 210px;
     height: 100px;
     background: var(--black);
     border-radius: 100px;
-    transition:
-        left 0.3s linear,
-        right 0.3s linear,
-        width 0.3s ease-out,
-        transform 0.3s ease-out;
     z-index: 0;
+
+    /* Centralização vertical e estado inicial horizontal */
+    transform: translateY(-50%) translateX(0);
+
+    /* A MAGIA DO BOUNCE: cubic-bezier com valores > 1 cria o efeito de mola */
+    transition:
+        transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+        width 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    will-change: transform, width;
 }
 
+/* Quando ativo à direita */
 .switchThumbRight {
-    left: auto;
-    right: 20px;
     width: 160px;
+    /* Cálculo: 500 (track) - 160 (thumb) - 20 (margem esq) - 20 (margem dir) = 300px */
+    transform: translateY(-50%) translateX(300px);
 }
 
 .switchLabel {
@@ -50,72 +58,51 @@
     color: var(--gray-medium);
     font-family: "Playfair Display", serif;
     font-style: italic;
-    transition: color var(--transition-normal);
+    transition: color 0.4s ease;
     z-index: 1;
-    cursor: pointer;
 }
 
 .switchLabelActive {
     color: var(--white);
 }
 
-/* Tablet breakpoint */
+/* --- Breakpoints Otimizados --- */
+
 @media (max-width: 1024px) {
     .switchTrack {
         width: 400px;
         height: 100px;
-        padding: 30px;
     }
-
     .switchThumb {
         left: 15px;
         width: 180px;
         height: 80px;
-        transition:
-            left 0.3s linear,
-            right 0.3s linear,
-            width 0.3s ease-out,
-            transform 0.3s ease-out;
     }
-
-    .switchThumbRight {
-        left: auto;
-        right: 15px;
-        width: 130px;
-    }
-
     .switchLabel {
         font-size: 48px;
     }
+    .switchThumbRight {
+        width: 130px;
+        transform: translateY(-50%) translateX(240px); /* 400-130-15-15 */
+    }
 }
 
-/* Mobile breakpoint */
 @media (max-width: 740px) {
     .switchTrack {
         width: 320px;
         height: 80px;
-        padding: 20px;
     }
-
     .switchThumb {
         left: 12px;
         width: 140px;
         height: 65px;
-        transition:
-            left 0.3s linear,
-            right 0.3s linear,
-            width 0.3s ease-out,
-            transform 0.3s ease-out;
     }
-
-    .switchThumbRight {
-        left: auto;
-        right: 12px;
-        width: 110px;
-    }
-
     .switchLabel {
         font-size: 36px;
+    }
+    .switchThumbRight {
+        width: 110px;
+        transform: translateY(-50%) translateX(186px); /* 320-110-12-12 */
     }
 }
 
@@ -123,22 +110,17 @@
     .switchTrack {
         width: 280px;
         height: 70px;
-        padding: 16px;
     }
-
     .switchThumb {
         left: 10px;
         width: 90px;
         height: 55px;
     }
-
-    .switchThumbRight {
-        left: auto;
-        right: 10px;
-        width: 70px;
-    }
-
     .switchLabel {
         font-size: 28px;
+    }
+    .switchThumbRight {
+        width: 70px;
+        transform: translateY(-50%) translateX(190px); /* 280-70-10-10 */
     }
 }
