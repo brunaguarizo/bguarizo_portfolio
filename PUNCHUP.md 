@@ -1,0 +1,36 @@
+Hey Sonja!
+
+_____________________________________
+
+** Prunch-up Description: **
+Create a "welcome" page with an interesting interactive background where users can engage and play with. 
+The idea is to create a fluid simulating as a dynamic background element for my portfolio. The fluid simulation responds to mouse movements and touch inputs. 
+
+
+
+** How it will enhance my work: **
+This punch-up will make my website more unique and engaging, making it easier to be remembed.  
+Also, it demonstrates my ability to work with frontend coding, moving beyond just standard CSS transitions.
+This interaction will reinforce my identity as a multidisciplinary developer who values hihg quality visuals and functionality.
+
+
+
+** Inspirations and examples: **
+- https://paveldogreat.github.io/WebGL-Fluid-Simulation/
+
+- https://reactbits.dev/tools/background-studio?bg=splash-cursor&SIM_RESOLUTION=160&DYE_RESOLUTION=1024&DENSITY_DISSIPATION=10&VELOCITY_DISSIPATION=4&PRESSURE=0&CURL=14&SPLAT_RADIUS=0.85&COLOR_UPDATE_SPEED=1
+
+
+
+** Resources: **
+- Youtube tutorial: https://www.youtube.com/watch?v=wdyJr-UeiZs
+
+- Github: https://github.com/PavelDoGreat/WebGL-Fluid-Simulation
+
+
+** Fears, uncertainties, doubts about the implementation: **
+- Coding: One concern is to how I will exactly implement this idea considering my coding skills, and the other elements of my website. 
+
+- Performance: Other concern is the loading time. I need to ensure that the simulation doesn't cause lag on older laptops or mobile browsers. 
+
+- Readability: Balance the background and the content, to make sure that everything is readable enough, but still fun and engaging. 
