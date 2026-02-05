@@ -612,22 +612,15 @@ const Genial = () => {
                 </div>
                 <div className={styles.content}></div>
             </div>
-            <div
-                ref={secondImage2ColRef}
-                className={styles.image_2col}>
-                <img
-                    src='/genial/genial-image5.png'
-                    alt='Genial Care image'
-                    className={styles.image}
-                />
-                <img
-                    src='/genial/genial-image6.png'
-                    alt='Genial Care image'
-                    className={styles.image}
-                />
-            </div>
+
             <img
                 src='/genial/genial-image4.png'
+                alt='Genial Care image'
+                className={styles.image}
+            />
+
+            <img
+                src='/genial/genial-image7.png'
                 alt='Genial Care image'
                 className={styles.image}
             />
@@ -636,12 +629,12 @@ const Genial = () => {
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/genial/genial-image7.png'
+                    src='/genial/genial-image9.png'
                     alt='Genial Care image'
                     className={styles.image}
                 />
                 <img
-                    src='/genial/genial-image8.png'
+                    src='/genial/genial-image12.png'
                     alt='Genial Care image'
                     className={styles.image}
                 />
@@ -691,26 +684,32 @@ const Genial = () => {
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/genial/genial-image13.png'
+                    src='/genial/genial-image16.png'
                     alt='Genial Care image'
                     className={styles.image}
                 />
                 <img
-                    src='/genial/genial-image12.png'
+                    src='/genial/genial-image8.png'
                     alt='Genial Care image'
                     className={styles.image}
                 />
             </div>
+
+            <img
+                src='/genial/genial-image10.png'
+                alt='Genial Care image'
+                className={styles.image}
+            />
             <div
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/genial/genial-image14.png'
+                    src='/genial/genial-image17.png'
                     alt='Genial Care image'
                     className={styles.image}
                 />
                 <img
-                    src='/genial/genial-image15.png'
+                    src='/genial/genial-image18.png'
                     alt='Genial Care image'
                     className={styles.image}
                 />
