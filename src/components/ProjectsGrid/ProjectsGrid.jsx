@@ -133,7 +133,9 @@ const ProjectsGrid = ({ filterMode = "design" }) => {
                                                   ? "/latitud"
                                                   : item.index === 8
                                                     ? "/genial"
-                                                    : undefined
+                                                    : item.index === 9
+                                                      ? "/goodboy"
+                                                      : undefined
                             }
                         />
                     ))}
