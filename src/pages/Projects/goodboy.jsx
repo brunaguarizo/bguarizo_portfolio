@@ -455,11 +455,13 @@ const Goodboy = () => {
                     <p className={styles.section_description}>
                         Goodboy Brewery is a{" "}
                         <strong>fake Vancouver-based craft beer brand</strong>{" "}
-                        inspired by the loyalty and vibrant energy of man’s best
-                        friend. The project focused on creating a bold, "faced"
-                        design for a 12oz beverage can that captures the spirit
-                        of the brand while meeting the technical requirements of
-                        the Canadian market.
+                        inspired by my sweet french bulldog Ramona. The loyalty
+                        and vibrant energy of the "man’s best friend" made me
+                        want to create a brand that celebrates the bond between
+                        a dog and humans. The project focused on creating a
+                        bold, "faced" design for a 12oz beverage can that
+                        captures the spirit of the brand while meeting the
+                        technical requirements of the Canadian market.
                     </p>
                 </div>
 
