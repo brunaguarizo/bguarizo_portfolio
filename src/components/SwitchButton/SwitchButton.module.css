@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 10px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 100px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -32,22 +32,15 @@
     background: var(--black);
     border-radius: 100px;
     z-index: 0;
-
-    /* Centralização vertical e estado inicial horizontal */
     transform: translateY(-50%) translateX(0);
-
-    /* A MAGIA DO BOUNCE: cubic-bezier com valores > 1 cria o efeito de mola */
     transition:
         transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6),
         width 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
     will-change: transform, width;
 }
 
-/* Quando ativo à direita */
 .switchThumbRight {
     width: 160px;
-    /* Cálculo: 500 (track) - 160 (thumb) - 20 (margem esq) - 20 (margem dir) = 300px */
     transform: translateY(-50%) translateX(300px);
 }
 
@@ -60,18 +53,20 @@
     font-style: italic;
     transition: color 0.4s ease;
     z-index: 1;
+    padding: 0 30px;
 }
 
 .switchLabelActive {
     color: var(--white);
 }
 
-/* --- Breakpoints Otimizados --- */
+/* --- Breakpoints --- */
 
 @media (max-width: 1024px) {
     .switchTrack {
         width: 400px;
         height: 100px;
+        padding: 0 10px;
     }
     .switchThumb {
         left: 15px;
@@ -80,10 +75,11 @@
     }
     .switchLabel {
         font-size: 48px;
+        padding: 0 20px;
     }
     .switchThumbRight {
         width: 130px;
-        transform: translateY(-50%) translateX(240px); /* 400-130-15-15 */
+        transform: translateY(-50%) translateX(240px);
     }
 }
 
@@ -91,6 +87,10 @@
     .switchTrack {
         width: 320px;
         height: 80px;
+        padding: 0 10px;
+    }
+    .slot {
+        padding: 0 10px;
     }
     .switchThumb {
         left: 12px;
@@ -99,17 +99,22 @@
     }
     .switchLabel {
         font-size: 36px;
+        padding: 0 10px;
     }
     .switchThumbRight {
         width: 110px;
-        transform: translateY(-50%) translateX(186px); /* 320-110-12-12 */
+        transform: translateY(-50%) translateX(186px);
     }
 }
 
 @media (max-width: 480px) {
     .switchTrack {
-        width: 280px;
+        width: 240px;
         height: 70px;
+        padding: 0 10px;
+    }
+    .slot {
+        padding: 0 8px;
     }
     .switchThumb {
         left: 10px;
@@ -118,9 +123,10 @@
     }
     .switchLabel {
         font-size: 28px;
+        padding: 0 10px;
     }
     .switchThumbRight {
-        width: 70px;
-        transform: translateY(-50%) translateX(190px); /* 280-70-10-10 */
+        width: 80px;
+        transform: translateY(-50%) translateX(140px);
     }
 }

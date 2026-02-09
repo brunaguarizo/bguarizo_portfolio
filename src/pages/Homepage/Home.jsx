@@ -301,8 +301,10 @@ const Home = () => {
                             <h1
                                 ref={titleRef}
                                 className={styles.title}>
-                                Connecting brands <br />
-                                to people through <br />
+                                <span className={styles.title_text}>
+                                    Connecting brands <br />
+                                    to people through
+                                </span>
                                 <SwitchButton
                                     value={filterMode}
                                     onChange={setFilterMode}

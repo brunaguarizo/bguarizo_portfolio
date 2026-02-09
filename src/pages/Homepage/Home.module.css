@@ -78,6 +78,10 @@
     gap: var(--spacing-sm);
 }
 
+.title_text {
+    display: block;
+}
+
 .italicText {
     font-family: "Playfair Display", serif;
     font-style: italic;
@@ -194,6 +198,7 @@
     }
 
     .title {
+        flex-direction: column;
         line-height: 1.15;
     }
 
