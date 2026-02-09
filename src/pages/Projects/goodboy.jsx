@@ -445,6 +445,158 @@ const Goodboy = () => {
                 Goodboy Beer
             </h1>
 
+            <h2 className={styles.title_details}>Craft beer for dog lovers</h2>
+
+            <div
+                ref={firstSectionRef}
+                className={styles.content_2col}>
+                <div className={styles.content}>
+                    <h2 className={styles.section_title}>Overview</h2>
+                    <p className={styles.section_description}>
+                        Goodboy Brewery is a{" "}
+                        <strong>fake Vancouver-based craft beer brand</strong>{" "}
+                        inspired by the loyalty and vibrant energy of man’s best
+                        friend. The project focused on creating a bold, "faced"
+                        design for a 12oz beverage can that captures the spirit
+                        of the brand while meeting the technical requirements of
+                        the Canadian market.
+                    </p>
+                </div>
+
+                <div
+                    ref={secondSectionRef}
+                    className={styles.content}>
+                    <h2 className={styles.section_title}>Year</h2>
+                    <p className={styles.section_description}>2025</p>
+                    <h2 className={styles.section_title}>Role</h2>
+                    <p className={styles.section_description}>
+                        Visual Identity
+                        <br /> Brand Designer
+                    </p>
+                </div>
+            </div>
+
+            <video
+                ref={firstImageRef}
+                src='/askfolio/askfolio-image1.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={styles.image}
+            />
+
+            <div
+                ref={aboutProjectRef}
+                className={styles.content_2col}>
+                <div className={styles.content}>
+                    <h2 className={styles.subtitle}>About the project</h2>
+                </div>
+
+                <div
+                    ref={challengeSectionRef}
+                    className={styles.content}>
+                    <h2 className={styles.section_title}>The Concept</h2>
+                    <p className={styles.section_description}>
+                        The visual identity revolves around the brand’s core
+                        pillars: being Bold, Playful, and Loyal. To reflect
+                        this, the design utilizes high-contrast typography and a
+                        clean layout that maximizes the front of the can for
+                        consumer appeal.
+                    </p>
+                    <ul
+                        ref={firstListRef}
+                        className={styles.section_list}>
+                        <li>
+                            <strong>Bilingual Integration:</strong> To meet
+                            Canadian regulations, all slogans, flavors, and
+                            product descriptions were seamlessly translated into
+                            French (e.g., Brave, Enjoué, Loyal).
+                        </li>
+                        <li>
+                            <strong>Visual Hierarchy:</strong> Essential
+                            elements like the barcode, nutritional facts, and
+                            ingredients were treated as integrated design
+                            components rather than afterthoughts.
+                        </li>
+                        <li>
+                            <strong>Beer Variations: </strong>The system was
+                            expanded into IPA, Lager, and Weiss—using distinct
+                            color palettes and graphic variations to ensure
+                            consumers can easily differentiate between flavors
+                            while maintaining a cohesive brand feel.
+                        </li>
+                    </ul>
+
+                    <div className={styles.space}></div>
+                    <h2 className={styles.section_title}>Brand Strategy</h2>
+                    <p className={styles.section_description}>
+                        The visual identity for Goodboy Brewery centers on a
+                        bold, stacked logotype that reflects the brand’s pillars
+                        of being <strong>bold, playful, and loyal</strong>.
+                        Color is used strategically to differentiate the product
+                        line: a vibrant palette for the 7.5% IPA, neutral tones
+                        for the crisp 4% Lager, and golden hues for the 5.5%
+                        Weiss. Each 12oz can is designed with a "faced" layout
+                        to maximize shelf impact, incorporating essential
+                        technical elements like barcodes and nutritional facts
+                        as cohesive design features.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                ref={image2ColRef}
+                className={styles.image_2col}>
+                <img
+                    src='/askfolio/askfolio-image2.png'
+                    alt='Askfolio image'
+                    className={styles.image}
+                />
+                <img
+                    src='/askfolio/askfolio-image3.png'
+                    alt='Askfolio image'
+                    className={styles.image}
+                />
+            </div>
+
+            <div
+                ref={thirdSectionRef}
+                className={styles.content_2col}>
+                <div className={styles.content}>
+                    <h2 className={styles.section_title}>
+                        Technical Execution
+                    </h2>
+                    <p className={styles.section_description}>
+                        This project involved a rigorous technical workflow to
+                        ensure the design was "print-ready" and professionally
+                        presented:
+                    </p>
+                    <ul
+                        ref={firstListRef}
+                        className={styles.section_list}>
+                        <li>
+                            <strong>Dieline Precision:</strong> Developed 151mm
+                            x 200mm dielines with organized, named layers to
+                            manage complex vector and raster content.
+                        </li>
+                        <li>
+                            <strong>High-Fidelity Assets:</strong> Used 300 PPI
+                            raster content and vector smart objects to guarantee
+                            reproduction quality.
+                        </li>
+                        <li>
+                            <strong>Realistic Mockups:</strong> Created
+                            non-destructive Photoshop mockups and 3D rendersto
+                            visualize the label on a physical can, ensuring the
+                            design didn't suffer from excessive negative space
+                            or width issues.
+                        </li>
+                    </ul>
+                </div>
+                <div className={styles.content}></div>
+            </div>
+
             <section
                 id='models'
                 className='main-section'>
