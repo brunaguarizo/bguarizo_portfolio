@@ -114,3 +114,39 @@
     fill: var(--white);
     color: var(--white);
 }
+
+/* Tablet e mobile: botões não encolhem e texto não quebra */
+@media (max-width: 1024px) {
+    .button_container {
+        min-width: min-content;
+        flex-shrink: 0;
+    }
+
+    .button_content {
+        white-space: nowrap;
+        width: auto;
+        min-width: min-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .button_container {
+        min-width: min-content;
+        flex-shrink: 0;
+    }
+
+    .button_content {
+        white-space: nowrap;
+        width: auto;
+        min-width: min-content;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button_content {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
