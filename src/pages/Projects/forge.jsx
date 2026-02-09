@@ -451,7 +451,7 @@ const Forge = () => {
                 Forge
             </h1>
             <h2 className={styles.title_details}>
-                Bridging the skilled trades gap through AI-guided exploration.
+                Bridging the skilled trades gap through AI-guided exploration
                 <div className={styles.buttons_container}>
                     <FlatButton
                         disableGlow

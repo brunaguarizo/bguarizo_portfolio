@@ -444,7 +444,7 @@ const Rumbazo = () => {
                 Rumbazo
             </h1>
             <h2 className={styles.title_details}>
-                The ultimate Latin block party in Las Vegas.
+                The ultimate Latin block party in Las Vegas
             </h2>
 
             <div

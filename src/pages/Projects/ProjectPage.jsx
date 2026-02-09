@@ -165,9 +165,14 @@ const ProjectPage = () => {
         selectedTag === "all"
             ? projects
             : projects.filter((project) =>
-                  project.tags.some(
-                      (tag) => tag.toLowerCase() === selectedTag.toLowerCase(),
-                  ),
+                  project.tags.some((tag) => {
+                      const tagLower = tag.toLowerCase();
+                      const selectedLower = selectedTag.toLowerCase();
+                      return (
+                          tagLower === selectedLower ||
+                          tagLower.includes(selectedLower)
+                      );
+                  }),
               );
 
     return (

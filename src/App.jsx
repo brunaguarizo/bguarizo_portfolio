@@ -30,18 +30,12 @@ function App() {
                         path='/'
                         element={<Home />}
                     />
-                    <Route
-                        path='/project1'
-                        element={<Project1 />}
-                    />
+
                     <Route
                         path='/askfolio'
                         element={<Askfolio />}
                     />
-                    <Route
-                        path='/project2'
-                        element={<Forge />}
-                    />
+
                     <Route
                         path='/forge'
                         element={<Forge />}

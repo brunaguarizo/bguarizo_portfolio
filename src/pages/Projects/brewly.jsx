@@ -452,7 +452,7 @@ const Brewly = () => {
                 Brewly
             </h1>
             <h2 className={styles.title_details}>
-                A platform for craft beer enthusiasts.
+                A platform for craft beer enthusiasts
                 <div className={styles.buttons_container}>
                     <FlatButton
                         disableGlow

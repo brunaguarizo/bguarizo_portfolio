@@ -450,7 +450,7 @@ const Goomer = () => {
                 Goomer
             </h1>
             <h2 className={styles.title_details}>
-                The right ingredient for restaurant growth.
+                The right ingredient for restaurant growth
             </h2>
 
             <div
