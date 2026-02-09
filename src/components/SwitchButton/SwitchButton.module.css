@@ -113,18 +113,22 @@
         height: 70px;
         padding: 0 10px;
     }
+
     .slot {
         padding: 0 8px;
     }
+
     .switchThumb {
         left: 10px;
         width: 90px;
         height: 55px;
     }
+
     .switchLabel {
         font-size: 28px;
         padding: 0 10px;
     }
+
     .switchThumbRight {
         width: 80px;
         transform: translateY(-50%) translateX(140px);

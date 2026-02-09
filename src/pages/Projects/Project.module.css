@@ -230,24 +230,29 @@
     }
 }
 
-/* Mobile Styles */
+/* Mobile Styles - um único espaço entre blocos (evita soma de margin-top + margin-bottom) */
 @media (max-width: 768px) {
     .container {
-        padding: var(--spacing-2xl) var(--spacing-sm);
+        padding: var(--spacing-2xl) var(--spacing-md);
     }
 
     .title {
-        padding-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
     }
 
     .title_details {
-        padding-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
     }
 
+    /* Só margin-bottom: espaço entre blocos fica sempre 24px */
     .content_2col {
-        gap: var(--spacing-lg);
-        padding: var(--spacing-md) 0;
-        margin: var(--spacing-md) 0;
+        gap: var(--spacing-md);
+        padding: 0;
+        margin: 0 0 var(--spacing-md) 0;
+    }
+
+    .content {
+        gap: var(--spacing-md);
     }
 
     .section_title {
@@ -266,16 +271,17 @@
         max-width: 100%;
         padding-left: var(--spacing-md);
     }
+
     .image {
         width: 100%;
-        margin-bottom: var(--spacing-md);
+        margin: 0 0 var(--spacing-md) 0;
     }
 
     .image_2col {
         flex-direction: column;
         gap: var(--spacing-md);
-        padding: var(--spacing-md) 0;
-        margin: var(--spacing-md) 0;
+        padding: 0;
+        margin: 0 0 var(--spacing-md) 0;
     }
 
     .image_2col .image {
@@ -284,19 +290,51 @@
 
     .space {
         margin-top: var(--spacing-md);
+        margin-bottom: 0;
+    }
+
+    .buttons_container {
+        margin-top: var(--spacing-md);
+        margin-bottom: 0;
     }
 }
 
 @media (max-width: 480px) {
     .title {
         font-size: var(--font-size-display-sm);
+        padding-bottom: var(--spacing-md);
     }
 
     .title_details {
         font-size: var(--font-size-display-md);
+        padding-bottom: var(--spacing-md);
     }
 
     .subtitle {
         font-size: var(--font-size-display-sm);
+    }
+
+    .container {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .content_2col {
+        margin: 0 0 var(--spacing-md) 0;
+        padding: 0;
+        gap: var(--spacing-md);
+    }
+
+    .image_2col {
+        margin: 0 0 var(--spacing-md) 0;
+        padding: 0;
+        gap: var(--spacing-md);
+    }
+
+    .image {
+        margin: 0 0 var(--spacing-md) 0;
+    }
+
+    .space {
+        margin-top: var(--spacing-md);
     }
 }
