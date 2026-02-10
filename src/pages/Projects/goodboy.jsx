@@ -478,13 +478,15 @@ const Goodboy = () => {
                 </div>
             </div>
 
-            <video
-                ref={firstImageRef}
-                src='/askfolio/askfolio-image1.mp4'
-                autoPlay
-                loop
-                muted
-                playsInline
+            <img
+                src='/goodboy/goodboy-image6.png'
+                alt='Goodboy image'
+                className={styles.image}
+            />
+
+            <img
+                src='/goodboy/goodboy-image1.png'
+                alt='Goodboy image'
                 className={styles.image}
             />
 
@@ -551,16 +553,21 @@ const Goodboy = () => {
                 ref={image2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/askfolio/askfolio-image2.png'
-                    alt='Askfolio image'
+                    src='/goodboy/goodboy-image2.png'
+                    alt='Goodboy image'
                     className={styles.image}
                 />
                 <img
-                    src='/askfolio/askfolio-image3.png'
-                    alt='Askfolio image'
+                    src='/goodboy/goodboy-image3.png'
+                    alt='Goodboy image'
                     className={styles.image}
                 />
             </div>
+            <img
+                src='/goodboy/goodboy-image4.png'
+                alt='Goodboy image'
+                className={styles.image}
+            />
 
             <div
                 ref={thirdSectionRef}
@@ -598,6 +605,14 @@ const Goodboy = () => {
                 </div>
                 <div className={styles.content}></div>
             </div>
+
+            <img
+                src='/goodboy/goodboy-image5.png'
+                alt='Goodboy image'
+                className={styles.image}
+            />
+
+            <div className={styles.space}></div>
 
             <section
                 id='models'
