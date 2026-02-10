@@ -74,10 +74,10 @@ export const projectsData = [
     },
     {
         id: 10,
-        image: "/goodboy/goodboy-cover.png",
+        image: "/goodboy/goodboy-image6.png",
         title: "Goodboy Beer",
         description: "Craft beer brand with interactive 3D experience",
-        tags: ["Brand Design", "Frontend"],
+        tags: ["Brand Design"],
         href: "/goodboy",
     },
 ];
