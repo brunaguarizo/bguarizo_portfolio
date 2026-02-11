@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "./Home.module.css";
-import WavyBackground from "../../components/WavyBackground/WavyBackground";
+import FluidWave from "../../components/FluidWave/FluidWave";
 import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
 import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
@@ -24,13 +24,6 @@ const Home = () => {
     const contactTitleRef = useRef(null);
     const contactDescriptionRef = useRef(null);
     const contactButtonRef = useRef(null);
-
-    // Colors based on project CSS variables
-    const waveColors = [
-        "#555555", // --gray-medium
-        "#333333", // --gray-dark
-        "#ffffff", // --white
-    ];
 
     const skills = [
         "Product Design",
@@ -280,13 +273,7 @@ const Home = () => {
             <section
                 id='hero'
                 className={styles.hero}>
-                <WavyBackground
-                    colors={waveColors}
-                    backgroundFill='var(--black)'
-                    waveOpacity={0.5}
-                    blur={20}
-                    speed='slow'
-                    waveWidth={100}
+                <FluidWave
                     containerClassName={styles.wavy_container}
                     className={styles.wavy_content}>
                     <div className={styles.container}>
@@ -335,7 +322,7 @@ const Home = () => {
                             </button> */}
                         </div>
                     </div>
-                </WavyBackground>
+                </FluidWave>
             </section>
             <div ref={projectsRef}>
                 <ProjectsGrid filterMode={filterMode} />
@@ -418,13 +405,7 @@ const Home = () => {
                 ref={contactRef}
                 id='contact'
                 className={styles.contact}>
-                <WavyBackground
-                    colors={waveColors}
-                    backgroundFill='var(--black)'
-                    waveOpacity={0.5}
-                    blur={20}
-                    speed='slow'
-                    waveWidth={100}
+                <FluidWave
                     containerClassName={styles.wavy_container}
                     className={styles.wavy_content}>
                     <div className={styles.contact_container}>
@@ -452,7 +433,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                </WavyBackground>
+                </FluidWave>
             </section>
         </div>
     );
