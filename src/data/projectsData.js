@@ -85,7 +85,7 @@ export const projectsData = [
         image: "/pomarola/pomarola-cover.png",
         title: "Pomarola - Cargill",
         description: "Transforming traditional recipes into scroll-stopping digital experiences",
-        tags: ["Motion"],
+        tags: ["Motion", "Social Media"],
         href: "/pomarola",
     },
 ];

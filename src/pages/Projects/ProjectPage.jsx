@@ -157,7 +157,7 @@ const ProjectPage = () => {
         }
     }, [selectedTag]);
 
-    const tags = ["all", "brand design", "UX/UI", "frontend", "motion"];
+    const tags = ["all", "brand design", "UX/UI", "frontend", "motion", "social media"];
 
     const projects = projectsData;
 
