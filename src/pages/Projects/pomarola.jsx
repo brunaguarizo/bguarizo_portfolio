@@ -454,12 +454,11 @@ const Pomarola = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Overview</h2>
                     <p className={styles.section_description}>
-                        For Pomarola, Cargill’s leading tomato sauce brand, the
-                        challenge was to elevate its digital presence through a
-                        dynamic and appetizing visual language. The project
-                        focused on transforming static ingredients and
-                        traditional recipes into high-engagement content for
-                        social media platforms.
+                        A digital revitalization for Pomarola (Cargill), the
+                        leading brand in the tomato sauce category. The project
+                        focused on evolving the brand’s digital identity by
+                        turning traditional culinary concepts into high-energy,
+                        scroll-stopping social media content.
                     </p>
                 </div>
 
@@ -497,48 +496,35 @@ const Pomarola = () => {
                     ref={challengeSectionRef}
                     className={styles.content}>
                     <h2 className={styles.section_title}>The Challenge</h2>
-                    <p className={styles.section_description}>
-                        The primary challenge was{" "}
-                        <strong>positioning a new category of service</strong>{" "}
-                        in the Brazilian market. We needed to create a visual
-                        and verbal universe that could appeal to two distinct
-                        audiences simultaneously:
-                    </p>
                     <ul
                         ref={firstListRef}
                         className={styles.section_list}>
                         <li>
-                            <strong>For Users: </strong>It needed to promise
-                            relief and speed, "answers in minutes."
+                            <strong>Modernizing Heritage:</strong> Elevating a
+                            traditional household brand to resonate with
+                            fast-paced digital consumption habits.
                         </li>
                         <li>
-                            <strong>For Experts:</strong> It needed to signal
-                            professionalism and a viable business opportunity.
+                            <strong>Static to Dynamic:</strong> Moving beyond
+                            flat imagery to capture the "appetite appeal" of the
+                            products in a competitive social feed.
+                        </li>
+                        <li>
+                            <strong>Consistency:</strong> Ensuring that while
+                            the format evolved, the brand’s iconic identity and
+                            vibrant palette remained instantly recognizable.
                         </li>
                     </ul>
-                    <p className={styles.section_description}>
-                        The goal was to move away from the coldness of search
-                        engines and{" "}
-                        <strong>
-                            humanize the experience of finding answers
-                        </strong>
-                        , positioning the brand as the bridge between a question
-                        and a solution.
-                    </p>
+
                     <div className={styles.space}></div>
-                    <h2 className={styles.section_title}>Brand Strategy</h2>
+                    <h2 className={styles.section_title}>Strategy</h2>
                     <p className={styles.section_description}>
-                        Our strategy focused on the emotional core of the
-                        product: <strong>Relief</strong>. We identified that the
-                        true value of Askfolio wasn't just the video call
-                        itself, but the feeling of "opening a window" to an
-                        expert precisely when a need arises. We aligned the
-                        Naming strategy with the brand narrative to highlight
-                        this immediate value proposition,{" "}
-                        <strong>
-                            which is the comfort of having a specialized answer
-                            crafted just for you, exactly when you need it.
-                        </strong>
+                        By adopting movement first design, the strategy utilized
+                        motion as the primary vehicle to showcase both product
+                        convenience and flavor. This was achieved through format
+                        diversification, tailoring content to specific platform
+                        behaviors, ranging from educational Instagram Carousels
+                        to high-energy Reels and Stories.
                     </p>
                 </div>
             </div>
@@ -547,13 +533,13 @@ const Pomarola = () => {
                 ref={image2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/askfolio/askfolio-image2.png'
-                    alt='Askfolio image'
+                    src='/pomarola/pomarola-image2.png'
+                    alt='Pomarola image'
                     className={styles.image}
                 />
                 <img
-                    src='/askfolio/askfolio-image3.png'
-                    alt='Askfolio image'
+                    src='/pomarola/pomarola-image3.png'
+                    alt='Pomarola image'
                     className={styles.image}
                 />
             </div>
@@ -564,72 +550,41 @@ const Pomarola = () => {
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>The Solution</h2>
                     <p className={styles.section_description}>
-                        We designed a visual identity that embodies the concepts
-                        of <strong>"opening windows"</strong> and{" "}
-                        <strong>"establishing connections"</strong>.
+                        The solution centered on the development of high-impact
+                        Motion Graphics, utilizing short-form videos and GIFs
+                        with fluid transitions to literally bring recipes to
+                        life. This was complemented by a robust library of
+                        Social-Centric Content, including strategic static posts
+                        and interactive carousels tailored specifically for
+                        Facebook and Instagram. Throughout the process, rigorous
+                        Art Direction ensured that Pomarola’s vibrant visual
+                        language was strictly applied across every frame,
+                        reinforcing brand equity while simultaneously pushing
+                        the envelope with fresh, digital-first aesthetics.
                     </p>
-                    <ul
-                        ref={firstListRef}
-                        className={styles.section_list}>
-                        <li>
-                            <strong>Visual Concept: </strong>The graphics and
-                            icons are designed to represent pathways opening up,
-                            symbolizing the connection between the user and the
-                            expert on duty.
-                        </li>
-                        <li>
-                            <strong>Logo & Symbol: </strong> The "A" in the logo
-                            is stylized to look like a bridge or a connecting
-                            structure, reinforcing the idea of linking problems
-                            to solutions.
-                        </li>
-                        <li>
-                            <strong>Typography: </strong> We selected Manrope, a
-                            modern sans-serif typeface that balances geometric
-                            readability with a friendly, approachable character,
-                            ensuring the app remains legible across all devices.
-                        </li>
-                        <li>
-                            <strong>Color Palette: </strong> A blend of deep
-                            greens and bright blues creates a gradient that
-                            feels both technological and organic, conveying
-                            growth, trust, and mental clarity.
-                        </li>
-                    </ul>
                 </div>
                 <div className={styles.content}></div>
             </div>
-            <img
-                src='/askfolio/askfolio-image4.png'
-                alt='Askfolio image'
+            <video
+                ref={firstImageRef}
+                src='/pomarola/pomarola-image4.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
                 className={styles.image}
             />
             <div
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/askfolio/askfolio-image5.png'
-                    alt='Askfolio image'
+                    src='/pomarola/pomarola-image5.png'
+                    alt='Pomarola image'
                     className={styles.image}
                 />
                 <img
-                    src='/askfolio/askfolio-image6.png'
-                    alt='Askfolio image'
-                    className={styles.image}
-                />
-            </div>
-
-            <div
-                ref={secondImage2ColRef}
-                className={styles.image_2col}>
-                <img
-                    src='/askfolio/askfolio-image7.png'
-                    alt='Askfolio image'
-                    className={styles.image}
-                />
-                <img
-                    src='/askfolio/askfolio-image14.png'
-                    alt='Askfolio image'
+                    src='/pomarola/pomarola-image6.png'
+                    alt='Pomarola image'
                     className={styles.image}
                 />
             </div>
@@ -641,42 +596,54 @@ const Pomarola = () => {
 
                 <div className={styles.content}>
                     <h2 className={styles.section_title}>Results and Impact</h2>
-                    <p className={styles.section_description}>
-                        The final identity successfully captures the essence of
-                        "opening a window" to knowledge. By visualizing the
-                        concept of quick connections, the branding conveys the
-                        idea that expert help is always just a few clicks away.
-                        The visual system is flexible enough to span various
-                        categories, from pet care to finance, while maintaining
-                        a unified look that{" "}
-                        <strong>
-                            communicates speed, intuition, and reliability.
-                        </strong>
-                    </p>
+                    <ul
+                        ref={firstListRef}
+                        className={styles.section_list}>
+                        <li>
+                            <strong>Higher Engagement:</strong> Transformed
+                            static ingredient lists into inspiring, shareable
+                            culinary experiences.
+                        </li>
+                        <li>
+                            <strong>Brand Inspiration:</strong> Shifted the feed
+                            from being purely informative to being a source of
+                            cooking inspiration for the audience.
+                        </li>
+                        <li>
+                            <stong>Modernized Identity:</stong> Successfully
+                            blended Pomarola’s long-standing heritage with the
+                            kinetic nature of modern social media, resulting in
+                            a cohesive and appetizing digital presence.
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <img
-                src='/askfolio/askfolio-image10.png'
-                alt='Askfolio image'
+            <video
+                ref={firstImageRef}
+                src='/pomarola/pomarola-image7.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
                 className={styles.image}
             />
             <div
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
                 <img
-                    src='/askfolio/askfolio-image11.png'
-                    alt='Askfolio image'
+                    src='/pomarola/pomarola-image8.png'
+                    alt='Pomarola image'
                     className={styles.image}
                 />
                 <img
-                    src='/askfolio/askfolio-image12.png'
-                    alt='Askfolio image'
+                    src='/pomarola/pomarola-image9.png'
+                    alt='Pomarola image'
                     className={styles.image}
                 />
             </div>
             <img
-                src='/askfolio/askfolio-image13.png'
-                alt='Askfolio image'
+                src='/pomarola/pomarola-image10.png'
+                alt='Pomarola image'
                 className={styles.image}
             />
             <ProjectsCarousel />
