@@ -135,7 +135,9 @@ const ProjectsGrid = ({ filterMode = "design" }) => {
                                                     ? "/genial"
                                                     : item.index === 9
                                                       ? "/goodboy"
-                                                      : undefined
+                                                      : item.index === 10
+                                                        ? "/pomarola"
+                                                        : undefined
                             }
                         />
                     ))}
