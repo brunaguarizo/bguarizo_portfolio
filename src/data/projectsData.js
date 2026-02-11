@@ -80,4 +80,12 @@ export const projectsData = [
         tags: ["Brand Design"],
         href: "/goodboy",
     },
+    {
+        id: 11,
+        image: "/pomarola/pomarola-cover.png",
+        title: "Pomarola - Cargill",
+        description: "Transforming traditional recipes into scroll-stopping digital experiences",
+        tags: ["Motion"],
+        href: "/pomarola",
+    },
 ];
