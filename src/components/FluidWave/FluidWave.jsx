@@ -9,6 +9,7 @@ import styles from "./fluidwave.module.css";
  *
  * Use for: loading screen, hero background
  */
+
 export const FluidWave = ({
     children,
     className,

@@ -4,6 +4,7 @@
     height: 100%;
     min-height: 100%;
     overflow: hidden;
+    background-color: var(--black);
 }
 
 .canvasWrapper {
@@ -12,6 +13,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    background-color: var(--black);
 }
 
 .canvasWrapper canvas {
@@ -19,6 +21,7 @@
     height: 100% !important;
     position: absolute !important;
     inset: 0 !important;
+    background-color: var(--black) !important;
 }
 
 .content {
