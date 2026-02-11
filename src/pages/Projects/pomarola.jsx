@@ -574,6 +574,15 @@ const Pomarola = () => {
                 playsInline
                 className={styles.image}
             />
+            <video
+                ref={firstImageRef}
+                src='/pomarola/pomarola-image4.2.mp4'
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={styles.image}
+            />
             <div
                 ref={secondImage2ColRef}
                 className={styles.image_2col}>
