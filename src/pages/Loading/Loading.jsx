@@ -7,7 +7,11 @@ const Loading = () => {
         <div className={styles.loading_page}>
             <FluidWave fixed={true} containerClassName={styles.fluid_container}>
                 <div className={styles.content}>
-                    <h1 className={styles.title}>Bruna Guarizo</h1>
+                    <img
+                        src='/bg logo.svg'
+                        alt='Bruna Guarizo'
+                        className={styles.logo}
+                    />
                     <p className={styles.subtitle}>
                         Brand Designer & Frontend Developer
                     </p>

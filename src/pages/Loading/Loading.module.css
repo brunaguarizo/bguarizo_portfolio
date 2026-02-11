@@ -17,19 +17,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-sm, 16px);
+    gap: var(--spacing-md);
 }
 
-.title {
-    font-size: var(--font-size-heading-xl, 3rem);
-    font-weight: 700;
-    color: var(--white, #ffffff);
-    font-family: "Inter", sans-serif;
+.logo {
+    height: var(--font-size-heading-xxl);
+    width: auto;
+    display: block;
 }
 
 .subtitle {
-    font-size: var(--font-size-medium, 1rem);
-    color: var(--gray-light, #cccccc);
+    font-size: var(--font-size-medium);
+    color: var(--gray-light);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: var(--font-size-heading-xl);
+    }
+
+    .subtitle {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: var(--font-size-heading-lg);
+    }
 }
