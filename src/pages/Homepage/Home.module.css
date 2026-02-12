@@ -1,14 +1,8 @@
-.home_wrapper {
-    padding: 0 var(--spacing-lg);
-}
-
 .hero {
     min-height: 80vh;
     position: relative;
     overflow: visible;
     width: 100vw;
-    margin-left: calc(-1 * var(--spacing-lg));
-    margin-right: calc(-1 * var(--spacing-lg));
     padding-top: calc(var(--spacing-4xl) + 120px);
     padding-bottom: var(--spacing-2xl);
     display: flex;
@@ -180,6 +174,10 @@
     color: var(--white);
     line-height: 1.2;
     font-family: "Inter", sans-serif;
+}
+
+.about_container {
+    padding: 0 var(--spacing-lg);
 }
 
 @media (max-width: 1024px) {

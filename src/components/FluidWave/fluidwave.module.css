@@ -5,6 +5,7 @@
     min-height: 100%;
     overflow: hidden;
     background-color: var(--black);
+    padding: 200px 0;
 }
 
 .canvasWrapper {
