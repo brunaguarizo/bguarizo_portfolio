@@ -1,30 +1,21 @@
-.hero {
-    min-height: 80vh;
+/* ===== Layout ===== */
+.home_wrapper {
+    width: 100%;
+}
+
+.hero_section {
     position: relative;
-    overflow: visible;
-    width: 100vw;
-    padding-top: calc(var(--spacing-4xl) + 120px);
-    padding-bottom: var(--spacing-2xl);
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
+    min-height: 65vh;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to bottom, transparent, var(--black));
-    z-index: 1;
-    pointer-events: none;
-}
-
+/* ===== FluidWave ===== */
 .wavy_container {
     width: 100%;
     height: 100%;
+}
+
+.hero_section .wavy_container {
+    padding: 180px 0 20px 0;
 }
 
 .wavy_content {
@@ -60,6 +51,13 @@
     gap: var(--spacing-lg);
 }
 
+.description {
+    font-size: var(--font-size-medium);
+    color: var(--white);
+    max-width: 700px;
+    text-transform: uppercase;
+}
+
 .title {
     font-size: var(--font-size-heading-xl);
     line-height: var(--line-height-display);
@@ -76,47 +74,7 @@
     display: block;
 }
 
-.italicText {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-}
-
-.description {
-    font-size: var(--font-size-medium);
-    color: var(--white);
-    max-width: 700px;
-    text-transform: uppercase;
-}
-
-.scroll_button {
-    width: 48px;
-    height: 48px;
-    border-radius: 100px;
-    background: transparent;
-    border: 0.5px solid var(--gray-light);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    margin-top: var(--spacing-md);
-    padding: 0;
-}
-
-.scroll_button:hover {
-    transform: scale(1.2);
-}
-
-.scroll_button:active {
-    transform: scale(1.1);
-}
-
-.scroll_button svg {
-    width: 24px;
-    height: 24px;
-}
-
+/* ===== Contact Section ===== */
 .contact {
     min-height: 85vh;
     position: relative;
@@ -176,17 +134,7 @@
     font-family: "Inter", sans-serif;
 }
 
-.about_container {
-    padding: 0 var(--spacing-lg);
-}
-
 @media (max-width: 1024px) {
-    .hero {
-        min-height: 75vh;
-        padding-top: calc(var(--spacing-3xl) + 100px);
-        padding-bottom: var(--spacing-xl);
-    }
-
     .container {
         gap: var(--spacing-md);
     }
@@ -218,14 +166,6 @@
 @media (max-width: 768px) {
     .home_wrapper {
         padding: 0 var(--spacing-sm);
-    }
-
-    .hero {
-        min-height: 70vh;
-        margin-left: calc(-1 * var(--spacing-sm));
-        margin-right: calc(-1 * var(--spacing-sm));
-        padding-top: calc(var(--spacing-2xl) + 80px);
-        padding-bottom: var(--spacing-md);
     }
 
     .container {
@@ -276,20 +216,9 @@
     .contact_content p {
         font-size: var(--font-size-small);
     }
-
-    .buttons {
-        flex-direction: column;
-        width: 100%;
-    }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        min-height: 100vh;
-        padding-top: calc(var(--spacing-xl) + 70px);
-        padding-bottom: var(--spacing-md);
-    }
-
     .container {
         gap: var(--spacing-sm);
     }
@@ -306,15 +235,9 @@
     .description {
         font-size: var(--font-size-small);
     }
-
-    .scroll_button {
-        width: 40px;
-        height: 40px;
-        margin-top: var(--spacing-sm);
-    }
 }
 
-/* About Section Styles */
+/* ===== About Section ===== */
 .about {
     background: var(--black);
     position: relative;
@@ -359,6 +282,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 1;
+    padding: 0 var(--spacing-lg);
 }
 
 .text_section {

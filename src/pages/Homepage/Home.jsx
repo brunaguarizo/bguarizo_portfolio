@@ -86,29 +86,6 @@ const Home = () => {
             );
         }
 
-        // ProjectsGrid animation
-        if (projectsRef.current) {
-            gsap.fromTo(
-                projectsRef.current,
-                {
-                    opacity: 0,
-                    y: 50,
-                },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: projectsRef.current,
-                        start: "top 80%",
-                        end: "top 50%",
-                        toggleActions: "play none none none",
-                    },
-                },
-            );
-        }
-
         // About section animation
         if (aboutRef.current) {
             // Title and description
@@ -264,13 +241,14 @@ const Home = () => {
 
     return (
         <div className={styles.home_wrapper}>
-            <FluidWave
-                containerClassName={styles.wavy_container}
-                className={styles.wavy_content}>
-                <div className={styles.container}>
-                    <div
-                        className={styles.content}
-                        ref={heroRef}>
+            <div className={styles.hero_section}>
+                <FluidWave
+                    containerClassName={styles.wavy_container}
+                    className={styles.wavy_content}>
+                    <div className={styles.container}>
+                        <div
+                            className={styles.content}
+                            ref={heroRef}>
                         <p
                             ref={descriptionRef}
                             className={styles.description}>
@@ -311,10 +289,10 @@ const Home = () => {
                                     />
                                 </svg>
                             </button> */}
+                        </div>
                     </div>
-                </div>
-            </FluidWave>
-
+                </FluidWave>
+            </div>
             <div ref={projectsRef}>
                 <ProjectsGrid filterMode={filterMode} />
             </div>
