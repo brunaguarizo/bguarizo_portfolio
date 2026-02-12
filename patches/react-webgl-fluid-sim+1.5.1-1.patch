@@ -1,0 +1,85 @@
+diff --git a/node_modules/react-webgl-fluid-sim/dist/index.js b/node_modules/react-webgl-fluid-sim/dist/index.js
+index aae8fe1..362ab5e 100644
+--- a/node_modules/react-webgl-fluid-sim/dist/index.js
++++ b/node_modules/react-webgl-fluid-sim/dist/index.js
+@@ -822,7 +822,7 @@ function WebGLFluidSim(_ref2) {
+ 
+     updateKeywords();
+     initFramebuffers();
+-    multipleSplats(canvas, Math.floor(Math.random() * 20) + 5);
++    multipleSplats(canvas, 0);
+     var lastUpdateTime = Date.now();
+     var colorUpdateTimer = 0.0;
+ 
+@@ -1111,11 +1111,31 @@ function WebGLFluidSim(_ref2) {
+     });
+     window.addEventListener('mousemove', function (e) {
+       var pointer = pointers[0];
+-      if (!pointer.down) return;
+       var rect = canvas.getBoundingClientRect();
+       var posX = scaleByPixelRatio(e.clientX - rect.x);
+       var posY = scaleByPixelRatio(e.clientY - rect.y);
+-      updatePointerMoveData(pointer, posX, posY);
++      if (!pointer.down) {
++        var newTexX = posX / canvas.width;
++        var newTexY = 1.0 - posY / canvas.height;
++        if (pointer.texcoordX === 0 && pointer.texcoordY === 0 && pointer.prevTexcoordX === 0 && pointer.prevTexcoordY === 0) {
++          pointer.texcoordX = newTexX;
++          pointer.texcoordY = newTexY;
++          pointer.prevTexcoordX = newTexX;
++          pointer.prevTexcoordY = newTexY;
++          pointer.moved = false;
++        } else {
++          pointer.prevTexcoordX = pointer.texcoordX;
++          pointer.prevTexcoordY = pointer.texcoordY;
++          pointer.texcoordX = newTexX;
++          pointer.texcoordY = newTexY;
++          pointer.deltaX = correctDeltaX(pointer.texcoordX - pointer.prevTexcoordX);
++          pointer.deltaY = correctDeltaY(pointer.texcoordY - pointer.prevTexcoordY);
++          pointer.moved = Math.abs(pointer.deltaX) > 0 || Math.abs(pointer.deltaY) > 0;
++          if (pointer.moved) pointer.color = colorGenerator();
++        }
++      } else {
++        updatePointerMoveData(pointer, posX, posY);
++      }
+     }, {
+       passive: false
+     });
+diff --git a/node_modules/react-webgl-fluid-sim/dist/index.modern.js b/node_modules/react-webgl-fluid-sim/dist/index.modern.js
+index b38f382..4f395c4 100644
+--- a/node_modules/react-webgl-fluid-sim/dist/index.modern.js
++++ b/node_modules/react-webgl-fluid-sim/dist/index.modern.js
+@@ -1109,11 +1109,31 @@ function WebGLFluidSim(_ref2) {
+     });
+     window.addEventListener('mousemove', function (e) {
+       var pointer = pointers[0];
+-      if (!pointer.down) return;
+       var rect = canvas.getBoundingClientRect();
+       var posX = scaleByPixelRatio(e.clientX - rect.x);
+       var posY = scaleByPixelRatio(e.clientY - rect.y);
+-      updatePointerMoveData(pointer, posX, posY);
++      if (!pointer.down) {
++        var newTexX = posX / canvas.width;
++        var newTexY = 1.0 - posY / canvas.height;
++        if (pointer.texcoordX === 0 && pointer.texcoordY === 0 && pointer.prevTexcoordX === 0 && pointer.prevTexcoordY === 0) {
++          pointer.texcoordX = newTexX;
++          pointer.texcoordY = newTexY;
++          pointer.prevTexcoordX = newTexX;
++          pointer.prevTexcoordY = newTexY;
++          pointer.moved = false;
++        } else {
++          pointer.prevTexcoordX = pointer.texcoordX;
++          pointer.prevTexcoordY = pointer.texcoordY;
++          pointer.texcoordX = newTexX;
++          pointer.texcoordY = newTexY;
++          pointer.deltaX = correctDeltaX(pointer.texcoordX - pointer.prevTexcoordX);
++          pointer.deltaY = correctDeltaY(pointer.texcoordY - pointer.prevTexcoordY);
++          pointer.moved = Math.abs(pointer.deltaX) > 0 || Math.abs(pointer.deltaY) > 0;
++          if (pointer.moved) pointer.color = colorGenerator();
++        }
++      } else {
++        updatePointerMoveData(pointer, posX, posY);
++      }
+     }, {
+       passive: false
+     });

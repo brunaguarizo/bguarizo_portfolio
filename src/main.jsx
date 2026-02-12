@@ -10,7 +10,7 @@ const Root = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 5000); // 5 seconds to check the loading screen, then load the homepage
+        }, 8000); // 8 seconds to check the loading screen, then load the homepage
         return () => clearTimeout(timer);
     }, []);
 
