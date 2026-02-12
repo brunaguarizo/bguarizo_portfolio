@@ -61,31 +61,15 @@ const Home = () => {
         }
     };
 
-    useEffect(() => {
-        // Wait for ScrollTrigger from CDN to load
-        const initScrollTrigger = () => {
-            if (typeof window !== "undefined" && window.ScrollTrigger) {
-                gsap.registerPlugin(window.ScrollTrigger);
-                setupAnimations();
-            } else {
-                // Try again after a short delay
-                setTimeout(initScrollTrigger, 100);
-            }
-        };
+    const setupAnimations = () => {
+        if (typeof window === "undefined" || !window.ScrollTrigger) return;
+        gsap.registerPlugin(window.ScrollTrigger);
 
-        const setupAnimations = () => {
             // Hero animation (initial fade in)
-            if (
-                titleRef.current &&
-                descriptionRef.current &&
-                scrollButtonRef.current
-            ) {
+            const heroElements = [titleRef.current, descriptionRef.current].filter(Boolean);
+            if (heroElements.length > 0) {
                 gsap.fromTo(
-                    [
-                        titleRef.current,
-                        descriptionRef.current,
-                        scrollButtonRef.current,
-                    ],
+                    heroElements,
                     {
                         opacity: 0,
                         y: 30,
@@ -253,12 +237,20 @@ const Home = () => {
                     );
                 }
             }
+    };
+
+    useEffect(() => {
+        const initScrollTrigger = () => {
+            if (typeof window !== "undefined" && window.ScrollTrigger) {
+                gsap.registerPlugin(window.ScrollTrigger);
+                setupAnimations();
+            } else {
+                setTimeout(initScrollTrigger, 100);
+            }
         };
 
-        // Initialize when component mounts
         initScrollTrigger();
 
-        // Cleanup
         return () => {
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 window.ScrollTrigger.getAll().forEach((trigger) =>
