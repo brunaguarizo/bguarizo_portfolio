@@ -1,8 +1,3 @@
-/* ----- Layout ----- */
-.home_wrapper {
-    width: 100%;
-}
-
 /* ----- Loading Overlay ----- */
 .loadingOverlay {
     position: fixed;
@@ -93,6 +88,26 @@
     .loadingSubtitle {
         margin-top: calc(var(--font-size-heading-lg) / 2 + var(--spacing-md));
     }
+}
+
+/* ----- Layout ----- */
+.home_wrapper {
+    width: 100%;
+}
+
+/* ----- Content Reveal (after loading) ----- */
+.contentWrapper {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity 1.5s ease-out,
+        transform 1.5s ease-out;
+    will-change: opacity, transform;
+}
+
+.contentWrapper.contentVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ----- Hero ----- */
