@@ -85,7 +85,7 @@
     }
 
     .loadingSubtitle {
-        margin-top: var(--spacing-4xl);
+        margin-top: var(--spacing-xl);
         width: 70%;
         text-align: center;
     }

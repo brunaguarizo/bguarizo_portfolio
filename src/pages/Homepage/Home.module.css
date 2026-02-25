@@ -195,6 +195,10 @@
 }
 
 @media (max-width: 768px) {
+    .hero_section {
+        min-height: 50vh;
+    }
+
     .home_wrapper {
         padding: 0 var(--spacing-sm);
     }
@@ -215,6 +219,10 @@
 
     .description {
         font-size: var(--font-size-medium);
+    }
+
+    .hero_section .description {
+        width: 70%;
     }
 
     .wavy_content {
