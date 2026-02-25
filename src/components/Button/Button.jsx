@@ -71,17 +71,13 @@ const Button = ({
     );
 };
 
-const GlowButton = ({ children, ...props }) => (
-    <Button {...props}>{children}</Button>
-);
-
 const FlatButton = ({ children, ...props }) => (
     <Button disableGlow {...props}>
         {children}
     </Button>
 );
 
-export { GlowButton, FlatButton };
+export { FlatButton };
 export default Button;
 
 export const ProjectButton = ({ className, ...props }) => (

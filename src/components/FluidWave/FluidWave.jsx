@@ -22,24 +22,12 @@ GL_CONFIGS.BLOOM_INTENSITY = 0.1; // less white
 GL_CONFIGS.BLOOM_THRESHOLD = 0.2; // bright areas bloom
 GL_CONFIGS.BLOOM_RESOLUTION = 384; // bloom resolution
 
-// Colors
-const FLUID_PALETTE = [
-    { r: 177 / 255, g: 177 / 255, b: 177 / 255 }, // gray-light
-    { r: 85 / 255, g: 85 / 255, b: 85 / 255 }, // gray-medium
-    { r: 51 / 255, g: 51 / 255, b: 51 / 255 }, // gray-dark
-];
-
-const SPLASH_INTENSITY = 0.2; // subtle splash, less bright
-
-const defaultColorGenerator = () => {
-    const color =
-        FLUID_PALETTE[Math.floor(Math.random() * FLUID_PALETTE.length)];
-    return {
-        r: color.r * SPLASH_INTENSITY,
-        g: color.g * SPLASH_INTENSITY,
-        b: color.b * SPLASH_INTENSITY,
-    };
-};
+// Splash color: gray-medium (85/255) with subtle intensity
+const defaultColorGenerator = () => ({
+    r: (85 / 255) * 0.2,
+    g: (85 / 255) * 0.2,
+    b: (85 / 255) * 0.2,
+});
 
 /**
  * FluidWave - WebGL Fluid Simulation background
