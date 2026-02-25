@@ -6,11 +6,16 @@ import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
 import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
 
+const loadingDuration = 5000;
+const logoAnimationDuration = 1000;
+const overlayFadeDuration = 500;
+
 const Home = () => {
-    const [filterMode, setFilterMode] = useState("design");
+    const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadingComplete, setLoadingComplete] = useState(false);
+
     // Refs for elements that will be animated
-    const heroRef = useRef(null);
-    const projectsRef = useRef(null);
     const aboutRef = useRef(null);
     const contactRef = useRef(null);
     const titleRef = useRef(null);
@@ -25,6 +30,7 @@ const Home = () => {
     const contactButtonRef = useRef(null);
 
     const skills = [
+        // skills array - used in the about section
         "Product Design",
         "Brand Strategy",
         "UX/UI Design",
@@ -36,6 +42,7 @@ const Home = () => {
     ];
 
     const experience = [
+        // experience array - used in the about section
         {
             role: "Product Designer",
             company: "Freelance",
@@ -53,14 +60,8 @@ const Home = () => {
         },
     ];
 
-    const scrollToProjects = () => {
-        const projectsSection = document.getElementById("projects");
-        if (projectsSection) {
-            projectsSection.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
     const setupAnimations = () => {
+        // setup animations for the sections
         if (typeof window === "undefined" || !window.ScrollTrigger) return;
         gsap.registerPlugin(window.ScrollTrigger);
 
@@ -218,6 +219,7 @@ const Home = () => {
     };
 
     useEffect(() => {
+        // use effect to setup the animations
         const initScrollTrigger = () => {
             if (typeof window !== "undefined" && window.ScrollTrigger) {
                 gsap.registerPlugin(window.ScrollTrigger);
@@ -238,16 +240,53 @@ const Home = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // use effect to set the loading state
+        const timer1 = setTimeout(
+            () => setLoadingComplete(true),
+            loadingDuration,
+        );
+        const timer2 = setTimeout(
+            () => setIsLoading(false),
+            loadingDuration + logoAnimationDuration + overlayFadeDuration,
+        );
+        return () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+        };
+    }, []);
+
     return (
         <div className={styles.home_wrapper}>
+            {isLoading && (
+                <div
+                    className={`${styles.loadingOverlay} ${
+                        loadingComplete ? styles.loadingComplete : ""
+                    }`}>
+                    <FluidWave
+                        fixed={true}
+                        containerClassName={styles.loadingFluidContainer}>
+                        <div className={styles.loadingContent}>
+                            <img
+                                src='/bg logo.svg'
+                                alt='Bruna Guarizo'
+                                className={styles.loadingLogo}
+                                fetchPriority='high'
+                            />
+                            <p className={styles.loadingSubtitle}>
+                                Brand Designer & Frontend Developer
+                            </p>
+                        </div>
+                    </FluidWave>
+                </div>
+            )}
+
             <div className={styles.hero_section}>
                 <FluidWave
                     containerClassName={styles.wavy_container}
                     className={styles.wavy_content}>
                     <div className={styles.container}>
-                        <div
-                            className={styles.content}
-                            ref={heroRef}>
+                        <div className={styles.content}>
                             <p
                                 ref={descriptionRef}
                                 className={styles.description}>
@@ -271,7 +310,7 @@ const Home = () => {
                     </div>
                 </FluidWave>
             </div>
-            <div ref={projectsRef}>
+            <div>
                 <ProjectsGrid filterMode={filterMode} />
             </div>
             <section

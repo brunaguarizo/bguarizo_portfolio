@@ -21,7 +21,7 @@ Object.assign(GL_CONFIGS, {
 });
 
 const gray = (85 / 255) * 0.2; // gray-medium color - subtle splash
-const default_color_generator = () => ({ r: gray, g: gray, b: gray }); //the color generator grabs the gray var
+const defaultColorGenerator = () => ({ r: gray, g: gray, b: gray });
 
 export const FluidWave = ({
     children,
@@ -38,7 +38,7 @@ export const FluidWave = ({
             <div className={styles.canvas_wrapper}>
                 <WebGLFluidSim
                     fixed={fixed}
-                    colorGenerator={colorGenerator ?? default_color_generator}
+                    colorGenerator={colorGenerator ?? defaultColorGenerator}
                 />
             </div>
             {children && (
