@@ -281,6 +281,10 @@ const Home = () => {
                 </div>
             )}
 
+            <div
+                className={`${styles.contentWrapper} ${
+                    !isLoading ? styles.contentVisible : ""
+                }`}>
             <div className={styles.hero_section}>
                 <FluidWave
                     containerClassName={styles.wavy_container}
@@ -421,6 +425,7 @@ const Home = () => {
                     </div>
                 </FluidWave>
             </section>
+            </div>
         </div>
     );
 };
