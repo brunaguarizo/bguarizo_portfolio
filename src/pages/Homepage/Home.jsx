@@ -1,19 +1,31 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "./Home.module.css";
 import FluidWave from "../../components/FluidWave/FluidWave";
 import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
 import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
+import Loading from "./Loading";
 
-const loadingDuration = 5000;
-const logoAnimationDuration = 1000;
-const overlayFadeDuration = 500;
+const MOBILE_BREAKPOINT = 768;
 
 const Home = () => {
     const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
     const [isLoading, setIsLoading] = useState(true);
-    const [loadingComplete, setLoadingComplete] = useState(false);
+    const [isMobile, setIsMobile] = useState(
+        () =>
+            typeof window !== "undefined" &&
+            window.innerWidth <= MOBILE_BREAKPOINT,
+    );
+    const handleLoadingComplete = useCallback(() => setIsLoading(false), []);
+
+    useEffect(() => {
+        const checkMobile = () =>
+            setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     // Refs for elements that will be animated
     const aboutRef = useRef(null);
@@ -240,79 +252,75 @@ const Home = () => {
         };
     }, []);
 
-    useEffect(() => {
-        // use effect to set the loading state
-        const timer1 = setTimeout(
-            () => setLoadingComplete(true),
-            loadingDuration,
-        );
-        const timer2 = setTimeout(
-            () => setIsLoading(false),
-            loadingDuration + logoAnimationDuration + overlayFadeDuration,
-        );
-        return () => {
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-        };
-    }, []);
-
     return (
         <div className={styles.home_wrapper}>
-            {isLoading && (
-                <div
-                    className={`${styles.loadingOverlay} ${
-                        loadingComplete ? styles.loadingComplete : ""
-                    }`}>
-                    <FluidWave
-                        fixed={true}
-                        containerClassName={styles.loadingFluidContainer}>
-                        <div className={styles.loadingContent}>
-                            <img
-                                src='/bg logo.svg'
-                                alt='Bruna Guarizo'
-                                className={styles.loadingLogo}
-                                fetchPriority='high'
-                            />
-                            <p className={styles.loadingSubtitle}>
-                                Brand Designer & Frontend Developer
-                            </p>
-                        </div>
-                    </FluidWave>
-                </div>
-            )}
+            {isLoading && <Loading onComplete={handleLoadingComplete} />}
 
             <div
                 className={`${styles.contentWrapper} ${
                     !isLoading ? styles.contentVisible : ""
                 }`}>
             <div className={styles.hero_section}>
-                <FluidWave
-                    containerClassName={styles.wavy_container}
-                    className={styles.wavy_content}>
-                    <div className={styles.container}>
-                        <div className={styles.content}>
-                            <p
-                                ref={descriptionRef}
-                                className={styles.description}>
-                                A multidisciplinary designer based in Vancouver
-                            </p>
-                            <h1
-                                ref={titleRef}
-                                className={styles.title}>
-                                <span className={styles.title_text}>
-                                    Connecting brands <br />
-                                    to people through
-                                </span>
-                                <SwitchButton
-                                    value={filterMode}
-                                    onChange={setFilterMode}
-                                    leftLabel='design'
-                                    rightLabel='code'
-                                />
-                            </h1>
+                {isMobile ? (
+                    <div
+                        className={`${styles.wavy_container} ${styles.hero_mobile_bg}`}>
+                        <div className={styles.wavy_content}>
+                            <div className={styles.container}>
+                                <div className={styles.content}>
+                                    <p
+                                        ref={descriptionRef}
+                                        className={styles.description}>
+                                        A multidisciplinary designer based in
+                                        Vancouver
+                                    </p>
+                                    <h1
+                                        ref={titleRef}
+                                        className={styles.title}>
+                                        <span className={styles.title_text}>
+                                            Connecting brands <br />
+                                            to people through
+                                        </span>
+                                        <SwitchButton
+                                            value={filterMode}
+                                            onChange={setFilterMode}
+                                            leftLabel='design'
+                                            rightLabel='code'
+                                        />
+                                    </h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </FluidWave>
+                ) : (
+                    <FluidWave
+                        containerClassName={styles.wavy_container}
+                        className={styles.wavy_content}>
+                        <div className={styles.container}>
+                            <div className={styles.content}>
+                                <p
+                                    ref={descriptionRef}
+                                    className={styles.description}>
+                                    A multidisciplinary designer based in
+                                    Vancouver
+                                </p>
+                                <h1
+                                    ref={titleRef}
+                                    className={styles.title}>
+                                    <span className={styles.title_text}>
+                                        Connecting brands <br />
+                                        to people through
+                                    </span>
+                                    <SwitchButton
+                                        value={filterMode}
+                                        onChange={setFilterMode}
+                                        leftLabel='design'
+                                        rightLabel='code'
+                                    />
+                                </h1>
+                            </div>
+                        </div>
+                    </FluidWave>
+                )}
             </div>
             <div>
                 <ProjectsGrid filterMode={filterMode} />
@@ -395,35 +403,69 @@ const Home = () => {
                 ref={contactRef}
                 id='contact'
                 className={styles.contact}>
-                <FluidWave
-                    containerClassName={styles.wavy_container}
-                    className={styles.wavy_content}>
-                    <div className={styles.contact_container}>
-                        <div className={styles.contact_content}>
-                            <p
-                                ref={contactDescriptionRef}
-                                className={styles.description}>
-                                Let's combine strategy and code to bring your
-                                vision to life
-                            </p>
-                            <h2
-                                ref={contactTitleRef}
-                                className={styles.contact_title}>
-                                Ready to build impactful digital products?
-                            </h2>
+                {isMobile ? (
+                    <div
+                        className={`${styles.wavy_container} ${styles.contact_mobile_bg}`}>
+                        <div className={styles.wavy_content}>
+                            <div className={styles.contact_container}>
+                                <div className={styles.contact_content}>
+                                    <p
+                                        ref={contactDescriptionRef}
+                                        className={styles.description}>
+                                        Let's combine strategy and code to
+                                        bring your vision to life
+                                    </p>
+                                    <h2
+                                        ref={contactTitleRef}
+                                        className={styles.contact_title}>
+                                        Ready to build impactful digital
+                                        products?
+                                    </h2>
 
-                            <div ref={contactButtonRef}>
-                                <Button
-                                    onClick={() =>
-                                        (window.location.href =
-                                            "mailto:guarizob@gmail.com")
-                                    }>
-                                    Get In Touch
-                                </Button>
+                                    <div ref={contactButtonRef}>
+                                        <Button
+                                            onClick={() =>
+                                                (window.location.href =
+                                                    "mailto:guarizob@gmail.com")
+                                            }>
+                                            Get In Touch
+                                        </Button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </FluidWave>
+                ) : (
+                    <FluidWave
+                        containerClassName={styles.wavy_container}
+                        className={styles.wavy_content}>
+                        <div className={styles.contact_container}>
+                            <div className={styles.contact_content}>
+                                <p
+                                    ref={contactDescriptionRef}
+                                    className={styles.description}>
+                                    Let's combine strategy and code to bring
+                                    your vision to life
+                                </p>
+                                <h2
+                                    ref={contactTitleRef}
+                                    className={styles.contact_title}>
+                                    Ready to build impactful digital products?
+                                </h2>
+
+                                <div ref={contactButtonRef}>
+                                    <Button
+                                        onClick={() =>
+                                            (window.location.href =
+                                                "mailto:guarizob@gmail.com")
+                                        }>
+                                        Get In Touch
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    </FluidWave>
+                )}
             </section>
             </div>
         </div>
