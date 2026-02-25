@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "postinstall": "patch-package"
     },
     "dependencies": {
         "@react-three/drei": "^9.88.17",
@@ -26,7 +27,6 @@
     "devDependencies": {
         "@vitejs/plugin-react": "^4.2.1",
         "patch-package": "^8.0.1",
-        "postinstall": "patch-package",
         "vite": "^5.0.8"
     }
 }
