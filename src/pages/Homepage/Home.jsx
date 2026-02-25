@@ -1,19 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "./Home.module.css";
 import FluidWave from "../../components/FluidWave/FluidWave";
 import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
 import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
-
-const loadingDuration = 5000;
-const logoAnimationDuration = 1000;
-const overlayFadeDuration = 500;
+import Loading from "./Loading";
 
 const Home = () => {
     const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
     const [isLoading, setIsLoading] = useState(true);
-    const [loadingComplete, setLoadingComplete] = useState(false);
+    const handleLoadingComplete = useCallback(() => setIsLoading(false), []);
 
     // Refs for elements that will be animated
     const aboutRef = useRef(null);
@@ -240,46 +237,9 @@ const Home = () => {
         };
     }, []);
 
-    useEffect(() => {
-        // use effect to set the loading state
-        const timer1 = setTimeout(
-            () => setLoadingComplete(true),
-            loadingDuration,
-        );
-        const timer2 = setTimeout(
-            () => setIsLoading(false),
-            loadingDuration + logoAnimationDuration + overlayFadeDuration,
-        );
-        return () => {
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-        };
-    }, []);
-
     return (
         <div className={styles.home_wrapper}>
-            {isLoading && (
-                <div
-                    className={`${styles.loadingOverlay} ${
-                        loadingComplete ? styles.loadingComplete : ""
-                    }`}>
-                    <FluidWave
-                        fixed={true}
-                        containerClassName={styles.loadingFluidContainer}>
-                        <div className={styles.loadingContent}>
-                            <img
-                                src='/bg logo.svg'
-                                alt='Bruna Guarizo'
-                                className={styles.loadingLogo}
-                                fetchPriority='high'
-                            />
-                            <p className={styles.loadingSubtitle}>
-                                Brand Designer & Frontend Developer
-                            </p>
-                        </div>
-                    </FluidWave>
-                </div>
-            )}
+            {isLoading && <Loading onComplete={handleLoadingComplete} />}
 
             <div
                 className={`${styles.contentWrapper} ${
