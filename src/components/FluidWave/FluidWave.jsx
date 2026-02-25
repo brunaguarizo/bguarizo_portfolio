@@ -11,8 +11,8 @@ Object.assign(GL_CONFIGS, {
     VELOCITY_DISSIPATION: 0.55, // fluid velocity dissipation
     PRESSURE: 0.5, // fluid pressure and intensity
     CURL: 0.5, // vorticity intensity - when user interacts
-    SPLAT_RADIUS: 0.3, // splash area - when user interacts
-    SPLAT_FORCE: 200, // splash force - when user interacts
+    SPLAT_RADIUS: 0.5, // splash area - when user interacts
+    SPLAT_FORCE: 500, // splash force - when user interacts
     SHADING: true, // 3D shading
     SUNRAYS: false, // sunrays - false to save performance
     BLOOM_INTENSITY: 0.1, // bloom intensity

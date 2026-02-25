@@ -85,6 +85,8 @@
     }
 
     .loadingSubtitle {
-        margin-top: calc(var(--font-size-heading-lg) / 2 + var(--spacing-md));
+        margin-top: var(--spacing-4xl);
+        width: 70%;
+        text-align: center;
     }
 }

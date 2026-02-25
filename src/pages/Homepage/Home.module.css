@@ -183,6 +183,17 @@
     }
 }
 
+/* Mobile: hero/contact without FluidWave - solid background */
+.hero_mobile_bg,
+.contact_mobile_bg {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .home_wrapper {
         padding: 0 var(--spacing-sm);
