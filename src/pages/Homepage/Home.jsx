@@ -15,7 +15,6 @@ const Home = () => {
     const contactRef = useRef(null);
     const titleRef = useRef(null);
     const descriptionRef = useRef(null);
-    const scrollButtonRef = useRef(null);
     const aboutTitleRef = useRef(null);
     const aboutDescriptionRef = useRef(null);
     const skillsRef = useRef(null);
@@ -249,46 +248,25 @@ const Home = () => {
                         <div
                             className={styles.content}
                             ref={heroRef}>
-                        <p
-                            ref={descriptionRef}
-                            className={styles.description}>
-                            A multidisciplinary designer based in Vancouver
-                        </p>
-                        <h1
-                            ref={titleRef}
-                            className={styles.title}>
-                            <span className={styles.title_text}>
-                                Connecting brands <br />
-                                to people through
-                            </span>
-                            <SwitchButton
-                                value={filterMode}
-                                onChange={setFilterMode}
-                                leftLabel='design'
-                                rightLabel='code'
-                            />
-                        </h1>
-
-                        {/* <button
-                                ref={scrollButtonRef}
-                                className={styles.scroll_button}
-                                onClick={scrollToProjects}
-                                aria-label='Scroll down to projects'>
-                                <svg
-                                    width='24'
-                                    height='24'
-                                    viewBox='0 0 24 24'
-                                    fill='none'
-                                    xmlns='http://www.w3.org/2000/svg'>
-                                    <path
-                                        d='M12 8L12 18M12 18L8 14M12 18L16 14'
-                                        stroke='currentColor'
-                                        strokeWidth='2'
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                    />
-                                </svg>
-                            </button> */}
+                            <p
+                                ref={descriptionRef}
+                                className={styles.description}>
+                                A multidisciplinary designer based in Vancouver
+                            </p>
+                            <h1
+                                ref={titleRef}
+                                className={styles.title}>
+                                <span className={styles.title_text}>
+                                    Connecting brands <br />
+                                    to people through
+                                </span>
+                                <SwitchButton
+                                    value={filterMode}
+                                    onChange={setFilterMode}
+                                    leftLabel='design'
+                                    rightLabel='code'
+                                />
+                            </h1>
                         </div>
                     </div>
                 </FluidWave>

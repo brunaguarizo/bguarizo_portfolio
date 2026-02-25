@@ -11,6 +11,7 @@ const Loading = () => {
                         src='/bg logo.svg'
                         alt='Bruna Guarizo'
                         className={styles.logo}
+                        fetchPriority="high"
                     />
                     <p className={styles.subtitle}>
                         Brand Designer & Frontend Developer

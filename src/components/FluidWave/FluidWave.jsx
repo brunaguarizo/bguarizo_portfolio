@@ -2,40 +2,26 @@ import React from "react";
 import WebGLFluidSim, { GL_CONFIGS } from "react-webgl-fluid-sim";
 import styles from "./fluidwave.module.css";
 
-// Removed auto splash effect
-GL_CONFIGS.SPLAT_RATE = Number.MAX_SAFE_INTEGER;
-GL_CONFIGS.SPLAT_COUNT = () => 0;
-
-// Fluid settings
-const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-GL_CONFIGS.DYE_RESOLUTION = isMobile ? 768 : 1536; // quality: high
-GL_CONFIGS.SIM_RESOLUTION = 256; // sim resolution - detailed and smoother
-GL_CONFIGS.DENSITY_DISSIPATION = 0.35; // soft spread
-GL_CONFIGS.VELOCITY_DISSIPATION = 0.55; // velocity diffusion
-GL_CONFIGS.PRESSURE = 0.5; // pressure and intensity of the fluid
-GL_CONFIGS.CURL = 0.5; // vorticity
-GL_CONFIGS.SPLAT_RADIUS = 0.3; // splash area
-GL_CONFIGS.SPLAT_FORCE = 500; // gentler movement
-GL_CONFIGS.SHADING = true; // shading
-GL_CONFIGS.SUNRAYS = false; // sunrays
-GL_CONFIGS.BLOOM_INTENSITY = 0.1; // less white
-GL_CONFIGS.BLOOM_THRESHOLD = 0.2; // bright areas bloom
-GL_CONFIGS.BLOOM_RESOLUTION = 384; // bloom resolution
-
-// Splash color: gray-medium (85/255) with subtle intensity
-const defaultColorGenerator = () => ({
-    r: (85 / 255) * 0.2,
-    g: (85 / 255) * 0.2,
-    b: (85 / 255) * 0.2,
+Object.assign(GL_CONFIGS, {
+    SPLAT_RATE: Number.MAX_SAFE_INTEGER,
+    SPLAT_COUNT: () => 0, // no automatic splashes
+    DYE_RESOLUTION: 768, //lighter resolution - more performance
+    SIM_RESOLUTION: 128, // lighter sim resolution - more performance
+    DENSITY_DISSIPATION: 0.35, // velocity to color dissipation
+    VELOCITY_DISSIPATION: 0.55, // fluid velocity dissipation
+    PRESSURE: 0.5, // fluid pressure and intensity
+    CURL: 0.5, // vorticity intensity - when user interacts
+    SPLAT_RADIUS: 0.3, // splash area - when user interacts
+    SPLAT_FORCE: 200, // splash force - when user interacts
+    SHADING: true, // 3D shading
+    SUNRAYS: false, // sunrays - false to save performance
+    BLOOM_INTENSITY: 0.1, // bloom intensity
+    BLOOM_THRESHOLD: 0.2, // bloom threshold
+    BLOOM_RESOLUTION: 256, // bloom resolution - lighter - more performance
 });
 
-/**
- * FluidWave - WebGL Fluid Simulation background
- * Based on [WebGL Fluid Background](https://github.com/tkabalin/WebGL-Fluid-Background)
- * which adapts [PavelDoGreat's WebGL Fluid Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation)
- *
- * Use for: loading screen, hero background
- */
+const gray = (85 / 255) * 0.2; // gray-medium color - subtle splash
+const default_color_generator = () => ({ r: gray, g: gray, b: gray }); //the color generator grabs the gray var
 
 export const FluidWave = ({
     children,
@@ -49,10 +35,10 @@ export const FluidWave = ({
         <div
             className={`${styles.container} ${containerClassName || ""}`}
             {...props}>
-            <div className={styles.canvasWrapper}>
+            <div className={styles.canvas_wrapper}>
                 <WebGLFluidSim
                     fixed={fixed}
-                    colorGenerator={colorGenerator ?? defaultColorGenerator}
+                    colorGenerator={colorGenerator ?? default_color_generator}
                 />
             </div>
             {children && (
