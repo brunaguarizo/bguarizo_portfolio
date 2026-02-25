@@ -65,6 +65,11 @@
 }
 
 @media (max-width: 768px) {
+    /* Allow touch/scroll to pass through on mobile - overlay must not block */
+    .loadingOverlay {
+        pointer-events: none;
+    }
+
     .loadingLogo {
         height: var(--font-size-heading-xl);
     }

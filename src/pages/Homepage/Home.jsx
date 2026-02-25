@@ -11,21 +11,21 @@ const MOBILE_BREAKPOINT = 768;
 
 const Home = () => {
     const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
-    const [isLoading, setIsLoading] = useState(true);
-    const [isMobile, setIsMobile] = useState(
-        () =>
-            typeof window !== "undefined" &&
-            window.innerWidth <= MOBILE_BREAKPOINT,
-    );
+    const isMobileView = typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT;
+    const [isLoading, setIsLoading] = useState(!isMobileView); // skip loading on mobile - fixes touch/scroll
+    const [isMobile, setIsMobile] = useState(isMobileView);
     const handleLoadingComplete = useCallback(() => setIsLoading(false), []);
 
     useEffect(() => {
-        const checkMobile = () =>
-            setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+        const checkMobile = () => {
+            const mobile = window.innerWidth <= MOBILE_BREAKPOINT;
+            setIsMobile(mobile);
+            if (mobile && isLoading) setIsLoading(false); // ensure no loading overlay on mobile
+        };
         checkMobile();
         window.addEventListener("resize", checkMobile);
         return () => window.removeEventListener("resize", checkMobile);
-    }, []);
+    }, [isLoading]);
 
     // Refs for elements that will be animated
     const aboutRef = useRef(null);

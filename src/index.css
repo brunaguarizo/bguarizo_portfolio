@@ -23,7 +23,7 @@ body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     min-height: 100%;
-    touch-action: pan-y;
+    touch-action: manipulation; /* enables touch scroll + removes 300ms click delay */
 }
 
 :root {

@@ -482,7 +482,7 @@
 
     .about_container {
         gap: var(--spacing-xl);
-        padding: 0 var(--spacing-sm);
+        padding: 0;
     }
 
     .text_section {
