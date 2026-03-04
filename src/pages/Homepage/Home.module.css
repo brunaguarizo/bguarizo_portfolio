@@ -418,18 +418,6 @@
     font-family: "Inter", sans-serif;
 }
 
-.current_badge {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 4px var(--spacing-xs);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-small);
-    color: var(--white);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: "Inter", sans-serif;
-    white-space: nowrap;
-}
-
 .button_container {
     margin-top: var(--spacing-md);
 }
