@@ -7,18 +7,35 @@ import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
 import Loading from "./Loading";
 
-const MOBILE_BREAKPOINT = 768;
+const mobileBreakpoint = 768;
+const hasSeenLoadingKey = "hasSeenLoading";
 
 const Home = () => {
     const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
-    const isMobileView = typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT;
-    const [isLoading, setIsLoading] = useState(!isMobileView); // skip loading on mobile - fixes touch/scroll
+    const isMobileView =
+        typeof window !== "undefined" && window.innerWidth <= mobileBreakpoint;
+    const [isLoading, setIsLoading] = useState(() => {
+        // No loading page on mobile
+        if (isMobileView) return false;
+        // Check if user has already seen the loading page
+        const hasSeenLoading =
+            typeof window !== "undefined" &&
+            localStorage.getItem(hasSeenLoadingKey);
+        // If they already saw it, dont show it again.
+        return !hasSeenLoading;
+    });
     const [isMobile, setIsMobile] = useState(isMobileView);
-    const handleLoadingComplete = useCallback(() => setIsLoading(false), []);
+    const handleLoadingComplete = useCallback(() => {
+        //Saving the loading page view into a local storage
+        if (typeof window !== "undefined") {
+            localStorage.setItem(hasSeenLoadingKey, "true");
+        }
+        setIsLoading(false);
+    }, []);
 
     useEffect(() => {
         const checkMobile = () => {
-            const mobile = window.innerWidth <= MOBILE_BREAKPOINT;
+            const mobile = window.innerWidth <= mobileBreakpoint;
             setIsMobile(mobile);
             if (mobile && isLoading) setIsLoading(false); // ensure no loading overlay on mobile
         };
@@ -27,7 +44,7 @@ const Home = () => {
         return () => window.removeEventListener("resize", checkMobile);
     }, [isLoading]);
 
-    // Refs for elements that will be animated
+    //Page animation
     const aboutRef = useRef(null);
     const contactRef = useRef(null);
     const titleRef = useRef(null);
@@ -260,11 +277,41 @@ const Home = () => {
                 className={`${styles.contentWrapper} ${
                     !isLoading ? styles.contentVisible : ""
                 }`}>
-            <div className={styles.hero_section}>
-                {isMobile ? (
-                    <div
-                        className={`${styles.wavy_container} ${styles.hero_mobile_bg}`}>
-                        <div className={styles.wavy_content}>
+                <div className={styles.hero_section}>
+                    {isMobile ? (
+                        <div
+                            className={`${styles.wavy_container} ${styles.hero_mobile_bg}`}>
+                            <div className={styles.wavy_content}>
+                                <div className={styles.container}>
+                                    <div className={styles.content}>
+                                        <p
+                                            ref={descriptionRef}
+                                            className={styles.description}>
+                                            A multidisciplinary designer based
+                                            in Vancouver
+                                        </p>
+                                        <h1
+                                            ref={titleRef}
+                                            className={styles.title}>
+                                            <span className={styles.title_text}>
+                                                Connecting brands <br />
+                                                to people through
+                                            </span>
+                                            <SwitchButton
+                                                value={filterMode}
+                                                onChange={setFilterMode}
+                                                leftLabel='design'
+                                                rightLabel='code'
+                                            />
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <FluidWave
+                            containerClassName={styles.wavy_container}
+                            className={styles.wavy_content}>
                             <div className={styles.container}>
                                 <div className={styles.content}>
                                     <p
@@ -289,131 +336,132 @@ const Home = () => {
                                     </h1>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                ) : (
-                    <FluidWave
-                        containerClassName={styles.wavy_container}
-                        className={styles.wavy_content}>
-                        <div className={styles.container}>
-                            <div className={styles.content}>
-                                <p
-                                    ref={descriptionRef}
-                                    className={styles.description}>
-                                    A multidisciplinary designer based in
-                                    Vancouver
-                                </p>
-                                <h1
-                                    ref={titleRef}
-                                    className={styles.title}>
-                                    <span className={styles.title_text}>
-                                        Connecting brands <br />
-                                        to people through
+                        </FluidWave>
+                    )}
+                </div>
+                <div>
+                    <ProjectsGrid filterMode={filterMode} />
+                </div>
+                <section
+                    ref={aboutRef}
+                    id='about'
+                    className={styles.about}>
+                    <div className={styles.about_container}>
+                        <div className={styles.text_section}>
+                            <h2
+                                ref={aboutTitleRef}
+                                className={styles.about_title}>
+                                Meet Bruna
+                            </h2>
+                            <p
+                                ref={aboutDescriptionRef}
+                                className={styles.about_description}>
+                                Hey there! I'm Bruna Guarizo, a
+                                multidisciplinary designer and frontend
+                                developer based in Vancouver. I believe that
+                                impactful design creates meaningful connections
+                                between brands and people. By combining
+                                strategic branding with technical precision, I
+                                bridge the gap between concept and reality to
+                                build seamless, end-to-end digital products.
+                            </p>
+                            <div
+                                ref={skillsRef}
+                                className={styles.skills}>
+                                {skills.map((skill, index) => (
+                                    <span
+                                        key={index}
+                                        className={styles.skill_tag}>
+                                        {skill}
                                     </span>
-                                    <SwitchButton
-                                        value={filterMode}
-                                        onChange={setFilterMode}
-                                        leftLabel='design'
-                                        rightLabel='code'
-                                    />
-                                </h1>
+                                ))}
                             </div>
-                        </div>
-                    </FluidWave>
-                )}
-            </div>
-            <div>
-                <ProjectsGrid filterMode={filterMode} />
-            </div>
-            <section
-                ref={aboutRef}
-                id='about'
-                className={styles.about}>
-                <div className={styles.about_container}>
-                    <div className={styles.text_section}>
-                        <h2
-                            ref={aboutTitleRef}
-                            className={styles.about_title}>
-                            Meet Bruna
-                        </h2>
-                        <p
-                            ref={aboutDescriptionRef}
-                            className={styles.about_description}>
-                            Hey there! I'm Bruna Guarizo, a multidisciplinary
-                            designer and frontend developer based in Vancouver.
-                            I believe that impactful design creates meaningful
-                            connections between brands and people. By combining
-                            strategic branding with technical precision, I
-                            bridge the gap between concept and reality to build
-                            seamless, end-to-end digital products.
-                        </p>
-                        <div
-                            ref={skillsRef}
-                            className={styles.skills}>
-                            {skills.map((skill, index) => (
-                                <span
-                                    key={index}
-                                    className={styles.skill_tag}>
-                                    {skill}
-                                </span>
-                            ))}
-                        </div>
-                        <div
-                            ref={experienceRef}
-                            className={styles.experience_section}>
-                            {experience.map((exp, index) => (
-                                <div
-                                    key={index}
-                                    className={styles.experience_item}>
-                                    <div className={styles.experience_content}>
-                                        <div className={styles.role}>
-                                            {exp.role}
-                                        </div>
-                                        <div className={styles.company}>
-                                            {exp.company}
-                                        </div>
-                                        <div className={styles.period}>
-                                            {exp.period}
+                            <div
+                                ref={experienceRef}
+                                className={styles.experience_section}>
+                                {experience.map((exp, index) => (
+                                    <div
+                                        key={index}
+                                        className={styles.experience_item}>
+                                        <div
+                                            className={
+                                                styles.experience_content
+                                            }>
+                                            <div className={styles.role}>
+                                                {exp.role}
+                                            </div>
+                                            <div className={styles.company}>
+                                                {exp.company}
+                                            </div>
+                                            <div className={styles.period}>
+                                                {exp.period}
+                                            </div>
                                         </div>
                                     </div>
-                                    {exp.current && (
-                                        <span className={styles.current_badge}>
-                                            Currently
-                                        </span>
-                                    )}
-                                </div>
-                            ))}
+                                ))}
+                            </div>
+                            <div className={styles.button_container}>
+                                <Button>More About Me</Button>
+                            </div>
                         </div>
-                        <div className={styles.button_container}>
-                            <Button>More About Me</Button>
-                        </div>
-                    </div>
 
-                    <div className={styles.profile_image}>
-                        <img
-                            ref={profileImageRef}
-                            src='/bruna.png'
-                            alt='Bruna Guarizo'
-                            className={styles.profile_img}
-                        />
+                        <div className={styles.profile_image}>
+                            <img
+                                ref={profileImageRef}
+                                src='/bruna.png'
+                                alt='Bruna Guarizo'
+                                className={styles.profile_img}
+                            />
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section
-                ref={contactRef}
-                id='contact'
-                className={styles.contact}>
-                {isMobile ? (
-                    <div
-                        className={`${styles.wavy_container} ${styles.contact_mobile_bg}`}>
-                        <div className={styles.wavy_content}>
+                </section>
+                <section
+                    ref={contactRef}
+                    id='contact'
+                    className={styles.contact}>
+                    {isMobile ? (
+                        <div
+                            className={`${styles.wavy_container} ${styles.contact_mobile_bg}`}>
+                            <div className={styles.wavy_content}>
+                                <div className={styles.contact_container}>
+                                    <div className={styles.contact_content}>
+                                        <p
+                                            ref={contactDescriptionRef}
+                                            className={styles.description}>
+                                            Let's combine strategy and code to
+                                            bring your vision to life
+                                        </p>
+                                        <h2
+                                            ref={contactTitleRef}
+                                            className={styles.contact_title}>
+                                            Ready to build impactful digital
+                                            products?
+                                        </h2>
+
+                                        <div ref={contactButtonRef}>
+                                            <Button
+                                                onClick={() =>
+                                                    (window.location.href =
+                                                        "mailto:guarizob@gmail.com")
+                                                }>
+                                                Get In Touch
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <FluidWave
+                            containerClassName={styles.wavy_container}
+                            className={styles.wavy_content}>
                             <div className={styles.contact_container}>
                                 <div className={styles.contact_content}>
                                     <p
                                         ref={contactDescriptionRef}
                                         className={styles.description}>
-                                        Let's combine strategy and code to
-                                        bring your vision to life
+                                        Let's combine strategy and code to bring
+                                        your vision to life
                                     </p>
                                     <h2
                                         ref={contactTitleRef}
@@ -433,40 +481,9 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                ) : (
-                    <FluidWave
-                        containerClassName={styles.wavy_container}
-                        className={styles.wavy_content}>
-                        <div className={styles.contact_container}>
-                            <div className={styles.contact_content}>
-                                <p
-                                    ref={contactDescriptionRef}
-                                    className={styles.description}>
-                                    Let's combine strategy and code to bring
-                                    your vision to life
-                                </p>
-                                <h2
-                                    ref={contactTitleRef}
-                                    className={styles.contact_title}>
-                                    Ready to build impactful digital products?
-                                </h2>
-
-                                <div ref={contactButtonRef}>
-                                    <Button
-                                        onClick={() =>
-                                            (window.location.href =
-                                                "mailto:guarizob@gmail.com")
-                                        }>
-                                        Get In Touch
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-                    </FluidWave>
-                )}
-            </section>
+                        </FluidWave>
+                    )}
+                </section>
             </div>
         </div>
     );
