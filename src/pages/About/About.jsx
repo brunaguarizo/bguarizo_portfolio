@@ -313,7 +313,7 @@ const AboutMe = () => {
                         I'm Bruna Guarizo, a multidisciplinary designer based in
                         Vancouver. <br></br>I believe that impactful design
                         creates meaningful connections between brands and
-                        people. By combining my 10 years ofdesign background
+                        people. By combining my 10 years of design background
                         with my frontend skills, I bridge the gap between
                         concept and reality to build seamless, end-to-end
                         digital products.
