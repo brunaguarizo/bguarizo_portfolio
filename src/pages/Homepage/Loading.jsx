@@ -13,9 +13,22 @@ const Loading = ({ onComplete }) => {
             loadingDuration,
         );
         const timer2 = setTimeout(() => onComplete?.(), loadingDuration);
+
+        const handleSkip = () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            setLoadingComplete(true);
+            onComplete?.();
+        };
+
+        window.addEventListener("click", handleSkip, { once: true });
+        window.addEventListener("scroll", handleSkip, { once: true });
+
         return () => {
             clearTimeout(timer1);
             clearTimeout(timer2);
+            window.removeEventListener("click", handleSkip);
+            window.removeEventListener("scroll", handleSkip);
         };
     }, [onComplete]);
 
