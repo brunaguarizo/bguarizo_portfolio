@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import FluidWave from "../../components/FluidWave/FluidWave";
 import styles from "./Loading.module.css";
 
-const loadingDuration = 5000;
-const logoAnimationDuration = 1000;
-const overlayFadeDuration = 500;
+const loadingDuration = 5500;
 
 const Loading = ({ onComplete }) => {
     const [loadingComplete, setLoadingComplete] = useState(false);
@@ -14,10 +12,7 @@ const Loading = ({ onComplete }) => {
             () => setLoadingComplete(true),
             loadingDuration,
         );
-        const timer2 = setTimeout(
-            () => onComplete?.(),
-            loadingDuration + logoAnimationDuration + overlayFadeDuration,
-        );
+        const timer2 = setTimeout(() => onComplete?.(), loadingDuration);
         return () => {
             clearTimeout(timer1);
             clearTimeout(timer2);

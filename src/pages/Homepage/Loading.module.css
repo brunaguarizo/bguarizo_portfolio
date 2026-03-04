@@ -6,7 +6,6 @@
     height: 100vh;
     z-index: 9999;
     background-color: var(--black);
-    transition: opacity 0.5s ease 1s;
 }
 
 .loadingOverlay.loadingComplete {
@@ -37,11 +36,25 @@
     height: var(--font-size-heading-xxl);
     width: auto;
     display: block;
-    transition:
-        top 1s ease,
-        left 1s ease,
-        transform 1s ease,
-        height 1s ease;
+    animation-name: moveLogo;
+    animation-duration: 1.5s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveLogo {
+    from {
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        transform: translate(
+            calc(-50vw + var(--spacing-lg)),
+            calc(-50vh + var(--spacing-md))
+        );
+        height: 24px;
+    }
 }
 
 .loadingOverlay.loadingComplete .loadingLogo {
