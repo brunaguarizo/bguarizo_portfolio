@@ -70,17 +70,15 @@
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    animation: fadeSubtitle 5.5s ease-out forwards;
+    opacity: 1;
+    animation: fadeSubtitle 0.5s ease-out 4s forwards;
 }
 
 @keyframes fadeSubtitle {
-    0%, 45% {
+    from {
         opacity: 1;
     }
-    55% {
-        opacity: 0;
-    }
-    100% {
+    to {
         opacity: 0;
     }
 }

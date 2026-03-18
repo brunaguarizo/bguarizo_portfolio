@@ -1,33 +1,30 @@
 import React, { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 import FluidWave from "../../components/FluidWave/FluidWave";
 import styles from "./Loading.module.css";
 
-const loadingDuration = 5500; // loading duration of 5,5 seconds
+const loadingDuration = 5500; // loading duration of 5.5 seconds
 
 const Loading = ({ onComplete }) => {
     const [loadingComplete, setLoadingComplete] = useState(false);
 
     useEffect(() => {
-        const timer1 = setTimeout(
-            () => setLoadingComplete(true),
-            loadingDuration,
-        );
-        const timer2 = setTimeout(() => onComplete?.(), loadingDuration);
+        const timer = setTimeout(() => {
+            setLoadingComplete(true);
+            onComplete?.();
+        }, loadingDuration);
 
         const handleSkip = () => {
-            // handle skip button - skip the loading page
-            clearTimeout(timer1);
-            clearTimeout(timer2);
+            clearTimeout(timer);
             setLoadingComplete(true);
             onComplete?.();
         };
 
-        window.addEventListener("click", handleSkip, { once: true }); // handle click to skip the loading page
-        window.addEventListener("scroll", handleSkip, { once: true }); // handle scroll to skip the loading page
+        window.addEventListener("click", handleSkip, { once: true });
+        window.addEventListener("scroll", handleSkip, { once: true });
 
         return () => {
-            clearTimeout(timer1); // clear the timer to skip the loading page
-            clearTimeout(timer2); // clear the timer to skip the loading page
+            clearTimeout(timer);
             window.removeEventListener("click", handleSkip);
             window.removeEventListener("scroll", handleSkip);
         };
@@ -35,9 +32,8 @@ const Loading = ({ onComplete }) => {
 
     return (
         <div
-            className={`${styles.loadingOverlay} ${
-                loadingComplete ? styles.loadingComplete : ""
-            }`}>
+            className={cn(styles.loadingOverlay, loadingComplete && styles.loadingComplete)}
+            style={{ "--loading-duration": `${loadingDuration}ms` }}>
             <FluidWave
                 fixed={true}
                 containerClassName={styles.loadingFluidContainer}>
