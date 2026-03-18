@@ -7,8 +7,8 @@ import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
 import Loading from "./Loading";
 
-const mobileBreakpoint = 768;
-const hasSeenLoadingKey = "hasSeenLoading";
+const mobileBreakpoint = 768; // mobile breakpoint of 768px - to avoid loading page on mobile
+const hasSeenLoadingKey = "hasSeenLoading"; // key to store the loading page view into a local storages
 
 const Home = () => {
     const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
