@@ -37,7 +37,7 @@
     width: auto;
     display: block;
     animation-name: moveLogo;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     animation-delay: 4s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -70,11 +70,19 @@
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    transition: opacity 0.5s ease;
+    animation: fadeSubtitle 5.5s ease-out forwards;
 }
 
-.loadingOverlay.loadingComplete .loadingSubtitle {
-    opacity: 0;
+@keyframes fadeSubtitle {
+    0%, 45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 768px) {
