@@ -6,11 +6,13 @@ import ProjectsGrid from "../../components/ProjectsGrid/ProjectsGrid";
 import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
 import Loading from "./Loading";
+import { useHomeLoading } from "../../context/HomeLoadingContext";
 
 const mobileBreakpoint = 768; // mobile breakpoint of 768px - to avoid loading page on mobile
 const hasSeenLoadingKey = "hasSeenLoading"; // key to store the loading page view into a local storages
 
 const Home = () => {
+    const { setHomeLoading } = useHomeLoading();
     const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
     const isMobileView =
         typeof window !== "undefined" && window.innerWidth <= mobileBreakpoint;
@@ -38,6 +40,10 @@ const Home = () => {
     const handleTransitionStart = useCallback(() => {
         setIsTransitioning(true);
     }, []);
+
+    useEffect(() => {
+        setHomeLoading(isLoading);
+    }, [isLoading, setHomeLoading]);
 
     useEffect(() => {
         const checkMobile = () => {

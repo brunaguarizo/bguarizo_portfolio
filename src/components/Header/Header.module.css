@@ -9,6 +9,12 @@
     z-index: 1000;
     padding: var(--spacing-sm) var(--spacing-lg);
     margin: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.header.header_hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .nav {

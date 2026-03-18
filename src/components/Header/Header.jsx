@@ -3,10 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import { useHomeLoading } from "../../context/HomeLoadingContext";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
+    const { isHomeLoading } = useHomeLoading();
+
+    const isOnHome = location.pathname === "/" && !location.hash;
+    const showHeader = !isOnHome || !isHomeLoading;
 
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
@@ -17,7 +22,10 @@ const Header = () => {
     };
 
     return (
-        <header className={styles.header}>
+        <header
+            className={`${styles.header} ${
+                !showHeader ? styles.header_hidden : ""
+            }`}>
             <nav className={styles.nav}>
                 <Link
                     to='/'
