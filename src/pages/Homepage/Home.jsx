@@ -25,12 +25,18 @@ const Home = () => {
         return !hasSeenLoading;
     });
     const [isMobile, setIsMobile] = useState(isMobileView);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
     const handleLoadingComplete = useCallback(() => {
         //Saving the loading page view into a local storage
         if (typeof window !== "undefined") {
             localStorage.setItem(hasSeenLoadingKey, "true");
         }
         setIsLoading(false);
+    }, []);
+
+    const handleTransitionStart = useCallback(() => {
+        setIsTransitioning(true);
     }, []);
 
     useEffect(() => {
@@ -271,11 +277,16 @@ const Home = () => {
 
     return (
         <div className={styles.home_wrapper}>
-            {isLoading && <Loading onComplete={handleLoadingComplete} />}
+            {isLoading && (
+                <Loading
+                    onComplete={handleLoadingComplete}
+                    onTransitionStart={handleTransitionStart}
+                />
+            )}
 
             <div
                 className={`${styles.contentWrapper} ${
-                    !isLoading ? styles.contentVisible : ""
+                    isTransitioning || !isLoading ? styles.contentVisible : ""
                 }`}>
                 <div className={styles.hero_section}>
                     {isMobile ? (
