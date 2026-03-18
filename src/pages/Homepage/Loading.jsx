@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import FluidWave from "../../components/FluidWave/FluidWave";
 import styles from "./Loading.module.css";
 
-const loadingDuration = 5500; // loading duration of 5.5 seconds
+const loadingDuration = 4700; // 4s + 0.7s (logo animation completes)
 
 const Loading = ({ onComplete }) => {
     const [loadingComplete, setLoadingComplete] = useState(false);
@@ -32,7 +32,10 @@ const Loading = ({ onComplete }) => {
 
     return (
         <div
-            className={cn(styles.loadingOverlay, loadingComplete && styles.loadingComplete)}
+            className={cn(
+                styles.loadingOverlay,
+                loadingComplete && styles.loadingComplete,
+            )}
             style={{ "--loading-duration": `${loadingDuration}ms` }}>
             <FluidWave
                 fixed={true}
