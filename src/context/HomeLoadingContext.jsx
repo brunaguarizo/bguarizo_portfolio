@@ -6,7 +6,7 @@ const HomeLoadingContext = createContext({
 });
 
 export function HomeLoadingProvider({ children }) {
-    /* Start true to avoid header flash on first paint when landing on Home with loading */
+    /* Start true to avoid header flash when landing on Home with loading */
     const [isHomeLoading, setHomeLoading] = useState(true);
 
     return (
