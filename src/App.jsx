@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HomeLoadingProvider } from "./context/HomeLoadingContext";
 import Header from "./components/Header/Header";
 import Home from "./pages/Homepage/Home";
 import Project1 from "./pages/Projects/Project1";
@@ -25,8 +26,9 @@ function App() {
     return (
         <Router>
             <ScrollToTop />
-            <div className='App'>
-                <Header />
+            <HomeLoadingProvider>
+                <div className='App'>
+                    <Header />
                 <Routes>
                     <Route
                         path='/'
@@ -88,7 +90,8 @@ function App() {
                     />
                 </Routes>
                 <Footer />
-            </div>
+                </div>
+            </HomeLoadingProvider>
         </Router>
     );
 }
