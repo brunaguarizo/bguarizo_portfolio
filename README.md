@@ -17,7 +17,6 @@ I chose React for this portfolio website because of its component-based architec
 -   **[Motion](https://motion.dev/)** - For button glow effects and animations
 -   **[Matter.js](https://brm.io/matter-js/)** - Physics engine for draggable tags with realistic collisions
 -   **[GSAP](https://gsap.com/)** - Professional-grade animation library
--   **[Simplex Noise](https://github.com/jwagner/simplex-noise.js)** - For wavy background effects
 -   **[react-webgl-fluid-sim](https://www.npmjs.com/package/react-webgl-fluid-sim)** - WebGL fluid simulation for the hero and contact section backgrounds
 -   **[Three.js](https://threejs.org/)** + **[React Three Fiber](https://docs.pmnd.rs/react-three-fiber)** + **[Drei](https://github.com/pmndrs/drei)** - WebGL 3D graphics for the Cans component
 
