@@ -25,8 +25,8 @@ const AboutMe = () => {
 
     const experience = [
         {
-            role: "Product Designer",
-            company: "Freelance",
+            role: "Web Designer",
+            company: "Unicorn Marketing Co.",
             period: "Currently",
         },
         {
