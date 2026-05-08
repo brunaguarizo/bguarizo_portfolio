@@ -85,8 +85,8 @@ const Home = () => {
     const experience = [
         // experience array - used in the about section
         {
-            role: "Product Designer",
-            company: "Freelance",
+            role: "Web Designer",
+            company: "Unicorn Marketing Co.",
             period: "Currently",
         },
         {
