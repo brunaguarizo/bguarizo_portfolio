@@ -90,7 +90,7 @@ const Home = () => {
             period: "Currently",
         },
         {
-            role: "Web Designer",
+            role: "Web Designer Intern",
             company: "Unicorn Marketing Co.",
             period: "April-May 2026",
         },
