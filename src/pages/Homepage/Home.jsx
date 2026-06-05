@@ -86,8 +86,13 @@ const Home = () => {
         // experience array - used in the about section
         {
             role: "Web Designer",
-            company: "Unicorn Marketing Co.",
+            company: "Teamtown",
             period: "Currently",
+        },
+        {
+            role: "Web Designer",
+            company: "Unicorn Marketing Co.",
+            period: "April-May 2026",
         },
         {
             role: "Senior Brand Designer",
