@@ -26,8 +26,13 @@ const AboutMe = () => {
     const experience = [
         {
             role: "Web Designer",
-            company: "Unicorn Marketing Co.",
+            company: "Teamtown",
             period: "Currently",
+        },
+        {
+            role: "Web Designer",
+            company: "Unicorn Marketing Co.",
+            period: "April-May 2026",
         },
         {
             role: "Senior Brand Designer",
