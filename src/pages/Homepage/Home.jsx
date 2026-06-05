@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import styles from "./Home.module.css";
 import FluidWave from "../../components/FluidWave/FluidWave";
@@ -12,6 +13,7 @@ const mobileBreakpoint = 768; // mobile breakpoint of 768px - to avoid loading p
 const hasSeenLoadingKey = "hasSeenLoading"; // key to store the loading page view into a local storages
 
 const Home = () => {
+    const navigate = useNavigate();
     const { setHomeLoading } = useHomeLoading();
     const [filterMode, setFilterMode] = useState("design"); // filter mode - set to start with design
     const isMobileView =
@@ -423,7 +425,9 @@ const Home = () => {
                                 ))}
                             </div>
                             <div className={styles.button_container}>
-                                <Button>More About Me</Button>
+                                <Button onClick={() => navigate("/about")}>
+                                    More About Me
+                                </Button>
                             </div>
                         </div>
 
